@@ -1,0 +1,91 @@
+// ----------------------------------------------
+// Dot Elastic
+// ----------------------------------------------
+
+@mixin dot() {
+  width: 10px;
+  height: 10px;
+  border-radius: 5px;
+  background-color: #ccc;
+}
+
+.dot-elastic {
+  position: relative;
+  @include dot;
+
+  animation: dot 1s infinite linear;
+
+  &:before,
+  &:after {
+    content: '';
+    display: inline-block;
+    position: absolute;
+    top: 0;
+    @include dot;
+  }
+
+  &:before {
+    left: -15px;
+    animation: dotBefore 1s infinite linear;
+  }
+
+  &:after {
+    left: 15px;
+    animation: dotAfter 1s infinite linear;
+  }
+}
+
+
+@keyframes dotBefore {
+  0% {
+    transform: scale(1,1);
+  }
+  25% {
+    transform: scale(1,1.25);
+  }
+  50% {
+    transform: scale(1,0.75);
+  }
+  75% {
+    transform: scale(1,1);
+  }
+  100% {
+    transform: scale(1,1);
+  }
+}
+
+@keyframes dot {
+  0% {
+    transform: scale(1,1);
+  }
+  25% {
+    transform: scale(1,1);
+  }
+  50% {
+    transform: scale(1,1.25);
+  }
+  75% {
+    transform: scale(1,1);
+  }
+  100% {
+    transform: scale(1,1);
+  }
+}
+
+@keyframes dotAfter {
+  0% {
+    transform: scale(1,1);
+  }
+  25% {
+    transform: scale(1,1);
+  }
+  50% {
+    transform: scale(1,0.75);
+  }
+  75% {
+    transform: scale(1,1.25);
+  }
+  100% {
+    transform: scale(1,1);
+  }
+}
