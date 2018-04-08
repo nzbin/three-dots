@@ -1,12 +1,12 @@
 // ----------------------------------------------
-// Dot Elastic
+// Dot Pulse
 // ----------------------------------------------
 
-.dot-elastic {
+.dot-pulse {
   position: relative;
   @include dot;
 
-  animation: dotElastic 1s infinite linear;
+  animation: dotPulse 1s infinite linear;
 
   &:before,
   &:after {
@@ -19,25 +19,43 @@
 
   &:before {
     left: -15px;
-    animation: dotElasticBefore 1s infinite linear;
+    animation: dotPulseBefore 1s infinite linear;
   }
 
   &:after {
     left: 15px;
-    animation: dotElasticAfter 1s infinite linear;
+    animation: dotPulseAfter 1s infinite linear;
   }
 }
 
 
-@keyframes dotElasticBefore {
+@keyframes dotPulseBefore {
   0% {
     transform: scale(1,1);
   }
   25% {
-    transform: scale(1,1.25);
+    transform: scale(1.5,1.5);
   }
   50% {
-    transform: scale(1,0.75);
+    transform: scale(1,1);
+  }
+  75% {
+    transform: scale(0.5,0.5);
+  }
+  100% {
+    transform: scale(1,1);
+  }
+}
+
+@keyframes dotPulse {
+  0% {
+    transform: scale(1,1);
+  }
+  25% {
+    transform: scale(1,1);
+  }
+  50% {
+    transform: scale(1,1);
   }
   75% {
     transform: scale(1,1);
@@ -47,36 +65,18 @@
   }
 }
 
-@keyframes dotElastic {
+@keyframes dotPulseAfter {
   0% {
     transform: scale(1,1);
   }
   25% {
-    transform: scale(1,1);
+    transform: scale(0.5,0.5);
   }
   50% {
-    transform: scale(1,1.25);
+    transform: scale(1,1);
   }
   75% {
-    transform: scale(1,1);
-  }
-  100% {
-    transform: scale(1,1);
-  }
-}
-
-@keyframes dotElasticAfter {
-  0% {
-    transform: scale(1,1);
-  }
-  25% {
-    transform: scale(1,1);
-  }
-  50% {
-    transform: scale(1,0.75);
-  }
-  75% {
-    transform: scale(1,1.25);
+    transform: scale(1.5,1.5);
   }
   100% {
     transform: scale(1,1);

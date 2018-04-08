@@ -1,0 +1,42 @@
+// ----------------------------------------------
+// Dot Flash
+// ----------------------------------------------
+
+.dot-flash {
+  position: relative;
+  @include dot;
+
+  animation: dotFlash 1s infinite alternate;
+  animation-delay: .5s;
+
+  &:before,
+  &:after {
+    content: '';
+    display: inline-block;
+    position: absolute;
+    top: 0;
+    @include dot;
+  }
+
+  &:before {
+    left: -15px;
+    animation: dotFlash 1s infinite alternate;
+    animation-delay: 0s;
+  }
+
+  &:after {
+    left: 15px;
+    animation: dotFlash 1s infinite alternate;
+    animation-delay: 1s;
+  }
+}
+
+
+@keyframes dotFlash {
+  0% {
+    background-color: #ccc;
+  }
+  100% {
+    background-color: #eee;
+  }
+}
