@@ -1,0 +1,71 @@
+<!doctype html>
+<html class="no-js" lang="">
+
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="x-ua-compatible" content="ie=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+  <meta name="description" content="">
+  <title>Three Dots</title>
+  <link rel="apple-touch-icon" href="apple-touch-icon.png">
+  <link rel="stylesheet" href="css/three-dots.css">
+  <!--[if lt IE 9]>
+    <script src="https://cdn.bootcss.com/html5shiv/3.7.3/html5shiv.min.js"></script>
+    <script src="https://cdn.bootcss.com/respond.js/1.4.2/respond.min.js"></script>
+  <![endif]-->
+  <style>
+  html,
+  body {
+    height: 100%;
+  }
+
+  body, .show-area {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .show-area{
+    width: 100px;
+    height: 100px;
+    margin-bottom: 10px;
+    border: 1px solid #ddd;
+  }
+
+  select{
+    display: block;
+    width: 100%;
+  }
+
+  </style>
+</head>
+
+<body>
+  <!--[if lt IE 9]>
+        <p class="browserupgrade">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
+    <![endif]-->
+  <div class="container">
+    <div class="show-area">
+      <div class="dot-elastic" id="showElem"></div>
+    </div>
+
+    <select id="showSelect">
+      <option value="dot-elastic">dot-elastic</option>
+      <option value="dot-pulse">dot-pulse</option>
+      <option value="dot-flash">dot-flash</option>
+      <option value="dot-collision">dot-collision</option>
+      <option value="dot-revolution">dot-revolution</option>
+    </select>
+
+  </div>
+
+  <script src="https://cdn.bootcss.com/jquery/1.12.4/jquery.min.js"></script>
+  <script>
+    $('#showSelect').on('change', function(){
+      var className = $(this).val();
+      $('#showElem').removeClass().addClass(className);
+    });
+  </script>
+</body>
+
+</html>
