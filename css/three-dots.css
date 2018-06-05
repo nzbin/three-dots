@@ -95,85 +95,30 @@
 
 .dot-pulse {
   position: relative;
+  left: -900px;
   width: 10px;
   height: 10px;
   border-radius: 5px;
   background-color: #ccc;
+  box-shadow: 885px 0 0 0 #ccc, 900px 0 0 0 #ccc, 915px 0 0 0 #ccc;
   animation: dotPulse 1s infinite linear;
-}
-
-.dot-pulse:before, .dot-pulse:after {
-  content: '';
-  display: inline-block;
-  position: absolute;
-  top: 0;
-  width: 10px;
-  height: 10px;
-  border-radius: 5px;
-  background-color: #ccc;
-}
-
-.dot-pulse:before {
-  left: -15px;
-  animation: dotPulseBefore 1s infinite linear;
-}
-
-.dot-pulse:after {
-  left: 15px;
-  animation: dotPulseAfter 1s infinite linear;
-}
-
-@keyframes dotPulseBefore {
-  0% {
-    transform: scale(1, 1);
-  }
-  25% {
-    transform: scale(1.5, 1.5);
-  }
-  50% {
-    transform: scale(1, 1);
-  }
-  75% {
-    transform: scale(0.5, 0.5);
-  }
-  100% {
-    transform: scale(1, 1);
-  }
 }
 
 @keyframes dotPulse {
   0% {
-    transform: scale(1, 1);
+    box-shadow: 885px 0 0 -2px #ccc, 900px 0 0 0 #ccc, 915px 0 0 2px #ccc;
   }
   25% {
-    transform: scale(1, 1);
+    box-shadow: 885px 0 0 0 #ccc, 900px 0 0 2px #ccc, 915px 0 0 0 #ccc;
   }
   50% {
-    transform: scale(1, 1);
+    box-shadow: 885px 0 0 2px #ccc, 900px 0 0 0 #ccc, 915px 0 0 -2px #ccc;
   }
   75% {
-    transform: scale(1, 1);
+    box-shadow: 885px 0 0 0 #ccc, 900px 0 0 -2px #ccc, 915px 0 0 0 #ccc;
   }
   100% {
-    transform: scale(1, 1);
-  }
-}
-
-@keyframes dotPulseAfter {
-  0% {
-    transform: scale(1, 1);
-  }
-  25% {
-    transform: scale(0.5, 0.5);
-  }
-  50% {
-    transform: scale(1, 1);
-  }
-  75% {
-    transform: scale(1.5, 1.5);
-  }
-  100% {
-    transform: scale(1, 1);
+    box-shadow: 885px 0 0 -2px #ccc, 900px 0 0 0 #ccc, 915px 0 0 2px #ccc;
   }
 }
 
@@ -309,3 +254,77 @@
     transform: rotateZ(360deg) translate3d(0, 0, 0);
   }
 }
+
+.dot-translate {
+  position: relative;
+  width: 10px;
+  height: 10px;
+  border-radius: 5px;
+  background-color: #ccc;
+  animation: dotTranslate 1s infinite linear;
+}
+
+.dot-translate:before, .dot-translate:after {
+  content: '';
+  display: inline-block;
+  position: absolute;
+  top: 0;
+  width: 10px;
+  height: 10px;
+  border-radius: 5px;
+  background-color: #ccc;
+}
+
+.dot-translate:before {
+  left: -15px;
+  animation: dotTranslateBefore 1s infinite linear;
+}
+
+.dot-translate:after {
+  left: 15px;
+  animation: dotTranslateAfter 1s infinite linear;
+}
+
+@keyframes dotTranslateBefore {
+  0% {
+    left: -15px;
+    transform: scale(1, 1);
+  }
+  50% {
+    left: 0px;
+    transform: scale(0.5, 0.5);
+  }
+  100% {
+    left: 15px;
+    transform: scale(1, 1);
+  }
+}
+
+@keyframes dotTranslate {
+  0% {
+    transform: scale(1, 1);
+  }
+  50% {
+    transform: scale(1, 1);
+  }
+  100% {
+    transform: scale(1, 1);
+  }
+}
+
+@keyframes dotTranslateAfter {
+  0% {
+    left: 15px;
+    transform: scale(1, 1);
+  }
+  50% {
+    left: 0px;
+    transform: scale(0.5, 0.5);
+  }
+  100% {
+    left: -15px;
+    transform: scale(1, 1);
+  }
+}
+
+/*# sourceMappingURL=three-dots.css.map */
