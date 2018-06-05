@@ -1,0 +1,91 @@
+// ----------------------------------------------
+// Dot Translate
+// ----------------------------------------------
+
+.dot-translate {
+  position: relative;
+  @include dot;
+
+  animation: dotTranslate 1s infinite linear;
+
+  &:before,
+  &:after {
+    content: '';
+    display: inline-block;
+    position: absolute;
+    top: 0;
+    @include dot;
+  }
+
+  &:before {
+    left: -15px;
+    animation: dotTranslateBefore 1s infinite linear;
+  }
+
+  &:after {
+    left: 15px;
+    animation: dotTranslateAfter 1s infinite linear;
+  }
+}
+
+
+@keyframes dotTranslateBefore {
+  0% {
+    left: -15px;
+    transform: scale(1,1);
+  }
+  // 25% {
+  //   transform: scale(1,1);
+  // }
+  50% {
+    left: 0px;
+    transform: scale(.5,.5);
+  }
+  // 75% {
+  //   transform: scale(1,1);
+  // }
+  100% {
+    left: 15px;
+    transform: scale(1,1);
+  }
+}
+
+@keyframes dotTranslate {
+  0% {
+    transform: scale(1,1);
+  }
+  // 25% {
+  //   transform: scale(1,1);
+  // }
+  50% {
+
+    transform: scale(1,1);
+  }
+  // 75% {
+  //   transform: scale(1,1);
+  // }
+  100% {
+    transform: scale(1,1);
+  }
+}
+
+@keyframes dotTranslateAfter {
+  0% {
+    left: 15px;
+    transform: scale(1,1);
+  }
+  // 25% {
+  //   transform: scale(1,1);
+  // }
+  50% {
+    left: 0px;
+    transform: scale(.5,.5);
+  }
+  // 75% {
+  //   transform: scale(1,1);
+  // }
+  100% {
+    left: -15px;
+    transform: scale(1,1);
+  }
+}

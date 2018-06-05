@@ -4,81 +4,47 @@
 
 .dot-pulse {
   position: relative;
+  left: -900px;
   @include dot;
+
+  box-shadow:
+  885px 0 0 0 #ccc,
+  900px 0 0 0 #ccc,
+  915px 0 0 0 #ccc;
 
   animation: dotPulse 1s infinite linear;
 
-  &:before,
-  &:after {
-    content: '';
-    display: inline-block;
-    position: absolute;
-    top: 0;
-    @include dot;
-  }
-
-  &:before {
-    left: -15px;
-    animation: dotPulseBefore 1s infinite linear;
-  }
-
-  &:after {
-    left: 15px;
-    animation: dotPulseAfter 1s infinite linear;
-  }
-}
-
-
-@keyframes dotPulseBefore {
-  0% {
-    transform: scale(1,1);
-  }
-  25% {
-    transform: scale(1.5,1.5);
-  }
-  50% {
-    transform: scale(1,1);
-  }
-  75% {
-    transform: scale(0.5,0.5);
-  }
-  100% {
-    transform: scale(1,1);
-  }
 }
 
 @keyframes dotPulse {
   0% {
-    transform: scale(1,1);
+    box-shadow:
+    885px 0 0 -2px #ccc,
+    900px 0 0 0 #ccc,
+    915px 0 0 2px #ccc;
   }
   25% {
-    transform: scale(1,1);
+    box-shadow:
+    885px 0 0 0 #ccc,
+    900px 0 0 2px #ccc,
+    915px 0 0 0 #ccc;
   }
   50% {
-    transform: scale(1,1);
+    box-shadow:
+    885px 0 0 2px #ccc,
+    900px 0 0 0 #ccc,
+    915px 0 0 -2px #ccc;
   }
   75% {
-    transform: scale(1,1);
+    box-shadow:
+    885px 0 0 0 #ccc,
+    900px 0 0 -2px #ccc,
+    915px 0 0 0 #ccc;
   }
   100% {
-    transform: scale(1,1);
-  }
-}
-
-@keyframes dotPulseAfter {
-  0% {
-    transform: scale(1,1);
-  }
-  25% {
-    transform: scale(0.5,0.5);
-  }
-  50% {
-    transform: scale(1,1);
-  }
-  75% {
-    transform: scale(1.5,1.5);
-  }
-  100% {
-    transform: scale(1,1);
+    box-shadow:
+    885px 0 0 -2px #ccc,
+    900px 0 0 0 #ccc,
+    915px 0 0 2px #ccc;
   }
 }

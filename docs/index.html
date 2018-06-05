@@ -17,19 +17,37 @@
   html,
   body {
     height: 100%;
+    background: #f6f7fd;
   }
 
-  body, .show-area {
+  .container{
+    max-width: 64rem;
+    padding: 0 2%;
+    margin: 0 auto;
+  }
+
+  .tip{
+    position: relative;
+    background: #fff;
+    padding: 2rem 5%;
+    box-shadow: 0 .4rem .8rem -.1rem rgba(0,32,128,.1),0 0 0 1px #f0f2f7;
+    border-radius: .25rem;
+    font-size: 1.1rem;
+    margin: 1.5rem 0;
+  }
+
+  .stage{
+    width: 100px;
+    margin: 0 auto;
+  }
+
+  .show-area {
     display: flex;
     justify-content: center;
     align-items: center;
-  }
-
-  .show-area{
     width: 100px;
     height: 100px;
     margin-bottom: 10px;
-    border: 1px solid #ddd;
   }
 
   select{
@@ -45,17 +63,28 @@
         <p class="browserupgrade">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
     <![endif]-->
   <div class="container">
-    <div class="show-area">
-      <div class="dot-elastic" id="showElem"></div>
+    <div class="tip">
+      🔮 The project is a CSS loading animation created with three dots which made by just single element. I think the project can not only enhance your css skills but also improve your imagination 🔥.
     </div>
 
-    <select id="showSelect">
-      <option value="dot-elastic">dot-elastic</option>
-      <option value="dot-pulse">dot-pulse</option>
-      <option value="dot-flash">dot-flash</option>
-      <option value="dot-collision">dot-collision</option>
-      <option value="dot-revolution">dot-revolution</option>
-    </select>
+    <div class="tip">
+
+      <div class="stage">
+        <div class="show-area">
+          <div class="dot-elastic" id="showElem"></div>
+        </div>
+
+        <select id="showSelect">
+          <option value="dot-elastic">dot-elastic</option>
+          <option value="dot-pulse">dot-pulse</option>
+          <option value="dot-flash">dot-flash</option>
+          <option value="dot-collision">dot-collision</option>
+          <option value="dot-revolution">dot-revolution</option>
+          <option value="dot-translate">dot-translate</option>
+        </select>
+      </div>
+
+    </div>
 
   </div>
 
