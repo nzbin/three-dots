@@ -95,30 +95,30 @@
 
 .dot-pulse {
   position: relative;
-  left: -900px;
+  left: -9999px;
   width: 10px;
   height: 10px;
   border-radius: 5px;
   background-color: #ccc;
-  box-shadow: 885px 0 0 0 #ccc, 900px 0 0 0 #ccc, 915px 0 0 0 #ccc;
-  animation: dotPulse 1s infinite linear;
+  box-shadow: 9984px 0 0 0 #ccc, 9999px 0 0 0 #ccc, 10014px 0 0 0 #ccc;
+  animation: dotPulse 1.5s infinite linear;
 }
 
 @keyframes dotPulse {
   0% {
-    box-shadow: 885px 0 0 -2px #ccc, 900px 0 0 0 #ccc, 915px 0 0 2px #ccc;
+    box-shadow: 9984px 0 0 -2px #ccc, 9999px 0 0 0 #ccc, 10014px 0 0 2px #ccc;
   }
   25% {
-    box-shadow: 885px 0 0 0 #ccc, 900px 0 0 2px #ccc, 915px 0 0 0 #ccc;
+    box-shadow: 9984px 0 0 0 #ccc, 9999px 0 0 2px #ccc, 10014px 0 0 0 #ccc;
   }
   50% {
-    box-shadow: 885px 0 0 2px #ccc, 900px 0 0 0 #ccc, 915px 0 0 -2px #ccc;
+    box-shadow: 9984px 0 0 2px #ccc, 9999px 0 0 0 #ccc, 10014px 0 0 -2px #ccc;
   }
   75% {
-    box-shadow: 885px 0 0 0 #ccc, 900px 0 0 -2px #ccc, 915px 0 0 0 #ccc;
+    box-shadow: 9984px 0 0 0 #ccc, 9999px 0 0 -2px #ccc, 10014px 0 0 0 #ccc;
   }
   100% {
-    box-shadow: 885px 0 0 -2px #ccc, 900px 0 0 0 #ccc, 915px 0 0 2px #ccc;
+    box-shadow: 9984px 0 0 -2px #ccc, 9999px 0 0 0 #ccc, 10014px 0 0 2px #ccc;
   }
 }
 
@@ -214,7 +214,6 @@
 
 .dot-revolution {
   position: relative;
-  box-shadow: 0 0 0 14px #fff, 0 0 0 15px #eee, 0 0 0 24px #fff, 0 0 0 25px #eee;
   width: 10px;
   height: 10px;
   border-radius: 5px;
@@ -257,73 +256,24 @@
 
 .dot-translate {
   position: relative;
+  left: -9999px;
   width: 10px;
   height: 10px;
   border-radius: 5px;
   background-color: #ccc;
-  animation: dotTranslate 1s infinite linear;
-}
-
-.dot-translate:before, .dot-translate:after {
-  content: '';
-  display: inline-block;
-  position: absolute;
-  top: 0;
-  width: 10px;
-  height: 10px;
-  border-radius: 5px;
-  background-color: #ccc;
-}
-
-.dot-translate:before {
-  left: -15px;
-  animation: dotTranslateBefore 1s infinite linear;
-}
-
-.dot-translate:after {
-  left: 15px;
-  animation: dotTranslateAfter 1s infinite linear;
-}
-
-@keyframes dotTranslateBefore {
-  0% {
-    left: -15px;
-    transform: scale(1, 1);
-  }
-  50% {
-    left: 0px;
-    transform: scale(0.5, 0.5);
-  }
-  100% {
-    left: 15px;
-    transform: scale(1, 1);
-  }
+  box-shadow: 9984px 0 0 0 #ccc, 9999px 0 0 0 #ccc, 10014px 0 0 0 #ccc;
+  animation: dotTranslate 3s infinite linear;
 }
 
 @keyframes dotTranslate {
   0% {
-    transform: scale(1, 1);
+    box-shadow: 9984px 0 0 -1px #ccc, 9999px 0 0 1px #ccc, 10014px 0 0 -1px #ccc;
   }
   50% {
-    transform: scale(1, 1);
+    box-shadow: 10014px 0 0 -1px #ccc, 9984px 0 0 -1px #ccc, 9999px 0 0 1px #ccc;
   }
   100% {
-    transform: scale(1, 1);
-  }
-}
-
-@keyframes dotTranslateAfter {
-  0% {
-    left: 15px;
-    transform: scale(1, 1);
-  }
-  50% {
-    left: 0px;
-    transform: scale(0.5, 0.5);
-  }
-  100% {
-    left: -15px;
-    transform: scale(1, 1);
+    box-shadow: 9999px 0 0 1px #ccc, 10014px 0 0 -1px #ccc, 9984px 0 0 -1px #ccc;
   }
 }
 
