@@ -2,49 +2,54 @@
 // Dot Pulse
 // ----------------------------------------------
 
+$leftPos: -9999px;
+$leftPos-1: - $leftPos - 15px;
+$leftPos-2: - $leftPos;
+$leftPos-3: - $leftPos + 15px;
+
 .dot-pulse {
   position: relative;
-  left: -900px;
+  left: $leftPos;
   @include dot;
 
   box-shadow:
-  885px 0 0 0 #ccc,
-  900px 0 0 0 #ccc,
-  915px 0 0 0 #ccc;
+  $leftPos-1 0 0 0 #ccc,
+  $leftPos-2 0 0 0 #ccc,
+  $leftPos-3 0 0 0 #ccc;
 
-  animation: dotPulse 1s infinite linear;
+  animation: dotPulse 1.5s infinite linear;
 
 }
 
 @keyframes dotPulse {
   0% {
     box-shadow:
-    885px 0 0 -2px #ccc,
-    900px 0 0 0 #ccc,
-    915px 0 0 2px #ccc;
+    $leftPos-1 0 0 -2px #ccc,
+    $leftPos-2 0 0 0 #ccc,
+    $leftPos-3 0 0 2px #ccc;
   }
   25% {
     box-shadow:
-    885px 0 0 0 #ccc,
-    900px 0 0 2px #ccc,
-    915px 0 0 0 #ccc;
+    $leftPos-1 0 0 0 #ccc,
+    $leftPos-2 0 0 2px #ccc,
+    $leftPos-3 0 0 0 #ccc;
   }
   50% {
     box-shadow:
-    885px 0 0 2px #ccc,
-    900px 0 0 0 #ccc,
-    915px 0 0 -2px #ccc;
+    $leftPos-1 0 0 2px #ccc,
+    $leftPos-2 0 0 0 #ccc,
+    $leftPos-3 0 0 -2px #ccc;
   }
   75% {
     box-shadow:
-    885px 0 0 0 #ccc,
-    900px 0 0 -2px #ccc,
-    915px 0 0 0 #ccc;
+    $leftPos-1 0 0 0 #ccc,
+    $leftPos-2 0 0 -2px #ccc,
+    $leftPos-3 0 0 0 #ccc;
   }
   100% {
     box-shadow:
-    885px 0 0 -2px #ccc,
-    900px 0 0 0 #ccc,
-    915px 0 0 2px #ccc;
+    $leftPos-1 0 0 -2px #ccc,
+    $leftPos-2 0 0 0 #ccc,
+    $leftPos-3 0 0 2px #ccc;
   }
 }

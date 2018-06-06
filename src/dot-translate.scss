@@ -2,90 +2,42 @@
 // Dot Translate
 // ----------------------------------------------
 
+$leftPos: -9999px;
+$leftPos-1: - $leftPos - 15px;
+$leftPos-2: - $leftPos;
+$leftPos-3: - $leftPos + 15px;
+
 .dot-translate {
   position: relative;
+  left: $leftPos;
   @include dot;
 
-  animation: dotTranslate 1s infinite linear;
+  box-shadow:
+  $leftPos-1 0 0 0 #ccc,
+  $leftPos-2 0 0 0 #ccc,
+  $leftPos-3 0 0 0 #ccc;
 
-  &:before,
-  &:after {
-    content: '';
-    display: inline-block;
-    position: absolute;
-    top: 0;
-    @include dot;
-  }
+  animation: dotTranslate 3s infinite linear;
 
-  &:before {
-    left: -15px;
-    animation: dotTranslateBefore 1s infinite linear;
-  }
-
-  &:after {
-    left: 15px;
-    animation: dotTranslateAfter 1s infinite linear;
-  }
-}
-
-
-@keyframes dotTranslateBefore {
-  0% {
-    left: -15px;
-    transform: scale(1,1);
-  }
-  // 25% {
-  //   transform: scale(1,1);
-  // }
-  50% {
-    left: 0px;
-    transform: scale(.5,.5);
-  }
-  // 75% {
-  //   transform: scale(1,1);
-  // }
-  100% {
-    left: 15px;
-    transform: scale(1,1);
-  }
 }
 
 @keyframes dotTranslate {
   0% {
-    transform: scale(1,1);
+    box-shadow:
+    $leftPos-1 0 0 -1px #ccc,
+    $leftPos-2 0 0 1px #ccc,
+    $leftPos-3 0 0 -1px #ccc;
   }
-  // 25% {
-  //   transform: scale(1,1);
-  // }
   50% {
-
-    transform: scale(1,1);
+    box-shadow:
+    $leftPos-3 0 0 -1px #ccc,
+    $leftPos-1 0 0 -1px #ccc,
+    $leftPos-2 0 0 1px #ccc;
   }
-  // 75% {
-  //   transform: scale(1,1);
-  // }
   100% {
-    transform: scale(1,1);
-  }
-}
-
-@keyframes dotTranslateAfter {
-  0% {
-    left: 15px;
-    transform: scale(1,1);
-  }
-  // 25% {
-  //   transform: scale(1,1);
-  // }
-  50% {
-    left: 0px;
-    transform: scale(.5,.5);
-  }
-  // 75% {
-  //   transform: scale(1,1);
-  // }
-  100% {
-    left: -15px;
-    transform: scale(1,1);
+    box-shadow:
+    $leftPos-2 0 0 1px #ccc,
+    $leftPos-3 0 0 -1px #ccc,
+    $leftPos-1 0 0 -1px #ccc;
   }
 }
