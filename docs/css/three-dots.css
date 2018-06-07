@@ -122,17 +122,17 @@
   }
 }
 
-.dot-flash {
+.dot-flashing {
   position: relative;
   width: 10px;
   height: 10px;
   border-radius: 5px;
   background-color: #ccc;
-  animation: dotFlash 1s infinite alternate;
+  animation: dotFlashing 1s infinite alternate;
   animation-delay: .5s;
 }
 
-.dot-flash:before, .dot-flash:after {
+.dot-flashing:before, .dot-flashing:after {
   content: '';
   display: inline-block;
   position: absolute;
@@ -143,19 +143,19 @@
   background-color: #ccc;
 }
 
-.dot-flash:before {
+.dot-flashing:before {
   left: -15px;
-  animation: dotFlash 1s infinite alternate;
+  animation: dotFlashing 1s infinite alternate;
   animation-delay: 0s;
 }
 
-.dot-flash:after {
+.dot-flashing:after {
   left: 15px;
-  animation: dotFlash 1s infinite alternate;
+  animation: dotFlashing 1s infinite alternate;
   animation-delay: 1s;
 }
 
-@keyframes dotFlash {
+@keyframes dotFlashing {
   0% {
     background-color: #ccc;
   }
@@ -235,17 +235,17 @@
   left: -25px;
   top: -15px;
   transform-origin: 30px 20px;
-  animation: revolution 2s linear infinite;
+  animation: dotRevolution 2s linear infinite;
 }
 
 .dot-revolution:after {
   left: -15px;
   top: -10px;
   transform-origin: 20px 15px;
-  animation: revolution 1s linear infinite;
+  animation: dotRevolution 1s linear infinite;
 }
 
-@keyframes revolution {
+@keyframes dotRevolution {
   0% {
     transform: rotateZ(0deg) translate3d(0, 0, 0);
   }
@@ -254,7 +254,7 @@
   }
 }
 
-.dot-translate {
+.dot-translation {
   position: relative;
   left: -9999px;
   width: 10px;
@@ -262,10 +262,10 @@
   border-radius: 5px;
   background-color: #ccc;
   box-shadow: 9984px 0 0 0 #ccc, 9999px 0 0 0 #ccc, 10014px 0 0 0 #ccc;
-  animation: dotTranslate 3s infinite linear;
+  animation: dotTranslation 3s infinite linear;
 }
 
-@keyframes dotTranslate {
+@keyframes dotTranslation {
   0% {
     box-shadow: 9984px 0 0 -1px #ccc, 9999px 0 0 1px #ccc, 10014px 0 0 -1px #ccc;
   }
@@ -274,6 +274,82 @@
   }
   100% {
     box-shadow: 9999px 0 0 1px #ccc, 10014px 0 0 -1px #ccc, 9984px 0 0 -1px #ccc;
+  }
+}
+
+.dot-typing {
+  position: relative;
+  left: -9999px;
+  width: 10px;
+  height: 10px;
+  border-radius: 5px;
+  background-color: #ccc;
+  box-shadow: 9984px -5px 0 0 #ccc, 9999px 0 0 0 #ccc, 10014px 0 0 0 #ccc;
+  animation: dotTyping 1s infinite linear;
+}
+
+@keyframes dotTyping {
+  0% {
+    box-shadow: 9984px -5px 0 0 #ccc, 9999px 0 0 0 #ccc, 10014px 0 0 0 #ccc;
+  }
+  16.666% {
+    box-shadow: 9984px 0 0 0 #ccc, 9999px 0 0 0 #ccc, 10014px 0 0 0 #ccc;
+  }
+  33.333% {
+    box-shadow: 9984px 0 0 0 #ccc, 9999px -5px 0 0 #ccc, 10014px 0 0 0 #ccc;
+  }
+  50% {
+    box-shadow: 9984px 0 0 0 #ccc, 9999px 0 0 0 #ccc, 10014px 0 0 0 #ccc;
+  }
+  66.666% {
+    box-shadow: 9984px 0 0 0 #ccc, 9999px 0 0 0 #ccc, 10014px -5px 0 0 #ccc;
+  }
+  83.333% {
+    box-shadow: 9984px 0 0 0 #ccc, 9999px 0 0 0 #ccc, 10014px 0 0 0 #ccc;
+  }
+  100% {
+    box-shadow: 9984px -5px 0 0 #ccc, 9999px 0 0 0 #ccc, 10014px 0 0 0 #ccc;
+  }
+}
+
+.dot-circle {
+  position: relative;
+  top: -15px;
+  width: 10px;
+  height: 10px;
+  border-radius: 5px;
+  background-color: #ccc;
+  transform-origin: 5px 20px;
+  animation: dotCircle 2s linear infinite;
+}
+
+.dot-circle:before, .dot-circle:after {
+  content: '';
+  display: inline-block;
+  position: absolute;
+  top: 0;
+  width: 10px;
+  height: 10px;
+  border-radius: 5px;
+  background-color: #ccc;
+}
+
+.dot-circle:before {
+  left: -12.99px;
+  top: 22.5px;
+}
+
+.dot-circle:after {
+  left: 12.99px;
+  top: 22.5px;
+}
+
+@keyframes dotCircle {
+  0% {
+    transform: rotateZ(0deg) translate3d(0, 0, 0);
+  }
+  100% {
+    transform: rotateZ(360deg) translate3d(0, 0, 0);
   }
 }
 

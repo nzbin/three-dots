@@ -1,5 +1,5 @@
 // ----------------------------------------------
-// Dot Translate
+// Dot Translation
 // ----------------------------------------------
 
 $leftPos: -9999px;
@@ -7,7 +7,7 @@ $leftPos-1: - $leftPos - 15px;
 $leftPos-2: - $leftPos;
 $leftPos-3: - $leftPos + 15px;
 
-.dot-translate {
+.dot-translation {
   position: relative;
   left: $leftPos;
   @include dot;
@@ -17,11 +17,11 @@ $leftPos-3: - $leftPos + 15px;
   $leftPos-2 0 0 0 #ccc,
   $leftPos-3 0 0 0 #ccc;
 
-  animation: dotTranslate 3s infinite linear;
+  animation: dotTranslation 3s infinite linear;
 
 }
 
-@keyframes dotTranslate {
+@keyframes dotTranslation {
   0% {
     box-shadow:
     $leftPos-1 0 0 -1px #ccc,

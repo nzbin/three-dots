@@ -1,16 +1,19 @@
 // ----------------------------------------------
-// Dot Revolution
+// Dot Circle
 // ----------------------------------------------
 
-.dot-revolution {
+$r: 15px;
+$originX: 5px;
+$originY: 5px + $r;
+
+.dot-circle {
   position: relative;
-  // box-shadow:
-  //   0 0 0 14px #fff,
-  //   0 0 0 15px #eee,
-  //   0 0 0 24px #fff,
-  //   0 0 0 25px #eee;
+  top: - $r;
 
   @include dot;
+
+  transform-origin: $originX $originY;
+  animation: dotCircle 2s linear infinite;
 
   &:before,
   &:after {
@@ -23,21 +26,17 @@
   }
 
   &:before {
-    left: -25px;
-    top: -15px;
-    transform-origin: 30px 20px;
-    animation: dotRevolution 2s linear infinite;
+    left: -($r/2*1.732);
+    top: $r + $r/2;
   }
 
   &:after {
-    left: -15px;
-    top: -10px;
-    transform-origin: 20px 15px;
-    animation: dotRevolution 1s linear infinite;
+    left: $r/2*1.732;
+    top: $r + $r/2;
   }
 }
 
-@keyframes dotRevolution {
+@keyframes dotCircle {
   0% {
     transform: rotateZ(0deg) translate3d(0,0,0);
   }

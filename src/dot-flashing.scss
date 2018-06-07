@@ -1,12 +1,12 @@
 // ----------------------------------------------
-// Dot Flash
+// Dot Flashing
 // ----------------------------------------------
 
-.dot-flash {
+.dot-flashing {
   position: relative;
   @include dot;
 
-  animation: dotFlash 1s infinite alternate;
+  animation: dotFlashing 1s infinite alternate;
   animation-delay: .5s;
 
   &:before,
@@ -20,19 +20,19 @@
 
   &:before {
     left: -15px;
-    animation: dotFlash 1s infinite alternate;
+    animation: dotFlashing 1s infinite alternate;
     animation-delay: 0s;
   }
 
   &:after {
     left: 15px;
-    animation: dotFlash 1s infinite alternate;
+    animation: dotFlashing 1s infinite alternate;
     animation-delay: 1s;
   }
 }
 
 
-@keyframes dotFlash {
+@keyframes dotFlashing {
   0% {
     background-color: #ccc;
   }
