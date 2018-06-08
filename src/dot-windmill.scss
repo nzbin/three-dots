@@ -1,19 +1,19 @@
 // ----------------------------------------------
-// Dot Circle
+// Dot Windmill
 // ----------------------------------------------
 
 $r: 15px;
 $originX: 5px;
 $originY: 5px + $r;
 
-.dot-circle {
+.dot-windmill {
   position: relative;
   top: - $r;
 
   @include dot;
 
   transform-origin: $originX $originY;
-  animation: dotCircle 2s linear infinite;
+  animation: dotWindmill 2s infinite ease-in-out;
 
   &:before,
   &:after {
@@ -36,7 +36,7 @@ $originY: 5px + $r;
   }
 }
 
-@keyframes dotCircle {
+@keyframes dotWindmill {
   0% {
     transform: rotateZ(0deg) translate3d(0,0,0);
   }

@@ -3,9 +3,9 @@
 // ----------------------------------------------
 
 $leftPos: -9999px;
-$leftPos-1: - $leftPos - 15px;
-$leftPos-2: - $leftPos;
-$leftPos-3: - $leftPos + 15px;
+$x-1: - $leftPos - 15px;
+$x-2: - $leftPos;
+$x-3: - $leftPos + 15px;
 
 .dot-pulse {
   position: relative;
@@ -13,9 +13,9 @@ $leftPos-3: - $leftPos + 15px;
   @include dot;
 
   box-shadow:
-  $leftPos-1 0 0 0 #ccc,
-  $leftPos-2 0 0 0 #ccc,
-  $leftPos-3 0 0 0 #ccc;
+  $x-1 0 0 0 $dotColor,
+  $x-2 0 0 0 $dotColor,
+  $x-3 0 0 0 $dotColor;
 
   animation: dotPulse 1.5s infinite linear;
 
@@ -24,32 +24,32 @@ $leftPos-3: - $leftPos + 15px;
 @keyframes dotPulse {
   0% {
     box-shadow:
-    $leftPos-1 0 0 -2px #ccc,
-    $leftPos-2 0 0 0 #ccc,
-    $leftPos-3 0 0 2px #ccc;
+    $x-1 0 0 -2px $dotColor,
+    $x-2 0 0 0 $dotColor,
+    $x-3 0 0 2px $dotColor;
   }
   25% {
     box-shadow:
-    $leftPos-1 0 0 0 #ccc,
-    $leftPos-2 0 0 2px #ccc,
-    $leftPos-3 0 0 0 #ccc;
+    $x-1 0 0 0 $dotColor,
+    $x-2 0 0 2px $dotColor,
+    $x-3 0 0 0 $dotColor;
   }
   50% {
     box-shadow:
-    $leftPos-1 0 0 2px #ccc,
-    $leftPos-2 0 0 0 #ccc,
-    $leftPos-3 0 0 -2px #ccc;
+    $x-1 0 0 2px $dotColor,
+    $x-2 0 0 0 $dotColor,
+    $x-3 0 0 -2px $dotColor;
   }
   75% {
     box-shadow:
-    $leftPos-1 0 0 0 #ccc,
-    $leftPos-2 0 0 -2px #ccc,
-    $leftPos-3 0 0 0 #ccc;
+    $x-1 0 0 0 $dotColor,
+    $x-2 0 0 -2px $dotColor,
+    $x-3 0 0 0 $dotColor;
   }
   100% {
     box-shadow:
-    $leftPos-1 0 0 -2px #ccc,
-    $leftPos-2 0 0 0 #ccc,
-    $leftPos-3 0 0 2px #ccc;
+    $x-1 0 0 -2px $dotColor,
+    $x-2 0 0 0 $dotColor,
+    $x-3 0 0 2px $dotColor;
   }
 }

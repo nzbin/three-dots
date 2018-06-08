@@ -34,9 +34,9 @@
 
 @keyframes dotFlashing {
   0% {
-    background-color: #ccc;
+    background-color: $dotColor;
   }
   100% {
-    background-color: #eee;
+    background-color: lighten($dotColor,20%);
   }
 }

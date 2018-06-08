@@ -3,9 +3,9 @@
 // ----------------------------------------------
 
 $leftPos: -9999px;
-$leftPos-1: - $leftPos - 15px;
-$leftPos-2: - $leftPos;
-$leftPos-3: - $leftPos + 15px;
+$x-1: - $leftPos - 15px;
+$x-2: - $leftPos;
+$x-3: - $leftPos + 15px;
 
 .dot-typing {
   position: relative;
@@ -13,55 +13,55 @@ $leftPos-3: - $leftPos + 15px;
   @include dot;
 
   box-shadow:
-  $leftPos-1 -5px 0 0 #ccc,
-  $leftPos-2 0 0 0 #ccc,
-  $leftPos-3 0 0 0 #ccc;
+  $x-1 0 0 0 $dotColor,
+  $x-2 0 0 0 $dotColor,
+  $x-3 0 0 0 $dotColor;
 
-  animation: dotTyping 1s infinite linear;
+  animation: dotTyping 1.5s infinite linear;
 
 }
 
 @keyframes dotTyping {
   0% {
     box-shadow:
-    $leftPos-1 -5px 0 0 #ccc,
-    $leftPos-2 0 0 0 #ccc,
-    $leftPos-3 0 0 0 #ccc;
+    $x-1 0 0 0 $dotColor,
+    $x-2 0 0 0 $dotColor,
+    $x-3 0 0 0 $dotColor;
   }
-  16.666% {
+  16.667% {
     box-shadow:
-    $leftPos-1 0 0 0 #ccc,
-    $leftPos-2 0 0 0 #ccc,
-    $leftPos-3 0 0 0 #ccc;
+    $x-1 -5px 0 0 $dotColor,
+    $x-2 0 0 0 $dotColor,
+    $x-3 0 0 0 $dotColor;
   }
   33.333% {
     box-shadow:
-    $leftPos-1 0 0 0 #ccc,
-    $leftPos-2 -5px 0 0 #ccc,
-    $leftPos-3 0 0 0 #ccc;
+    $x-1 0 0 0 $dotColor,
+    $x-2 0 0 0 $dotColor,
+    $x-3 0 0 0 $dotColor;
   }
   50% {
     box-shadow:
-    $leftPos-1 0 0 0 #ccc,
-    $leftPos-2 0 0 0 #ccc,
-    $leftPos-3 0 0 0 #ccc;
+    $x-1 0 0 0 $dotColor,
+    $x-2 -5px 0 0 $dotColor,
+    $x-3 0 0 0 $dotColor;
   }
-  66.666% {
+  66.667% {
     box-shadow:
-    $leftPos-1 0 0 0 #ccc,
-    $leftPos-2 0 0 0 #ccc,
-    $leftPos-3 -5px 0 0 #ccc;
+    $x-1 0 0 0 $dotColor,
+    $x-2 0 0 0 $dotColor,
+    $x-3 0 0 0 $dotColor;
   }
   83.333% {
     box-shadow:
-    $leftPos-1 0 0 0 #ccc,
-    $leftPos-2 0 0 0 #ccc,
-    $leftPos-3 0 0 0 #ccc;
+    $x-1 0 0 0 $dotColor,
+    $x-2 0 0 0 $dotColor,
+    $x-3 -5px 0 0 $dotColor;
   }
   100% {
     box-shadow:
-    $leftPos-1 -5px 0 0 #ccc,
-    $leftPos-2 0 0 0 #ccc,
-    $leftPos-3 0 0 0 #ccc;
+    $x-1 0 0 0 $dotColor,
+    $x-2 0 0 0 $dotColor,
+    $x-3 0 0 0 $dotColor;
   }
 }
