@@ -8,12 +8,17 @@
   <meta name="description" content="">
   <title>Three Dots</title>
   <link rel="apple-touch-icon" href="apple-touch-icon.png">
+  <link rel="stylesheet" href="css/snack.css">
   <link rel="stylesheet" href="css/three-dots.css">
   <!--[if lt IE 9]>
     <script src="https://cdn.bootcss.com/html5shiv/3.7.3/html5shiv.min.js"></script>
     <script src="https://cdn.bootcss.com/respond.js/1.4.2/respond.min.js"></script>
   <![endif]-->
   <style>
+  html{
+    font-size: 16px;
+  }
+
   html,
   body {
     height: 100%;
@@ -22,11 +27,10 @@
 
   .container{
     max-width: 64rem;
-    padding: 0 2%;
     margin: 0 auto;
   }
 
-  .tip{
+  .snippet{
     position: relative;
     background: #fff;
     padding: 2rem 5%;
@@ -36,23 +40,11 @@
     margin: 1.5rem 0;
   }
 
-  .stage{
-    width: 100px;
-    margin: 0 auto;
-  }
-
   .show-area {
     display: flex;
     justify-content: center;
     align-items: center;
-    width: 100px;
-    height: 100px;
-    margin-bottom: 10px;
-  }
-
-  select{
-    display: block;
-    width: 100%;
+    padding: 2rem 0;
   }
 
   </style>
@@ -63,40 +55,86 @@
         <p class="browserupgrade">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
     <![endif]-->
   <div class="container">
-    <div class="tip">
-      🔮 The project is a CSS loading animation created with three dots which made by just single element. I think the project can not only enhance your css skills but also improve your imagination 🔥.
+    <div class="snippet">
+      🔮 The project is a CSS loading animation created with three dots which made by just single element. I think the project can not only enhance your css skills but also improve your imagination. 🔥
     </div>
 
-    <div class="tip">
-
-      <div class="stage">
-        <div class="show-area">
-          <div class="dot-elastic" id="showElem"></div>
+    <div class="row">
+      <div class="col-3">
+        <div class="snippet">
+          <div class="show-area">
+            <div class="dot-elastic"></div>
+          </div>
         </div>
-
-        <select id="showSelect">
-          <option value="dot-elastic">dot-elastic</option>
-          <option value="dot-pulse">dot-pulse</option>
-          <option value="dot-flashing">dot-flashing</option>
-          <option value="dot-collision">dot-collision</option>
-          <option value="dot-revolution">dot-revolution</option>
-          <option value="dot-translation">dot-translation</option>
-          <option value="dot-typing">dot-typing</option>
-          <option value="dot-circle">dot-circle</option>
-        </select>
       </div>
 
+      <div class="col-3">
+        <div class="snippet">
+          <div class="show-area">
+            <div class="dot-pulse"></div>
+          </div>
+        </div>
+      </div>
+
+      <div class="col-3">
+        <div class="snippet">
+          <div class="show-area">
+            <div class="dot-flashing"></div>
+          </div>
+        </div>
+      </div>
+
+      <div class="col-3">
+        <div class="snippet">
+          <div class="show-area">
+            <div class="dot-collision"></div>
+          </div>
+        </div>
+      </div>
+
+      <div class="col-3">
+        <div class="snippet">
+          <div class="show-area">
+            <div class="dot-revolution"></div>
+          </div>
+        </div>
+      </div>
+
+      <div class="col-3">
+        <div class="snippet">
+          <div class="show-area">
+            <div class="dot-translation"></div>
+          </div>
+        </div>
+      </div>
+
+      <div class="col-3">
+        <div class="snippet">
+          <div class="show-area">
+            <div class="dot-typing"></div>
+          </div>
+        </div>
+      </div>
+
+      <div class="col-3">
+        <div class="snippet">
+          <div class="show-area">
+            <div class="dot-windmill"></div>
+          </div>
+        </div>
+      </div>
+
+      <div class="col-3">
+        <div class="snippet">
+          <div class="show-area">
+            <div class="dot-bricks"></div>
+          </div>
+        </div>
+      </div>
     </div>
 
   </div>
 
-  <script src="https://cdn.bootcss.com/jquery/1.12.4/jquery.min.js"></script>
-  <script>
-    $('#showSelect').on('change', function(){
-      var className = $(this).val();
-      $('#showElem').removeClass().addClass(className);
-    });
-  </script>
 </body>
 
 </html>
