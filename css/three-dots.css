@@ -349,60 +349,133 @@
     transform: rotateZ(0deg) translate3d(0, 0, 0);
   }
   100% {
-    transform: rotateZ(360deg) translate3d(0, 0, 0);
+    transform: rotateZ(720deg) translate3d(0, 0, 0);
   }
 }
 
 .dot-bricks {
   position: relative;
+  top: 8px;
   left: -9999px;
   width: 10px;
   height: 10px;
   border-radius: 5px;
   background-color: #9880ff;
-  box-shadow: 9999px -15px 0 0 #9880ff, 9999px 0 0 0 #9880ff, 10014px 0 0 0 #9880ff;
+  box-shadow: 9991px -16px 0 0 #9880ff, 9991px 0 0 0 #9880ff, 10007px 0 0 0 #9880ff;
   animation: dotBricks 3s infinite ease;
 }
 
 @keyframes dotBricks {
   0% {
-    box-shadow: 9999px -15px 0 0 #9880ff, 9999px 0 0 0 #9880ff, 10014px 0 0 0 #9880ff;
+    box-shadow: 9991px -16px 0 0 #9880ff, 9991px 0 0 0 #9880ff, 10007px 0 0 0 #9880ff;
   }
   8.333% {
-    box-shadow: 10014px -15px 0 0 #9880ff, 9999px 0 0 0 #9880ff, 10014px 0 0 0 #9880ff;
+    box-shadow: 10007px -16px 0 0 #9880ff, 9991px 0 0 0 #9880ff, 10007px 0 0 0 #9880ff;
   }
   16.667% {
-    box-shadow: 10014px -15px 0 0 #9880ff, 9999px -15px 0 0 #9880ff, 10014px 0 0 0 #9880ff;
+    box-shadow: 10007px -16px 0 0 #9880ff, 9991px -16px 0 0 #9880ff, 10007px 0 0 0 #9880ff;
   }
   25% {
-    box-shadow: 10014px -15px 0 0 #9880ff, 9999px -15px 0 0 #9880ff, 9999px 0 0 0 #9880ff;
+    box-shadow: 10007px -16px 0 0 #9880ff, 9991px -16px 0 0 #9880ff, 9991px 0 0 0 #9880ff;
   }
   33.333% {
-    box-shadow: 10014px 0 0 0 #9880ff, 9999px -15px 0 0 #9880ff, 9999px 0 0 0 #9880ff;
+    box-shadow: 10007px 0 0 0 #9880ff, 9991px -16px 0 0 #9880ff, 9991px 0 0 0 #9880ff;
   }
   41.667% {
-    box-shadow: 10014px 0 0 0 #9880ff, 10014px -15px 0 0 #9880ff, 9999px 0 0 0 #9880ff;
+    box-shadow: 10007px 0 0 0 #9880ff, 10007px -16px 0 0 #9880ff, 9991px 0 0 0 #9880ff;
   }
   50% {
-    box-shadow: 10014px 0 0 0 #9880ff, 10014px -15px 0 0 #9880ff, 9999px -15px 0 0 #9880ff;
+    box-shadow: 10007px 0 0 0 #9880ff, 10007px -16px 0 0 #9880ff, 9991px -16px 0 0 #9880ff;
   }
   58.333% {
-    box-shadow: 9999px 0 0 0 #9880ff, 10014px -15px 0 0 #9880ff, 9999px -15px 0 0 #9880ff;
+    box-shadow: 9991px 0 0 0 #9880ff, 10007px -16px 0 0 #9880ff, 9991px -16px 0 0 #9880ff;
   }
   66.666% {
-    box-shadow: 9999px 0 0 0 #9880ff, 10014px 0 0 0 #9880ff, 9999px -15px 0 0 #9880ff;
+    box-shadow: 9991px 0 0 0 #9880ff, 10007px 0 0 0 #9880ff, 9991px -16px 0 0 #9880ff;
   }
   75% {
-    box-shadow: 9999px 0 0 0 #9880ff, 10014px 0 0 0 #9880ff, 10014px -15px 0 0 #9880ff;
+    box-shadow: 9991px 0 0 0 #9880ff, 10007px 0 0 0 #9880ff, 10007px -16px 0 0 #9880ff;
   }
   83.333% {
-    box-shadow: 9999px -15px 0 0 #9880ff, 10014px 0 0 0 #9880ff, 10014px -15px 0 0 #9880ff;
+    box-shadow: 9991px -16px 0 0 #9880ff, 10007px 0 0 0 #9880ff, 10007px -16px 0 0 #9880ff;
   }
   91.667% {
-    box-shadow: 9999px -15px 0 0 #9880ff, 9999px 0 0 0 #9880ff, 10014px -15px 0 0 #9880ff;
+    box-shadow: 9991px -16px 0 0 #9880ff, 9991px 0 0 0 #9880ff, 10007px -16px 0 0 #9880ff;
   }
   100% {
-    box-shadow: 9999px -15px 0 0 #9880ff, 9999px 0 0 0 #9880ff, 10014px 0 0 0 #9880ff;
+    box-shadow: 9991px -16px 0 0 #9880ff, 9991px 0 0 0 #9880ff, 10007px 0 0 0 #9880ff;
+  }
+}
+
+.dot-floating {
+  position: relative;
+  width: 10px;
+  height: 10px;
+  border-radius: 5px;
+  background-color: #9880ff;
+  animation: dotFloating 3s infinite cubic-bezier(0.2, 0.64, 0.81, 0.23);
+}
+
+.dot-floating:before, .dot-floating:after {
+  content: '';
+  display: inline-block;
+  position: absolute;
+  top: 0;
+  width: 10px;
+  height: 10px;
+  border-radius: 5px;
+  background-color: #9880ff;
+}
+
+.dot-floating:before {
+  left: -10px;
+  animation: dotFloatingBefore 3s infinite ease-in-out;
+}
+
+.dot-floating:after {
+  left: -20px;
+  animation: dotFloatingAfter 3s infinite cubic-bezier(0.4, 0, 1, 1);
+}
+
+@keyframes dotFloating {
+  0% {
+    left: calc(-50% - 5px);
+  }
+  75% {
+    left: calc(50% + 100px + 5px);
+  }
+  100% {
+    left: calc(50% + 100px + 5px);
+  }
+}
+
+@keyframes dotFloatingBefore {
+  0% {
+    left: -50px;
+  }
+  50% {
+    left: -12px;
+  }
+  75% {
+    left: -50px;
+  }
+  100% {
+    left: -50px;
+  }
+}
+
+@keyframes dotFloatingAfter {
+  0% {
+    left: -100px;
+  }
+  50% {
+    left: -24px;
+  }
+  75% {
+    left: -100px;
+  }
+  100% {
+    left: -100px;
   }
 }
 
