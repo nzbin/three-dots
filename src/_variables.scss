@@ -2,6 +2,10 @@
 // Variables
 // --------------------------------------------------
 
+$dotWidth: 10px;
+$dotHeight: $dotWidth;
+$dotRadius: $dotWidth / 2;
+
 $dotColor: #9880ff;
 $dotBeforeColor: $dotColor;
 $dotAfterColor: $dotColor;

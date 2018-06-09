@@ -2,14 +2,16 @@
 // Dot Bricks
 // ----------------------------------------------
 
+$topPos: 8px;
 $leftPos: -9999px;
-$x-1: - $leftPos;
-$x-2: - $leftPos + 15px;
+$x-1: - $leftPos - $topPos;
+$x-2: - $leftPos - $topPos + 16px;
 $y-1: 0;
-$y-2: -15px;
+$y-2: -16px;
 
 .dot-bricks {
   position: relative;
+  top: $topPos;
   left: $leftPos;
   @include dot;
 

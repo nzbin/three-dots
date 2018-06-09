@@ -1,0 +1,76 @@
+// ----------------------------------------------
+// Dot Floating
+// ----------------------------------------------
+
+$d-max: 50px;
+$d-min: 12px;
+
+.dot-floating {
+  position: relative;
+  @include dot;
+
+  animation: dotFloating 3s infinite cubic-bezier(.2,.64,.81,.23);
+
+  &:before,
+  &:after {
+    content: '';
+    display: inline-block;
+    position: absolute;
+    top: 0;
+
+    @include dot;
+  }
+
+  &:before {
+    left: -10px;
+    animation: dotFloatingBefore 3s infinite ease-in-out;
+  }
+
+  &:after {
+    left: -20px;
+    animation: dotFloatingAfter 3s infinite cubic-bezier(0.4, 0, 1, 1);
+  }
+}
+
+
+@keyframes dotFloating {
+  0% {
+    left: calc(-50% - 5px);
+  }
+  75% {
+    left: calc(50% + 100px + 5px);
+  }
+  100% {
+    left: calc(50% + 100px + 5px);
+  }
+}
+
+@keyframes dotFloatingBefore {
+  0% {
+    left: - $d-max;
+  }
+  50% {
+    left: - $d-min;
+  }
+  75%{
+    left: - $d-max;
+  }
+  100% {
+    left: - $d-max;
+  }
+}
+
+@keyframes dotFloatingAfter {
+  0% {
+    left: - $d-max*2;
+  }
+  50% {
+    left: - $d-min*2;
+  }
+  75%{
+    left: - $d-max*2;
+  }
+  100% {
+    left: - $d-max*2;
+  }
+}
