@@ -37,6 +37,6 @@
     "sass": "node-sass --output-style expanded src/three-dots.scss dist/three-dots.css && node-sass --output-style compressed src/three-dots.scss dist/three-dots.min.css",
     "copy": "cpy dist/*.css !dist/*.min.css docs/css",
     "autoprefixer": "postcss -u autoprefixer --no-map.inline --autoprefixer.browsers \"last 1 versions\" -r dist/*.css",
-    "watch": "onchange src -- run-p build"
+    "watch": "onchange src -- run-s sass copy"
   }
 }
