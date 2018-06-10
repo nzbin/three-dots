@@ -18,7 +18,7 @@
   animation: dotElastic 1s infinite linear;
 }
 
-.dot-elastic:before, .dot-elastic:after {
+.dot-elastic::before, .dot-elastic::after {
   content: '';
   display: inline-block;
   position: absolute;
@@ -29,12 +29,12 @@
   background-color: #9880ff;
 }
 
-.dot-elastic:before {
+.dot-elastic::before {
   left: -15px;
   animation: dotElasticBefore 1s infinite linear;
 }
 
-.dot-elastic:after {
+.dot-elastic::after {
   left: 15px;
   animation: dotElasticAfter 1s infinite linear;
 }
@@ -132,7 +132,7 @@
   animation-delay: .5s;
 }
 
-.dot-flashing:before, .dot-flashing:after {
+.dot-flashing::before, .dot-flashing::after {
   content: '';
   display: inline-block;
   position: absolute;
@@ -143,13 +143,13 @@
   background-color: #9880ff;
 }
 
-.dot-flashing:before {
+.dot-flashing::before {
   left: -15px;
   animation: dotFlashing 1s infinite alternate;
   animation-delay: 0s;
 }
 
-.dot-flashing:after {
+.dot-flashing::after {
   left: 15px;
   animation: dotFlashing 1s infinite alternate;
   animation-delay: 1s;
@@ -172,7 +172,7 @@
   background-color: #9880ff;
 }
 
-.dot-collision:before, .dot-collision:after {
+.dot-collision::before, .dot-collision::after {
   content: '';
   display: inline-block;
   position: absolute;
@@ -183,19 +183,22 @@
   background-color: #9880ff;
 }
 
-.dot-collision:before {
+.dot-collision::before {
   left: -10px;
   animation: dotCollisionBefore 2s infinite ease-in;
 }
 
-.dot-collision:after {
+.dot-collision::after {
   left: 10px;
   animation: dotCollisionAfter 2s infinite ease-in;
   animation-delay: 1s;
 }
 
 @keyframes dotCollisionBefore {
-  0%, 50%, 75%, 100% {
+  0%,
+  50%,
+  75%,
+  100% {
     transform: translateX(0);
   }
   25% {
@@ -204,7 +207,10 @@
 }
 
 @keyframes dotCollisionAfter {
-  0%, 50%, 75%, 100% {
+  0%,
+  50%,
+  75%,
+  100% {
     transform: translateX(0);
   }
   25% {
@@ -220,7 +226,7 @@
   background-color: #9880ff;
 }
 
-.dot-revolution:before, .dot-revolution:after {
+.dot-revolution::before, .dot-revolution::after {
   content: '';
   display: inline-block;
   position: absolute;
@@ -231,14 +237,14 @@
   background-color: #9880ff;
 }
 
-.dot-revolution:before {
+.dot-revolution::before {
   left: -25px;
   top: -15px;
   transform-origin: 30px 20px;
   animation: dotRevolution 2s linear infinite;
 }
 
-.dot-revolution:after {
+.dot-revolution::after {
   left: -15px;
   top: -10px;
   transform-origin: 20px 15px;
@@ -323,7 +329,7 @@
   animation: dotWindmill 2s infinite ease-in-out;
 }
 
-.dot-windmill:before, .dot-windmill:after {
+.dot-windmill::before, .dot-windmill::after {
   content: '';
   display: inline-block;
   position: absolute;
@@ -334,12 +340,12 @@
   background-color: #9880ff;
 }
 
-.dot-windmill:before {
+.dot-windmill::before {
   left: -12.99px;
   top: 22.5px;
 }
 
-.dot-windmill:after {
+.dot-windmill::after {
   left: 12.99px;
   top: 22.5px;
 }
@@ -416,7 +422,7 @@
   animation: dotFloating 3s infinite cubic-bezier(0.2, 0.64, 0.81, 0.23);
 }
 
-.dot-floating:before, .dot-floating:after {
+.dot-floating::before, .dot-floating::after {
   content: '';
   display: inline-block;
   position: absolute;
@@ -427,12 +433,12 @@
   background-color: #9880ff;
 }
 
-.dot-floating:before {
+.dot-floating::before {
   left: -10px;
   animation: dotFloatingBefore 3s infinite ease-in-out;
 }
 
-.dot-floating:after {
+.dot-floating::after {
   left: -20px;
   animation: dotFloatingAfter 3s infinite cubic-bezier(0.4, 0, 1, 1);
 }

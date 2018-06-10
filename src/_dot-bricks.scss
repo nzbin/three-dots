@@ -1,11 +1,10 @@
 // ----------------------------------------------
 // Dot Bricks
 // ----------------------------------------------
-
 $topPos: 8px;
 $leftPos: -9999px;
 $x-1: - $leftPos - $topPos;
-$x-2: - $leftPos - $topPos + 16px;
+$x-2: - $leftPos - $topPos+16px;
 $y-1: 0;
 $y-2: -16px;
 
@@ -13,94 +12,105 @@ $y-2: -16px;
   position: relative;
   top: $topPos;
   left: $leftPos;
+
   @include dot;
 
   box-shadow:
-  $x-1 $y-2 0 0 $dotColor,
-  $x-1 $y-1 0 0 $dotColor,
-  $x-2 $y-1 0 0 $dotColor;
-
+    $x-1 $y-2 0 0 $dotColor,
+    $x-1 $y-1 0 0 $dotColor,
+    $x-2 $y-1 0 0 $dotColor;
   animation: dotBricks 3s infinite ease;
-
 }
 
 @keyframes dotBricks {
   0% {
     box-shadow:
-    $x-1 $y-2 0 0 $dotColor,
-    $x-1 $y-1 0 0 $dotColor,
-    $x-2 $y-1 0 0 $dotColor;
+      $x-1 $y-2 0 0 $dotColor,
+      $x-1 $y-1 0 0 $dotColor,
+      $x-2 $y-1 0 0 $dotColor;
   }
+
   8.333% {
     box-shadow:
-    $x-2 $y-2 0 0 $dotColor,
-    $x-1 $y-1 0 0 $dotColor,
-    $x-2 $y-1 0 0 $dotColor;
+      $x-2 $y-2 0 0 $dotColor,
+      $x-1 $y-1 0 0 $dotColor,
+      $x-2 $y-1 0 0 $dotColor;
   }
+
   16.667% {
     box-shadow:
-    $x-2 $y-2 0 0 $dotColor,
-    $x-1 $y-2 0 0 $dotColor,
-    $x-2 $y-1 0 0 $dotColor;
+      $x-2 $y-2 0 0 $dotColor,
+      $x-1 $y-2 0 0 $dotColor,
+      $x-2 $y-1 0 0 $dotColor;
   }
+
   25% {
     box-shadow:
-    $x-2 $y-2 0 0 $dotColor,
-    $x-1 $y-2 0 0 $dotColor,
-    $x-1 $y-1 0 0 $dotColor;
+      $x-2 $y-2 0 0 $dotColor,
+      $x-1 $y-2 0 0 $dotColor,
+      $x-1 $y-1 0 0 $dotColor;
   }
+
   33.333% {
     box-shadow:
-    $x-2 $y-1 0 0 $dotColor,
-    $x-1 $y-2 0 0 $dotColor,
-    $x-1 $y-1 0 0 $dotColor;
+      $x-2 $y-1 0 0 $dotColor,
+      $x-1 $y-2 0 0 $dotColor,
+      $x-1 $y-1 0 0 $dotColor;
   }
+
   41.667% {
     box-shadow:
-    $x-2 $y-1 0 0 $dotColor,
-    $x-2 $y-2 0 0 $dotColor,
-    $x-1 $y-1 0 0 $dotColor;
+      $x-2 $y-1 0 0 $dotColor,
+      $x-2 $y-2 0 0 $dotColor,
+      $x-1 $y-1 0 0 $dotColor;
   }
+
   50% {
     box-shadow:
-    $x-2 $y-1 0 0 $dotColor,
-    $x-2 $y-2 0 0 $dotColor,
-    $x-1 $y-2 0 0 $dotColor;
+      $x-2 $y-1 0 0 $dotColor,
+      $x-2 $y-2 0 0 $dotColor,
+      $x-1 $y-2 0 0 $dotColor;
   }
+
   58.333% {
     box-shadow:
-    $x-1 $y-1 0 0 $dotColor,
-    $x-2 $y-2 0 0 $dotColor,
-    $x-1 $y-2 0 0 $dotColor;
+      $x-1 $y-1 0 0 $dotColor,
+      $x-2 $y-2 0 0 $dotColor,
+      $x-1 $y-2 0 0 $dotColor;
   }
+
   66.666% {
     box-shadow:
-    $x-1 $y-1 0 0 $dotColor,
-    $x-2 $y-1 0 0 $dotColor,
-    $x-1 $y-2 0 0 $dotColor;
+      $x-1 $y-1 0 0 $dotColor,
+      $x-2 $y-1 0 0 $dotColor,
+      $x-1 $y-2 0 0 $dotColor;
   }
+
   75% {
     box-shadow:
-    $x-1 $y-1 0 0 $dotColor,
-    $x-2 $y-1 0 0 $dotColor,
-    $x-2 $y-2 0 0 $dotColor;
+      $x-1 $y-1 0 0 $dotColor,
+      $x-2 $y-1 0 0 $dotColor,
+      $x-2 $y-2 0 0 $dotColor;
   }
+
   83.333% {
     box-shadow:
-    $x-1 $y-2 0 0 $dotColor,
-    $x-2 $y-1 0 0 $dotColor,
-    $x-2 $y-2 0 0 $dotColor;
+      $x-1 $y-2 0 0 $dotColor,
+      $x-2 $y-1 0 0 $dotColor,
+      $x-2 $y-2 0 0 $dotColor;
   }
+
   91.667% {
     box-shadow:
-    $x-1 $y-2 0 0 $dotColor,
-    $x-1 $y-1 0 0 $dotColor,
-    $x-2 $y-2 0 0 $dotColor;
+      $x-1 $y-2 0 0 $dotColor,
+      $x-1 $y-1 0 0 $dotColor,
+      $x-2 $y-2 0 0 $dotColor;
   }
+
   100% {
     box-shadow:
-    $x-1 $y-2 0 0 $dotColor,
-    $x-1 $y-1 0 0 $dotColor,
-    $x-2 $y-1 0 0 $dotColor;
+      $x-1 $y-2 0 0 $dotColor,
+      $x-1 $y-1 0 0 $dotColor,
+      $x-2 $y-1 0 0 $dotColor;
   }
 }

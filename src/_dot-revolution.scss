@@ -1,19 +1,13 @@
 // ----------------------------------------------
 // Dot Revolution
 // ----------------------------------------------
-
 .dot-revolution {
   position: relative;
-  // box-shadow:
-  //   0 0 0 14px #fff,
-  //   0 0 0 15px #eee,
-  //   0 0 0 24px #fff,
-  //   0 0 0 25px #eee;
 
   @include dot;
 
-  &:before,
-  &:after {
+  &::before,
+  &::after {
     content: '';
     display: inline-block;
     position: absolute;
@@ -22,14 +16,14 @@
     @include dot;
   }
 
-  &:before {
+  &::before {
     left: -25px;
     top: -15px;
     transform-origin: 30px 20px;
     animation: dotRevolution 2s linear infinite;
   }
 
-  &:after {
+  &::after {
     left: -15px;
     top: -10px;
     transform-origin: 20px 15px;
@@ -39,9 +33,10 @@
 
 @keyframes dotRevolution {
   0% {
-    transform: rotateZ(0deg) translate3d(0,0,0);
+    transform: rotateZ(0deg) translate3d(0, 0, 0);
   }
+
   100% {
-    transform: rotateZ(360deg) translate3d(0,0,0);
+    transform: rotateZ(360deg) translate3d(0, 0, 0);
   }
 }

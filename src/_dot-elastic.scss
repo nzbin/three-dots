@@ -1,84 +1,96 @@
 // ----------------------------------------------
 // Dot Elastic
 // ----------------------------------------------
-
 .dot-elastic {
   position: relative;
+
   @include dot;
 
   animation: dotElastic 1s infinite linear;
 
-  &:before,
-  &:after {
+  &::before,
+  &::after {
     content: '';
     display: inline-block;
     position: absolute;
     top: 0;
+
     @include dot;
   }
 
-  &:before {
+  &::before {
     left: -15px;
     animation: dotElasticBefore 1s infinite linear;
   }
 
-  &:after {
+  &::after {
     left: 15px;
     animation: dotElasticAfter 1s infinite linear;
   }
 }
 
-
 @keyframes dotElasticBefore {
   0% {
-    transform: scale(1,1);
+    transform: scale(1, 1);
   }
+
   25% {
-    transform: scale(1,1.5);
+    transform: scale(1, 1.5);
   }
+
   50% {
-    transform: scale(1,0.67);
+    transform: scale(1, .67);
   }
+
   75% {
-    transform: scale(1,1);
+    transform: scale(1, 1);
   }
+
   100% {
-    transform: scale(1,1);
+    transform: scale(1, 1);
   }
 }
 
 @keyframes dotElastic {
   0% {
-    transform: scale(1,1);
+    transform: scale(1, 1);
   }
+
   25% {
-    transform: scale(1,1);
+    transform: scale(1, 1);
   }
+
   50% {
-    transform: scale(1,1.5);
+    transform: scale(1, 1.5);
   }
+
   75% {
-    transform: scale(1,1);
+    transform: scale(1, 1);
   }
+
   100% {
-    transform: scale(1,1);
+    transform: scale(1, 1);
   }
 }
 
 @keyframes dotElasticAfter {
   0% {
-    transform: scale(1,1);
+    transform: scale(1, 1);
   }
+
   25% {
-    transform: scale(1,1);
+    transform: scale(1, 1);
   }
+
   50% {
-    transform: scale(1,0.67);
+    transform: scale(1, .67);
   }
+
   75% {
-    transform: scale(1,1.5);
+    transform: scale(1, 1.5);
   }
+
   100% {
-    transform: scale(1,1);
+    transform: scale(1, 1);
   }
 }

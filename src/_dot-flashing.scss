@@ -1,42 +1,43 @@
 // ----------------------------------------------
 // Dot Flashing
 // ----------------------------------------------
-
 .dot-flashing {
   position: relative;
+
   @include dot;
 
   animation: dotFlashing 1s infinite alternate;
   animation-delay: .5s;
 
-  &:before,
-  &:after {
+  &::before,
+  &::after {
     content: '';
     display: inline-block;
     position: absolute;
     top: 0;
+
     @include dot;
   }
 
-  &:before {
+  &::before {
     left: -15px;
     animation: dotFlashing 1s infinite alternate;
     animation-delay: 0s;
   }
 
-  &:after {
+  &::after {
     left: 15px;
     animation: dotFlashing 1s infinite alternate;
     animation-delay: 1s;
   }
 }
 
-
 @keyframes dotFlashing {
   0% {
     background-color: $dotColor;
   }
+
   100% {
-    background-color: lighten($dotColor,20%);
+    background-color: lighten($dotColor, 20%);
   }
 }

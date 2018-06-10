@@ -1,43 +1,43 @@
 // ----------------------------------------------
 // Dot Translation
 // ----------------------------------------------
-
 $leftPos: -9999px;
 $x-1: - $leftPos - 15px;
 $x-2: - $leftPos;
-$x-3: - $leftPos + 15px;
+$x-3: - $leftPos+15px;
 
 .dot-translation {
   position: relative;
   left: $leftPos;
+
   @include dot;
 
   box-shadow:
-  $x-1 0 0 0 $dotColor,
-  $x-2 0 0 0 $dotColor,
-  $x-3 0 0 0 $dotColor;
-
+    $x-1 0 0 0 $dotColor,
+    $x-2 0 0 0 $dotColor,
+    $x-3 0 0 0 $dotColor;
   animation: dotTranslation 3s infinite linear;
-
 }
 
 @keyframes dotTranslation {
   0% {
     box-shadow:
-    $x-1 0 0 -1px $dotColor,
-    $x-2 0 0 1px $dotColor,
-    $x-3 0 0 -1px $dotColor;
+      $x-1 0 0 -1px $dotColor,
+      $x-2 0 0 1px $dotColor,
+      $x-3 0 0 -1px $dotColor;
   }
+
   50% {
     box-shadow:
-    $x-3 0 0 -1px $dotColor,
-    $x-1 0 0 -1px $dotColor,
-    $x-2 0 0 1px $dotColor;
+      $x-3 0 0 -1px $dotColor,
+      $x-1 0 0 -1px $dotColor,
+      $x-2 0 0 1px $dotColor;
   }
+
   100% {
     box-shadow:
-    $x-2 0 0 1px $dotColor,
-    $x-3 0 0 -1px $dotColor,
-    $x-1 0 0 -1px $dotColor;
+      $x-2 0 0 1px $dotColor,
+      $x-3 0 0 -1px $dotColor,
+      $x-1 0 0 -1px $dotColor;
   }
 }
