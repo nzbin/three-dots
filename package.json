@@ -25,7 +25,11 @@
     "npm-run-all": "^2.3.0",
     "onchange": "^2.5.0",
     "postcss-cli": "^2.6.0",
-    "rimraf": "^2.5.4"
+    "rimraf": "^2.5.4",
+    "stylelint": "^9.2.1",
+    "stylelint-config-recommended-scss": "^3.2.0",
+    "stylelint-config-standard": "^18.2.0",
+    "stylelint-scss": "^3.1.0"
   },
   "engines": {
     "node": ">=4"
@@ -37,6 +41,7 @@
     "sass": "node-sass --output-style expanded src/three-dots.scss dist/three-dots.css && node-sass --output-style compressed src/three-dots.scss dist/three-dots.min.css",
     "copy": "cpy dist/*.css !dist/*.min.css docs/css",
     "autoprefixer": "postcss -u autoprefixer --no-map.inline --autoprefixer.browsers \"last 1 versions\" -r dist/*.css",
-    "watch": "onchange src -- run-s sass copy"
+    "watch": "onchange src -- run-s sass copy",
+    "lint": "stylelint --syntax scss \"src/**/*.scss\""
   }
 }
