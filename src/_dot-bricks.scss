@@ -19,7 +19,7 @@ $y-2: -16px;
     $x-1 $y-2 0 0 $dotColor,
     $x-1 $y-1 0 0 $dotColor,
     $x-2 $y-1 0 0 $dotColor;
-  animation: dotBricks 3s infinite ease;
+  animation: dotBricks 2s infinite ease;
 }
 
 @keyframes dotBricks {

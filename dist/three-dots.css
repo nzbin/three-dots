@@ -4,7 +4,7 @@
  *
  * https://nzbin.github.io/three-dots/
  *
- * Copyright (c) 2017 nzbin
+ * Copyright (c) 2018 nzbin
  *
  * Released under the MIT license
  *
@@ -260,7 +260,7 @@
   }
 }
 
-.dot-translation {
+.dot-carousel {
   position: relative;
   left: -9999px;
   width: 10px;
@@ -268,10 +268,10 @@
   border-radius: 5px;
   background-color: #9880ff;
   box-shadow: 9984px 0 0 0 #9880ff, 9999px 0 0 0 #9880ff, 10014px 0 0 0 #9880ff;
-  animation: dotTranslation 3s infinite linear;
+  animation: dotCarousel 1.5s infinite linear;
 }
 
-@keyframes dotTranslation {
+@keyframes dotCarousel {
   0% {
     box-shadow: 9984px 0 0 -1px #9880ff, 9999px 0 0 1px #9880ff, 10014px 0 0 -1px #9880ff;
   }
@@ -299,19 +299,19 @@
     box-shadow: 9984px 0 0 0 #9880ff, 9999px 0 0 0 #9880ff, 10014px 0 0 0 #9880ff;
   }
   16.667% {
-    box-shadow: 9984px -5px 0 0 #9880ff, 9999px 0 0 0 #9880ff, 10014px 0 0 0 #9880ff;
+    box-shadow: 9984px -10px 0 0 #9880ff, 9999px 0 0 0 #9880ff, 10014px 0 0 0 #9880ff;
   }
   33.333% {
     box-shadow: 9984px 0 0 0 #9880ff, 9999px 0 0 0 #9880ff, 10014px 0 0 0 #9880ff;
   }
   50% {
-    box-shadow: 9984px 0 0 0 #9880ff, 9999px -5px 0 0 #9880ff, 10014px 0 0 0 #9880ff;
+    box-shadow: 9984px 0 0 0 #9880ff, 9999px -10px 0 0 #9880ff, 10014px 0 0 0 #9880ff;
   }
   66.667% {
     box-shadow: 9984px 0 0 0 #9880ff, 9999px 0 0 0 #9880ff, 10014px 0 0 0 #9880ff;
   }
   83.333% {
-    box-shadow: 9984px 0 0 0 #9880ff, 9999px 0 0 0 #9880ff, 10014px -5px 0 0 #9880ff;
+    box-shadow: 9984px 0 0 0 #9880ff, 9999px 0 0 0 #9880ff, 10014px -10px 0 0 #9880ff;
   }
   100% {
     box-shadow: 9984px 0 0 0 #9880ff, 9999px 0 0 0 #9880ff, 10014px 0 0 0 #9880ff;
@@ -368,7 +368,7 @@
   border-radius: 5px;
   background-color: #9880ff;
   box-shadow: 9991px -16px 0 0 #9880ff, 9991px 0 0 0 #9880ff, 10007px 0 0 0 #9880ff;
-  animation: dotBricks 3s infinite ease;
+  animation: dotBricks 2s infinite ease;
 }
 
 @keyframes dotBricks {
@@ -482,6 +482,74 @@
   }
   100% {
     left: -100px;
+  }
+}
+
+.dot-hourglass {
+  position: relative;
+  top: -15px;
+  width: 10px;
+  height: 10px;
+  border-radius: 5px;
+  background-color: #9880ff;
+  transform-origin: 5px 20px;
+  animation: dotHourglass 2.4s infinite ease-in-out;
+  animation-delay: .6s;
+}
+
+.dot-hourglass::before, .dot-hourglass::after {
+  content: '';
+  display: inline-block;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 10px;
+  height: 10px;
+  border-radius: 5px;
+  background-color: #9880ff;
+}
+
+.dot-hourglass::before {
+  top: 30px;
+}
+
+.dot-hourglass::after {
+  animation: dotHourglassAfter 2.4s infinite cubic-bezier(0.65, 0.05, 0.36, 1);
+}
+
+@keyframes dotHourglass {
+  0% {
+    transform: rotateZ(0deg);
+  }
+  25% {
+    transform: rotateZ(180deg);
+  }
+  50% {
+    transform: rotateZ(180deg);
+  }
+  75% {
+    transform: rotateZ(360deg);
+  }
+  100% {
+    transform: rotateZ(360deg);
+  }
+}
+
+@keyframes dotHourglassAfter {
+  0% {
+    transform: translateY(0);
+  }
+  25% {
+    transform: translateY(30px);
+  }
+  50% {
+    transform: translateY(30px);
+  }
+  75% {
+    transform: translateY(0);
+  }
+  100% {
+    transform: translateY(0);
   }
 }
 

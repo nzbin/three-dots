@@ -30,7 +30,7 @@ $x-3: - $leftPos + 15px;
 
   16.667% {
     box-shadow:
-      $x-1 -5px 0 0 $dotColor,
+      $x-1 -10px 0 0 $dotColor,
       $x-2 0 0 0 $dotColor,
       $x-3 0 0 0 $dotColor;
   }
@@ -45,7 +45,7 @@ $x-3: - $leftPos + 15px;
   50% {
     box-shadow:
       $x-1 0 0 0 $dotColor,
-      $x-2 -5px 0 0 $dotColor,
+      $x-2 -10px 0 0 $dotColor,
       $x-3 0 0 0 $dotColor;
   }
 
@@ -60,7 +60,7 @@ $x-3: - $leftPos + 15px;
     box-shadow:
       $x-1 0 0 0 $dotColor,
       $x-2 0 0 0 $dotColor,
-      $x-3 -5px 0 0 $dotColor;
+      $x-3 -10px 0 0 $dotColor;
   }
 
   100% {
