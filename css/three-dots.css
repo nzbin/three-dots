@@ -553,4 +553,41 @@
   }
 }
 
+.dot-spin {
+  position: relative;
+  width: 10px;
+  height: 10px;
+  border-radius: 5px;
+  box-shadow: 0 -17px 0 #9880ff, 12px -12px 0 #9880ff, 17px 0 0 #9880ff, 12px 12px 0 rgba(152, 128, 255, 0), 0 17px 0 rgba(152, 128, 255, 0), -12px 12px 0 rgba(152, 128, 255, 0), -17px 0 0 rgba(152, 128, 255, 0), -12px -12px 0 rgba(152, 128, 255, 0);
+  animation: dotSpin 1.5s infinite linear;
+}
+
+@keyframes dotSpin {
+  0%,
+  100% {
+    box-shadow: 0 -17px 0 #9880ff, 12px -12px 0 #9880ff, 17px 0 0 #9880ff, 12px 12px 0 rgba(152, 128, 255, 0), 0 17px 0 rgba(152, 128, 255, 0), -12px 12px 0 rgba(152, 128, 255, 0), -17px 0 0 rgba(152, 128, 255, 0), -12px -12px 0 rgba(152, 128, 255, 0);
+  }
+  12.5% {
+    box-shadow: 0 -17px 0 rgba(152, 128, 255, 0), 12px -12px 0 #9880ff, 17px 0 0 #9880ff, 12px 12px 0 #9880ff, 0 17px 0 rgba(152, 128, 255, 0), -12px 12px 0 rgba(152, 128, 255, 0), -17px 0 0 rgba(152, 128, 255, 0), -12px -12px 0 rgba(152, 128, 255, 0);
+  }
+  25% {
+    box-shadow: 0 -17px 0 rgba(152, 128, 255, 0), 12px -12px 0 rgba(152, 128, 255, 0), 17px 0 0 #9880ff, 12px 12px 0 #9880ff, 0 17px 0 #9880ff, -12px 12px 0 rgba(152, 128, 255, 0), -17px 0 0 rgba(152, 128, 255, 0), -12px -12px 0 rgba(152, 128, 255, 0);
+  }
+  37.5% {
+    box-shadow: 0 -17px 0 rgba(152, 128, 255, 0), 12px -12px 0 rgba(152, 128, 255, 0), 17px 0 0 rgba(152, 128, 255, 0), 12px 12px 0 #9880ff, 0 17px 0 #9880ff, -12px 12px 0 #9880ff, -17px 0 0 rgba(152, 128, 255, 0), -12px -12px 0 rgba(152, 128, 255, 0);
+  }
+  50% {
+    box-shadow: 0 -17px 0 rgba(152, 128, 255, 0), 12px -12px 0 rgba(152, 128, 255, 0), 17px 0 0 rgba(152, 128, 255, 0), 12px 12px 0 rgba(152, 128, 255, 0), 0 17px 0 #9880ff, -12px 12px 0 #9880ff, -17px 0 0 #9880ff, -12px -12px 0 rgba(152, 128, 255, 0);
+  }
+  62.5% {
+    box-shadow: 0 -17px 0 rgba(152, 128, 255, 0), 12px -12px 0 rgba(152, 128, 255, 0), 17px 0 0 rgba(152, 128, 255, 0), 12px 12px 0 rgba(152, 128, 255, 0), 0 17px 0 rgba(152, 128, 255, 0), -12px 12px 0 #9880ff, -17px 0 0 #9880ff, -12px -12px 0 #9880ff;
+  }
+  75% {
+    box-shadow: 0 -17px 0 #9880ff, 12px -12px 0 rgba(152, 128, 255, 0), 17px 0 0 rgba(152, 128, 255, 0), 12px 12px 0 rgba(152, 128, 255, 0), 0 17px 0 rgba(152, 128, 255, 0), -12px 12px 0 rgba(152, 128, 255, 0), -17px 0 0 #9880ff, -12px -12px 0 #9880ff;
+  }
+  87.5% {
+    box-shadow: 0 -17px 0 #9880ff, 12px -12px 0 #9880ff, 17px 0 0 rgba(152, 128, 255, 0), 12px 12px 0 rgba(152, 128, 255, 0), 0 17px 0 rgba(152, 128, 255, 0), -12px 12px 0 rgba(152, 128, 255, 0), -17px 0 0 rgba(152, 128, 255, 0), -12px -12px 0 #9880ff;
+  }
+}
+
 /*# sourceMappingURL=three-dots.css.map */
