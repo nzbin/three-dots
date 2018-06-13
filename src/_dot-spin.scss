@@ -1,18 +1,21 @@
-// ----------------------------------------------
-// Dot Spin
-// ----------------------------------------------
-$x-1: 17px;
-$y-1: 17px;
-$-x-1: - $x-1;
-$-y-1: - $y-1;
+/**
+ * ==============================================
+ * Dot Spin
+ * ==============================================
+ */
 
-$x-2: 12px;
-$y-2: 12px;
-$-x-2: - $x-2;
-$-y-2: - $y-2;
+$x1: 17px;
+$y1: 17px;
+$-x1: - $x1;
+$-y1: - $y1;
 
-$color-0: rgba(152,128,255,0);
-$color-1: rgba(152,128,255,1);
+$x2: 12px;
+$y2: 12px;
+$-x2: - $x2;
+$-y2: - $y2;
+
+$color-0: rgba($dotColor,0);
+$color-1: rgba($dotColor,1);
 
 .dot-spin {
   position: relative;
@@ -20,14 +23,14 @@ $color-1: rgba(152,128,255,1);
   height: $dotHeight;
   border-radius: $dotRadius;
   box-shadow:
-  0 $-y-1 0 $color-1,
-  $x-2 $-y-2 0 $color-1,
-  $x-1 0 0 $color-1,
-  $x-2 $y-2 0 $color-0,
-  0 $y-1 0 $color-0,
-  $-x-2 $y-2 0 $color-0,
-  $-x-1 0 0 $color-0,
-  $-x-2 $-y-2 0 $color-0;
+  0 $-y1 0 $color-1,
+  $x2 $-y2 0 $color-1,
+  $x1 0 0 $color-1,
+  $x2 $y2 0 $color-0,
+  0 $y1 0 $color-0,
+  $-x2 $y2 0 $color-0,
+  $-x1 0 0 $color-0,
+  $-x2 $-y2 0 $color-0;
   animation: dotSpin 1.5s infinite linear;
 }
 
@@ -35,90 +38,90 @@ $color-1: rgba(152,128,255,1);
   0%,
   100% {
     box-shadow:
-    0 $-y-1 0 $color-1,
-    $x-2 $-y-2 0 $color-1,
-    $x-1 0 0 $color-1,
-    $x-2 $y-2 0 $color-0,
-    0 $y-1 0 $color-0,
-    $-x-2 $y-2 0 $color-0,
-    $-x-1 0 0 $color-0,
-    $-x-2 $-y-2 0 $color-0;
+    0 $-y1 0 $color-1,
+    $x2 $-y2 0 $color-1,
+    $x1 0 0 $color-1,
+    $x2 $y2 0 $color-0,
+    0 $y1 0 $color-0,
+    $-x2 $y2 0 $color-0,
+    $-x1 0 0 $color-0,
+    $-x2 $-y2 0 $color-0;
   }
   12.5% {
     box-shadow:
-    0 $-y-1 0 $color-0,
-    $x-2 $-y-2 0 $color-1,
-    $x-1 0 0 $color-1,
-    $x-2 $y-2 0 $color-1,
-    0 $y-1 0 $color-0,
-    $-x-2 $y-2 0 $color-0,
-    $-x-1 0 0 $color-0,
-    $-x-2 $-y-2 0 $color-0;
+    0 $-y1 0 $color-0,
+    $x2 $-y2 0 $color-1,
+    $x1 0 0 $color-1,
+    $x2 $y2 0 $color-1,
+    0 $y1 0 $color-0,
+    $-x2 $y2 0 $color-0,
+    $-x1 0 0 $color-0,
+    $-x2 $-y2 0 $color-0;
   }
   25% {
     box-shadow:
-    0 $-y-1 0 $color-0,
-    $x-2 $-y-2 0 $color-0,
-    $x-1 0 0 $color-1,
-    $x-2 $y-2 0 $color-1,
-    0 $y-1 0 $color-1,
-    $-x-2 $y-2 0 $color-0,
-    $-x-1 0 0 $color-0,
-    $-x-2 $-y-2 0 $color-0;
+    0 $-y1 0 $color-0,
+    $x2 $-y2 0 $color-0,
+    $x1 0 0 $color-1,
+    $x2 $y2 0 $color-1,
+    0 $y1 0 $color-1,
+    $-x2 $y2 0 $color-0,
+    $-x1 0 0 $color-0,
+    $-x2 $-y2 0 $color-0;
   }
   37.5% {
     box-shadow:
-    0 $-y-1 0 $color-0,
-    $x-2 $-y-2 0 $color-0,
-    $x-1 0 0 $color-0,
-    $x-2 $y-2 0 $color-1,
-    0 $y-1 0 $color-1,
-    $-x-2 $y-2 0 $color-1,
-    $-x-1 0 0 $color-0,
-    $-x-2 $-y-2 0 $color-0;
+    0 $-y1 0 $color-0,
+    $x2 $-y2 0 $color-0,
+    $x1 0 0 $color-0,
+    $x2 $y2 0 $color-1,
+    0 $y1 0 $color-1,
+    $-x2 $y2 0 $color-1,
+    $-x1 0 0 $color-0,
+    $-x2 $-y2 0 $color-0;
   }
   50% {
     box-shadow:
-    0 $-y-1 0 $color-0,
-    $x-2 $-y-2 0 $color-0,
-    $x-1 0 0 $color-0,
-    $x-2 $y-2 0 $color-0,
-    0 $y-1 0 $color-1,
-    $-x-2 $y-2 0 $color-1,
-    $-x-1 0 0 $color-1,
-    $-x-2 $-y-2 0 $color-0;
+    0 $-y1 0 $color-0,
+    $x2 $-y2 0 $color-0,
+    $x1 0 0 $color-0,
+    $x2 $y2 0 $color-0,
+    0 $y1 0 $color-1,
+    $-x2 $y2 0 $color-1,
+    $-x1 0 0 $color-1,
+    $-x2 $-y2 0 $color-0;
   }
   62.5% {
     box-shadow:
-    0 $-y-1 0 $color-0,
-    $x-2 $-y-2 0 $color-0,
-    $x-1 0 0 $color-0,
-    $x-2 $y-2 0 $color-0,
-    0 $y-1 0 $color-0,
-    $-x-2 $y-2 0 $color-1,
-    $-x-1 0 0 $color-1,
-    $-x-2 $-y-2 0 $color-1;
+    0 $-y1 0 $color-0,
+    $x2 $-y2 0 $color-0,
+    $x1 0 0 $color-0,
+    $x2 $y2 0 $color-0,
+    0 $y1 0 $color-0,
+    $-x2 $y2 0 $color-1,
+    $-x1 0 0 $color-1,
+    $-x2 $-y2 0 $color-1;
   }
   75% {
     box-shadow:
-    0 $-y-1 0 $color-1,
-    $x-2 $-y-2 0 $color-0,
-    $x-1 0 0 $color-0,
-    $x-2 $y-2 0 $color-0,
-    0 $y-1 0 $color-0,
-    $-x-2 $y-2 0 $color-0,
-    $-x-1 0 0 $color-1,
-    $-x-2 $-y-2 0 $color-1;
+    0 $-y1 0 $color-1,
+    $x2 $-y2 0 $color-0,
+    $x1 0 0 $color-0,
+    $x2 $y2 0 $color-0,
+    0 $y1 0 $color-0,
+    $-x2 $y2 0 $color-0,
+    $-x1 0 0 $color-1,
+    $-x2 $-y2 0 $color-1;
   }
   87.5% {
     box-shadow:
-    0 $-y-1 0 $color-1,
-    $x-2 $-y-2 0 $color-1,
-    $x-1 0 0 $color-0,
-    $x-2 $y-2 0 $color-0,
-    0 $y-1 0 $color-0,
-    $-x-2 $y-2 0 $color-0,
-    $-x-1 0 0 $color-0,
-    $-x-2 $-y-2 0 $color-1;
+    0 $-y1 0 $color-1,
+    $x2 $-y2 0 $color-1,
+    $x1 0 0 $color-0,
+    $x2 $y2 0 $color-0,
+    0 $y1 0 $color-0,
+    $-x2 $y2 0 $color-0,
+    $-x1 0 0 $color-0,
+    $-x2 $-y2 0 $color-1;
   }
 }

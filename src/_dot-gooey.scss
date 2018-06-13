@@ -1,0 +1,60 @@
+/**
+ * ==============================================
+ * Experiment
+ * Dot Gooey
+ * ==============================================
+ */
+
+$dotWidth: 20px;
+$dotHeight: $dotWidth;
+$dotRadius: $dotWidth / 2;
+
+$dotColorHSL: hsl(0, 100%, 0%);
+
+$d: 100px;
+
+.dot-gooey {
+  position: relative;
+  width: $dotWidth;
+  height: $dotHeight;
+  border-radius: $dotRadius;
+  background-color: $dotColorHSL;
+  filter: blur(3px);
+
+  &::before,
+  &::after {
+    content: '';
+    display: inline-block;
+    position: absolute;
+    top: 0;
+    left: - $d;
+    width: $dotWidth;
+    height: $dotHeight;
+    border-radius: $dotRadius;
+    background-color: $dotColorHSL;
+    opacity: 0;
+    filter: blur(3px);
+    animation: dotGooey 2s infinite ease-in;
+  }
+
+  &::after {
+    animation-delay: 1s;
+  }
+}
+
+@keyframes dotGooey {
+  0% {
+    opacity: 0;
+    transform: translateX(0);
+  }
+
+  50% {
+    opacity: 1;
+    transform: translateX($d);
+  }
+
+  100% {
+    opacity: 0;
+    transform: translateX($d*2);
+  }
+}
