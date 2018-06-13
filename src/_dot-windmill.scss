@@ -15,7 +15,7 @@ $originY: 5px + $r;
   @include dot;
 
   transform-origin: $originX $originY;
-  animation: dotWindmill 2s infinite ease-in-out;
+  animation: dotWindmill 2s infinite linear;
 
   &::before,
   &::after {

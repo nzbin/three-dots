@@ -1,0 +1,49 @@
+/**
+ * ==============================================
+ * Experiment
+ * Dot Emoji ⚽ 🏀 🏐
+ * ==============================================
+ */
+
+$d: 20px;
+
+.dot-emoji {
+  position: relative;
+
+  &:before {
+    content: '⚽🏀🏐';
+    display: inline-block;
+    position: relative;
+    animation: dotEmoji 1s infinite;
+  }
+}
+
+@keyframes dotEmoji {
+  0% {
+    top: - $d;
+    animation-timing-function: ease-in;
+  }
+
+  34% {
+    transform: scale(1, 1);
+  }
+
+  35% {
+    top: $d;
+    animation-timing-function: ease-out;
+    transform: scale(1.5, 0.5);
+  }
+
+  45% {
+    transform: scale(1, 1);
+  }
+
+  90% {
+    top: - $d;
+  }
+
+  100% {
+
+    top: - $d;
+  }
+}

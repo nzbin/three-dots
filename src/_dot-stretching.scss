@@ -1,0 +1,75 @@
+/**
+ * ==============================================
+ * Dot Stretching
+ * ==============================================
+ */
+
+.dot-stretching {
+  position: relative;
+
+  @include dot;
+
+  animation: dotStretching 2s infinite ease-in;
+
+  &::before,
+  &::after {
+    content: '';
+    display: inline-block;
+    position: absolute;
+    top: 0;
+
+    @include dot;
+  }
+
+  &::before{
+    animation: dotStretchingBefore 2s infinite ease-in;
+  }
+
+  &::after {
+    animation: dotStretchingAfter 2s infinite ease-in;
+  }
+}
+
+@keyframes dotStretching {
+  0% {
+    transform: scale(1, 1);
+  }
+
+  50% {
+    transform: scale(.8, .8);
+  }
+
+  100% {
+    transform: scale(1, 1);
+  }
+}
+
+@keyframes dotStretchingBefore {
+  0% {
+    transform: translate(0) scale(1, 1);
+  }
+
+  50% {
+    transform: translate(-20px) scale(.8, .8);
+  }
+
+  80%,
+  100% {
+    transform: translate(0) scale(1, 1);
+  }
+}
+
+@keyframes dotStretchingAfter {
+  0% {
+    transform: translate(0) scale(1, 1);
+  }
+
+  50% {
+    transform: translate(20px) scale(.8, .8);
+  }
+
+  80%,
+  100% {
+    transform: translate(0) scale(1, 1);
+  }
+}

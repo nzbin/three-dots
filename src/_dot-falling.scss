@@ -1,0 +1,90 @@
+/**
+ * ==============================================
+ * Dot Falling
+ * ==============================================
+ */
+
+$leftPos: -9999px;
+$x1: - $leftPos - 15px;
+$x2: - $leftPos;
+$x3: - $leftPos + 15px;
+
+$y1: -15px;
+$y2: 0;
+$y3: 15px;
+
+$color-0: rgba($dotColor,0);
+$color-1: rgba($dotColor,1);
+
+.dot-falling {
+  position: relative;
+  left: $leftPos;
+
+  @include dot;
+
+  box-shadow: $x2 0 0 0 $dotColor;
+  animation: dotFalling 1s infinite linear;
+  animation-delay: .2s;
+
+  &::before,
+  &::after {
+    content: '';
+    display: inline-block;
+    position: absolute;
+    top: 0;
+
+    @include dot;
+  }
+
+  &:before {
+    animation: dotFallingBefore 1s infinite linear;
+    animation-delay: 0s;
+  }
+
+  &:after {
+    animation: dotFallingAfter 1s infinite linear;
+    animation-delay: .4s;
+  }
+}
+
+@keyframes dotFalling {
+  0% {
+    box-shadow: $x2 $y1 0 0 $color-0;
+  }
+
+  50% {
+    box-shadow: $x2 $y2 0 0 $color-1;
+  }
+
+  100% {
+    box-shadow: $x2 $y3 0 0 $color-0;
+  }
+}
+
+@keyframes dotFallingBefore {
+  0% {
+    box-shadow: $x1 $y1 0 0 $color-0;
+  }
+
+  50% {
+    box-shadow: $x1 $y2 0 0 $color-1;
+  }
+
+  100% {
+    box-shadow: $x1 $y3 0 0 $color-0;
+  }
+}
+
+@keyframes dotFallingAfter {
+  0% {
+    box-shadow: $x3 $y1 0 0 $color-0;
+  }
+
+  50% {
+    box-shadow: $x3 $y2 0 0 $color-1;
+  }
+
+  100% {
+    box-shadow: $x3 $y3 0 0 $color-0;
+  }
+}
