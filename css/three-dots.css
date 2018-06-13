@@ -1,3 +1,4 @@
+@charset "UTF-8";
 /**
  *
  * three-dots.css v0.1.0
@@ -8,6 +9,11 @@
  *
  * Released under the MIT license
  *
+ */
+/**
+ * ==============================================
+ * Dot Elastic
+ * ==============================================
  */
 .dot-elastic {
   position: relative;
@@ -93,6 +99,11 @@
   }
 }
 
+/**
+ * ==============================================
+ * Dot Pulse
+ * ==============================================
+ */
 .dot-pulse {
   position: relative;
   left: -9999px;
@@ -106,22 +117,27 @@
 
 @keyframes dotPulse {
   0% {
-    box-shadow: 9984px 0 0 -2px #9880ff, 9999px 0 0 0 #9880ff, 10014px 0 0 2px #9880ff;
+    box-shadow: 9984px 0 0 -5px #9880ff, 9999px 0 0 0 #9880ff, 10014px 0 0 2px #9880ff;
   }
   25% {
     box-shadow: 9984px 0 0 0 #9880ff, 9999px 0 0 2px #9880ff, 10014px 0 0 0 #9880ff;
   }
   50% {
-    box-shadow: 9984px 0 0 2px #9880ff, 9999px 0 0 0 #9880ff, 10014px 0 0 -2px #9880ff;
+    box-shadow: 9984px 0 0 2px #9880ff, 9999px 0 0 0 #9880ff, 10014px 0 0 -5px #9880ff;
   }
   75% {
-    box-shadow: 9984px 0 0 0 #9880ff, 9999px 0 0 -2px #9880ff, 10014px 0 0 0 #9880ff;
+    box-shadow: 9984px 0 0 0 #9880ff, 9999px 0 0 -5px #9880ff, 10014px 0 0 0 #9880ff;
   }
   100% {
-    box-shadow: 9984px 0 0 -2px #9880ff, 9999px 0 0 0 #9880ff, 10014px 0 0 2px #9880ff;
+    box-shadow: 9984px 0 0 -5px #9880ff, 9999px 0 0 0 #9880ff, 10014px 0 0 2px #9880ff;
   }
 }
 
+/**
+ * ==============================================
+ * Dot Flashing
+ * ==============================================
+ */
 .dot-flashing {
   position: relative;
   width: 10px;
@@ -164,6 +180,11 @@
   }
 }
 
+/**
+ * ==============================================
+ * Dot Collision
+ * ==============================================
+ */
 .dot-collision {
   position: relative;
   width: 10px;
@@ -218,6 +239,11 @@
   }
 }
 
+/**
+ * ==============================================
+ * Dot Revolution
+ * ==============================================
+ */
 .dot-revolution {
   position: relative;
   width: 10px;
@@ -260,6 +286,11 @@
   }
 }
 
+/**
+ * ==============================================
+ * Dot Carousel
+ * ==============================================
+ */
 .dot-carousel {
   position: relative;
   left: -9999px;
@@ -283,6 +314,11 @@
   }
 }
 
+/**
+ * ==============================================
+ * Dot Typing
+ * ==============================================
+ */
 .dot-typing {
   position: relative;
   left: -9999px;
@@ -318,6 +354,11 @@
   }
 }
 
+/**
+ * ==============================================
+ * Dot Windmill
+ * ==============================================
+ */
 .dot-windmill {
   position: relative;
   top: -15px;
@@ -326,7 +367,7 @@
   border-radius: 5px;
   background-color: #9880ff;
   transform-origin: 5px 20px;
-  animation: dotWindmill 2s infinite ease-in-out;
+  animation: dotWindmill 2s infinite linear;
 }
 
 .dot-windmill::before, .dot-windmill::after {
@@ -359,6 +400,11 @@
   }
 }
 
+/**
+ * ==============================================
+ * Dot Bricks
+ * ==============================================
+ */
 .dot-bricks {
   position: relative;
   top: 8px;
@@ -413,6 +459,11 @@
   }
 }
 
+/**
+ * ==============================================
+ * Dot Floating
+ * ==============================================
+ */
 .dot-floating {
   position: relative;
   width: 10px;
@@ -485,6 +536,11 @@
   }
 }
 
+/**
+ * ==============================================
+ * Dot Hourglass
+ * ==============================================
+ */
 .dot-hourglass {
   position: relative;
   top: -15px;
@@ -553,6 +609,11 @@
   }
 }
 
+/**
+ * ==============================================
+ * Dot Spin
+ * ==============================================
+ */
 .dot-spin {
   position: relative;
   width: 10px;
@@ -587,6 +648,241 @@
   }
   87.5% {
     box-shadow: 0 -17px 0 #9880ff, 12px -12px 0 #9880ff, 17px 0 0 rgba(152, 128, 255, 0), 12px 12px 0 rgba(152, 128, 255, 0), 0 17px 0 rgba(152, 128, 255, 0), -12px 12px 0 rgba(152, 128, 255, 0), -17px 0 0 rgba(152, 128, 255, 0), -12px -12px 0 #9880ff;
+  }
+}
+
+/**
+ * ==============================================
+ * Dot Falling
+ * ==============================================
+ */
+.dot-falling {
+  position: relative;
+  left: -9999px;
+  width: 10px;
+  height: 10px;
+  border-radius: 5px;
+  background-color: #9880ff;
+  box-shadow: 9999px 0 0 0 #9880ff;
+  animation: dotFalling 1s infinite linear;
+  animation-delay: .2s;
+}
+
+.dot-falling::before, .dot-falling::after {
+  content: '';
+  display: inline-block;
+  position: absolute;
+  top: 0;
+  width: 10px;
+  height: 10px;
+  border-radius: 5px;
+  background-color: #9880ff;
+}
+
+.dot-falling:before {
+  animation: dotFallingBefore 1s infinite linear;
+  animation-delay: 0s;
+}
+
+.dot-falling:after {
+  animation: dotFallingAfter 1s infinite linear;
+  animation-delay: .4s;
+}
+
+@keyframes dotFalling {
+  0% {
+    box-shadow: 9999px -15px 0 0 rgba(152, 128, 255, 0);
+  }
+  50% {
+    box-shadow: 9999px 0 0 0 #9880ff;
+  }
+  100% {
+    box-shadow: 9999px 15px 0 0 rgba(152, 128, 255, 0);
+  }
+}
+
+@keyframes dotFallingBefore {
+  0% {
+    box-shadow: 9984px -15px 0 0 rgba(152, 128, 255, 0);
+  }
+  50% {
+    box-shadow: 9984px 0 0 0 #9880ff;
+  }
+  100% {
+    box-shadow: 9984px 15px 0 0 rgba(152, 128, 255, 0);
+  }
+}
+
+@keyframes dotFallingAfter {
+  0% {
+    box-shadow: 10014px -15px 0 0 rgba(152, 128, 255, 0);
+  }
+  50% {
+    box-shadow: 10014px 0 0 0 #9880ff;
+  }
+  100% {
+    box-shadow: 10014px 15px 0 0 rgba(152, 128, 255, 0);
+  }
+}
+
+/**
+ * ==============================================
+ * Dot Stretching
+ * ==============================================
+ */
+.dot-stretching {
+  position: relative;
+  width: 10px;
+  height: 10px;
+  border-radius: 5px;
+  background-color: #9880ff;
+  animation: dotStretching 2s infinite ease-in;
+}
+
+.dot-stretching::before, .dot-stretching::after {
+  content: '';
+  display: inline-block;
+  position: absolute;
+  top: 0;
+  width: 10px;
+  height: 10px;
+  border-radius: 5px;
+  background-color: #9880ff;
+}
+
+.dot-stretching::before {
+  animation: dotStretchingBefore 2s infinite ease-in;
+}
+
+.dot-stretching::after {
+  animation: dotStretchingAfter 2s infinite ease-in;
+}
+
+@keyframes dotStretching {
+  0% {
+    transform: scale(1, 1);
+  }
+  50% {
+    transform: scale(0.8, 0.8);
+  }
+  100% {
+    transform: scale(1, 1);
+  }
+}
+
+@keyframes dotStretchingBefore {
+  0% {
+    transform: translate(0) scale(1, 1);
+  }
+  50% {
+    transform: translate(-20px) scale(0.8, 0.8);
+  }
+  80%,
+  100% {
+    transform: translate(0) scale(1, 1);
+  }
+}
+
+@keyframes dotStretchingAfter {
+  0% {
+    transform: translate(0) scale(1, 1);
+  }
+  50% {
+    transform: translate(20px) scale(0.8, 0.8);
+  }
+  80%,
+  100% {
+    transform: translate(0) scale(1, 1);
+  }
+}
+
+/**
+ * ==============================================
+ * Experiment
+ * Dot Gooey
+ * ==============================================
+ */
+.dot-gooey {
+  position: relative;
+  width: 20px;
+  height: 20px;
+  border-radius: 10px;
+  background-color: black;
+  filter: blur(3px);
+}
+
+.dot-gooey::before, .dot-gooey::after {
+  content: '';
+  display: inline-block;
+  position: absolute;
+  top: 0;
+  left: -100px;
+  width: 20px;
+  height: 20px;
+  border-radius: 10px;
+  background-color: black;
+  opacity: 0;
+  filter: blur(3px);
+  animation: dotGooey 2s infinite ease-in;
+}
+
+.dot-gooey::after {
+  animation-delay: 1s;
+}
+
+@keyframes dotGooey {
+  0% {
+    opacity: 0;
+    transform: translateX(0);
+  }
+  50% {
+    opacity: 1;
+    transform: translateX(100px);
+  }
+  100% {
+    opacity: 0;
+    transform: translateX(200px);
+  }
+}
+
+/**
+ * ==============================================
+ * Experiment
+ * Dot Emoji ⚽ 🏀 🏐
+ * ==============================================
+ */
+.dot-emoji {
+  position: relative;
+}
+
+.dot-emoji:before {
+  content: '⚽🏀🏐';
+  display: inline-block;
+  position: relative;
+  animation: dotEmoji 1s infinite;
+}
+
+@keyframes dotEmoji {
+  0% {
+    top: -20px;
+    animation-timing-function: ease-in;
+  }
+  34% {
+    transform: scale(1, 1);
+  }
+  35% {
+    top: 20px;
+    animation-timing-function: ease-out;
+    transform: scale(1.5, 0.5);
+  }
+  45% {
+    transform: scale(1, 1);
+  }
+  90% {
+    top: -20px;
+  }
+  100% {
+    top: -20px;
   }
 }
 
