@@ -1,21 +1,25 @@
 /**
  * ==============================================
- * Dot Hourglass
+ * Experiment
+ * Dot Gooey2
  * ==============================================
  */
+
+$dotColorHSL: hsl(0, 100%, 0%);
 
 $r: $dotSpacing;
 $originX: $dotWidth/2;
 $originY: $dotHeight/2 + $r;
 
-.dot-hourglass {
+.dot-gooey2 {
   position: relative;
   top: - $r;
 
-  @include dot;
+  @include dot($width: 12px, $height: 12px, $radius: 6px, $bgColor: $dotColorHSL, $color: transparent);
 
+  filter: blur(2px);
   transform-origin: $originX $originY;
-  animation: dotHourglass 2.4s infinite ease-in-out;
+  animation: dotHourGooey2 2.4s infinite ease-in-out;
   animation-delay: .6s;
 
   &::before,
@@ -26,7 +30,9 @@ $originY: $dotHeight/2 + $r;
     top: 0;
     left: 0;
 
-    @include dot;
+    @include dot($width: 12px, $height: 12px, $radius: 6px, $bgColor: $dotColorHSL, $color: transparent);
+
+    filter: blur(2px);
   }
 
   &::before {
@@ -34,11 +40,11 @@ $originY: $dotHeight/2 + $r;
   }
 
   &::after {
-    animation: dotHourglassAfter 2.4s infinite cubic-bezier(.65, .05, .36, 1);
+    animation: dotHourGooey2After 2.4s infinite cubic-bezier(.65, .05, .36, 1);
   }
 }
 
-@keyframes dotHourglass {
+@keyframes dotHourGooey2 {
   0% {
     transform: rotateZ(0deg);
   }
@@ -60,7 +66,7 @@ $originY: $dotHeight/2 + $r;
   }
 }
 
-@keyframes dotHourglassAfter {
+@keyframes dotHourGooey2After {
   0% {
     transform: translateY(0);
   }

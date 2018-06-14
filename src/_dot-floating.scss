@@ -12,7 +12,7 @@ $d-min: 12px;
 
   @include dot;
 
-  animation: dotFloating 3s infinite cubic-bezier(.2, .64, .81, .23);
+  animation: dotFloating 3s infinite cubic-bezier(.15, .6, .9, .1);
 
   &::before,
   &::after {
@@ -25,27 +25,27 @@ $d-min: 12px;
   }
 
   &::before {
-    left: -10px;
+    left: - $d-min;
     animation: dotFloatingBefore 3s infinite ease-in-out;
   }
 
   &::after {
-    left: -20px;
+    left: - $d-min*2;
     animation: dotFloatingAfter 3s infinite cubic-bezier(.4, 0, 1, 1);
   }
 }
 
 @keyframes dotFloating {
   0% {
-    left: calc(-50% - 5px);
+    left: calc(-50% - #{$dotWidth/2});
   }
 
   75% {
-    left: calc(50% + 100px + 5px);
+    left: calc(50% + #{$d-max*2 + $dotWidth/2});
   }
 
   100% {
-    left: calc(50% + 100px + 5px);
+    left: calc(50% + #{$d-max*2 + $dotWidth/2});
   }
 }
 

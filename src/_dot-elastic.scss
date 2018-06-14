@@ -22,12 +22,12 @@
   }
 
   &::before {
-    left: -15px;
+    left: - $dotSpacing;
     animation: dotElasticBefore 1s infinite linear;
   }
 
   &::after {
-    left: 15px;
+    left: $dotSpacing;
     animation: dotElasticAfter 1s infinite linear;
   }
 }

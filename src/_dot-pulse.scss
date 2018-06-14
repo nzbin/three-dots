@@ -5,9 +5,9 @@
  */
 
 $leftPos: -9999px;
-$x1: - $leftPos - 15px;
+$x1: - $leftPos - $dotSpacing;
 $x2: - $leftPos;
-$x3: - $leftPos + 15px;
+$x3: - $leftPos + $dotSpacing;
 
 .dot-pulse {
   position: relative;

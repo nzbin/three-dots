@@ -20,12 +20,12 @@
   }
 
   &::before {
-    left: -10px;
+    left: - $dotWidth;
     animation: dotCollisionBefore 2s infinite ease-in;
   }
 
   &::after {
-    left: 10px;
+    left: $dotWidth;
     animation: dotCollisionAfter 2s infinite ease-in;
     animation-delay: 1s;
   }
@@ -40,7 +40,7 @@
   }
 
   25% {
-    transform: translateX(-15px);
+    transform: translateX(-$dotSpacing);
   }
 }
 
@@ -53,6 +53,6 @@
   }
 
   25% {
-    transform: translateX(15px);
+    transform: translateX($dotSpacing);
   }
 }

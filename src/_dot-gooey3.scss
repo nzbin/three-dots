@@ -1,0 +1,52 @@
+/**
+ * ==============================================
+ * Experiment
+ * Dot Gooey3
+ * ==============================================
+ */
+
+$dotColorHSL: hsl(0, 100%, 0%);
+
+.dot-gooey3 {
+  position: relative;
+
+  @include dot($width: 12px, $height: 12px, $radius: 6px, $bgColor: transparent, $color: $dotColorHSL);
+
+  box-shadow: 0 -20px 0 0;
+  filter: blur(2px);
+  animation: dotGooey3 2s infinite cubic-bezier(.2, .6, .8, .2);
+
+  &::before,
+  &::after {
+    content: '';
+    display: inline-block;
+    position: absolute;
+    top: 0;
+    left: 0;
+
+    @include dot($width: 12px, $height: 12px, $radius: 6px, $bgColor: transparent, $color: $dotColorHSL);
+
+    box-shadow: 0 -20px 0 0;
+    filter: blur(2px);
+  }
+
+  &::before {
+    animation: dotGooey3 2s infinite cubic-bezier(.2, .6, .8, .2);
+    animation-delay: .3s;
+  }
+
+  &::after {
+    animation: dotGooey3 1.5s infinite cubic-bezier(.2, .6, .8, .2);
+    animation-delay: .6s;
+  }
+}
+
+@keyframes dotGooey3 {
+  0% {
+    transform: rotateZ(0deg);
+  }
+
+  100% {
+    transform: rotateZ(360deg);
+  }
+}

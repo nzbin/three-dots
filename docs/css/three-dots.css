@@ -12,6 +12,16 @@
  */
 /**
  * ==============================================
+ * Variables
+ * ==============================================
+ */
+/**
+ * ==============================================
+ * Mixins
+ * ==============================================
+ */
+/**
+ * ==============================================
  * Dot Elastic
  * ==============================================
  */
@@ -21,6 +31,7 @@
   height: 10px;
   border-radius: 5px;
   background-color: #9880ff;
+  color: #9880ff;
   animation: dotElastic 1s infinite linear;
 }
 
@@ -33,6 +44,7 @@
   height: 10px;
   border-radius: 5px;
   background-color: #9880ff;
+  color: #9880ff;
 }
 
 .dot-elastic::before {
@@ -111,6 +123,7 @@
   height: 10px;
   border-radius: 5px;
   background-color: #9880ff;
+  color: #9880ff;
   box-shadow: 9984px 0 0 0 #9880ff, 9999px 0 0 0 #9880ff, 10014px 0 0 0 #9880ff;
   animation: dotPulse 1.5s infinite linear;
 }
@@ -144,7 +157,8 @@
   height: 10px;
   border-radius: 5px;
   background-color: #9880ff;
-  animation: dotFlashing 1s infinite alternate;
+  color: #9880ff;
+  animation: dotFlashing 1s infinite linear alternate;
   animation-delay: .5s;
 }
 
@@ -157,6 +171,7 @@
   height: 10px;
   border-radius: 5px;
   background-color: #9880ff;
+  color: #9880ff;
 }
 
 .dot-flashing::before {
@@ -191,6 +206,7 @@
   height: 10px;
   border-radius: 5px;
   background-color: #9880ff;
+  color: #9880ff;
 }
 
 .dot-collision::before, .dot-collision::after {
@@ -202,6 +218,7 @@
   height: 10px;
   border-radius: 5px;
   background-color: #9880ff;
+  color: #9880ff;
 }
 
 .dot-collision::before {
@@ -250,6 +267,7 @@
   height: 10px;
   border-radius: 5px;
   background-color: #9880ff;
+  color: #9880ff;
 }
 
 .dot-revolution::before, .dot-revolution::after {
@@ -261,19 +279,20 @@
   height: 10px;
   border-radius: 5px;
   background-color: #9880ff;
+  color: #9880ff;
 }
 
 .dot-revolution::before {
-  left: -25px;
+  left: 0;
   top: -15px;
-  transform-origin: 30px 20px;
-  animation: dotRevolution 2s linear infinite;
+  transform-origin: 5px 20px;
+  animation: dotRevolution 1.5s linear infinite;
 }
 
 .dot-revolution::after {
-  left: -15px;
-  top: -10px;
-  transform-origin: 20px 15px;
+  left: 0;
+  top: -30px;
+  transform-origin: 5px 35px;
   animation: dotRevolution 1s linear infinite;
 }
 
@@ -298,6 +317,7 @@
   height: 10px;
   border-radius: 5px;
   background-color: #9880ff;
+  color: #9880ff;
   box-shadow: 9984px 0 0 0 #9880ff, 9999px 0 0 0 #9880ff, 10014px 0 0 0 #9880ff;
   animation: dotCarousel 1.5s infinite linear;
 }
@@ -326,6 +346,7 @@
   height: 10px;
   border-radius: 5px;
   background-color: #9880ff;
+  color: #9880ff;
   box-shadow: 9984px 0 0 0 #9880ff, 9999px 0 0 0 #9880ff, 10014px 0 0 0 #9880ff;
   animation: dotTyping 1.5s infinite linear;
 }
@@ -366,6 +387,7 @@
   height: 10px;
   border-radius: 5px;
   background-color: #9880ff;
+  color: #9880ff;
   transform-origin: 5px 20px;
   animation: dotWindmill 2s infinite linear;
 }
@@ -379,6 +401,7 @@
   height: 10px;
   border-radius: 5px;
   background-color: #9880ff;
+  color: #9880ff;
 }
 
 .dot-windmill::before {
@@ -413,6 +436,7 @@
   height: 10px;
   border-radius: 5px;
   background-color: #9880ff;
+  color: #9880ff;
   box-shadow: 9991px -16px 0 0 #9880ff, 9991px 0 0 0 #9880ff, 10007px 0 0 0 #9880ff;
   animation: dotBricks 2s infinite ease;
 }
@@ -470,7 +494,8 @@
   height: 10px;
   border-radius: 5px;
   background-color: #9880ff;
-  animation: dotFloating 3s infinite cubic-bezier(0.2, 0.64, 0.81, 0.23);
+  color: #9880ff;
+  animation: dotFloating 3s infinite cubic-bezier(0.15, 0.6, 0.9, 0.1);
 }
 
 .dot-floating::before, .dot-floating::after {
@@ -482,15 +507,16 @@
   height: 10px;
   border-radius: 5px;
   background-color: #9880ff;
+  color: #9880ff;
 }
 
 .dot-floating::before {
-  left: -10px;
+  left: -12px;
   animation: dotFloatingBefore 3s infinite ease-in-out;
 }
 
 .dot-floating::after {
-  left: -20px;
+  left: -24px;
   animation: dotFloatingAfter 3s infinite cubic-bezier(0.4, 0, 1, 1);
 }
 
@@ -499,10 +525,10 @@
     left: calc(-50% - 5px);
   }
   75% {
-    left: calc(50% + 100px + 5px);
+    left: calc(50% + 105px);
   }
   100% {
-    left: calc(50% + 100px + 5px);
+    left: calc(50% + 105px);
   }
 }
 
@@ -548,6 +574,7 @@
   height: 10px;
   border-radius: 5px;
   background-color: #9880ff;
+  color: #9880ff;
   transform-origin: 5px 20px;
   animation: dotHourglass 2.4s infinite ease-in-out;
   animation-delay: .6s;
@@ -563,6 +590,7 @@
   height: 10px;
   border-radius: 5px;
   background-color: #9880ff;
+  color: #9880ff;
 }
 
 .dot-hourglass::before {
@@ -619,35 +647,37 @@
   width: 10px;
   height: 10px;
   border-radius: 5px;
-  box-shadow: 0 -17px 0 #9880ff, 12px -12px 0 #9880ff, 17px 0 0 #9880ff, 12px 12px 0 rgba(152, 128, 255, 0), 0 17px 0 rgba(152, 128, 255, 0), -12px 12px 0 rgba(152, 128, 255, 0), -17px 0 0 rgba(152, 128, 255, 0), -12px -12px 0 rgba(152, 128, 255, 0);
+  background-color: transparent;
+  color: transparent;
+  box-shadow: 0 -18px 0 0 #9880ff, 12.72984px -12.72984px 0 0 #9880ff, 18px 0 0 0 #9880ff, 12.72984px 12.72984px 0 0 rgba(152, 128, 255, 0), 0 18px 0 0 rgba(152, 128, 255, 0), -12.72984px 12.72984px 0 0 rgba(152, 128, 255, 0), -18px 0 0 0 rgba(152, 128, 255, 0), -12.72984px -12.72984px 0 0 rgba(152, 128, 255, 0);
   animation: dotSpin 1.5s infinite linear;
 }
 
 @keyframes dotSpin {
   0%,
   100% {
-    box-shadow: 0 -17px 0 #9880ff, 12px -12px 0 #9880ff, 17px 0 0 #9880ff, 12px 12px 0 rgba(152, 128, 255, 0), 0 17px 0 rgba(152, 128, 255, 0), -12px 12px 0 rgba(152, 128, 255, 0), -17px 0 0 rgba(152, 128, 255, 0), -12px -12px 0 rgba(152, 128, 255, 0);
+    box-shadow: 0 -18px 0 0 #9880ff, 12.72984px -12.72984px 0 0 #9880ff, 18px 0 0 0 #9880ff, 12.72984px 12.72984px 0 -5px rgba(152, 128, 255, 0), 0 18px 0 -5px rgba(152, 128, 255, 0), -12.72984px 12.72984px 0 -5px rgba(152, 128, 255, 0), -18px 0 0 -5px rgba(152, 128, 255, 0), -12.72984px -12.72984px 0 -5px rgba(152, 128, 255, 0);
   }
   12.5% {
-    box-shadow: 0 -17px 0 rgba(152, 128, 255, 0), 12px -12px 0 #9880ff, 17px 0 0 #9880ff, 12px 12px 0 #9880ff, 0 17px 0 rgba(152, 128, 255, 0), -12px 12px 0 rgba(152, 128, 255, 0), -17px 0 0 rgba(152, 128, 255, 0), -12px -12px 0 rgba(152, 128, 255, 0);
+    box-shadow: 0 -18px 0 -5px rgba(152, 128, 255, 0), 12.72984px -12.72984px 0 0 #9880ff, 18px 0 0 0 #9880ff, 12.72984px 12.72984px 0 0 #9880ff, 0 18px 0 -5px rgba(152, 128, 255, 0), -12.72984px 12.72984px 0 -5px rgba(152, 128, 255, 0), -18px 0 0 -5px rgba(152, 128, 255, 0), -12.72984px -12.72984px 0 -5px rgba(152, 128, 255, 0);
   }
   25% {
-    box-shadow: 0 -17px 0 rgba(152, 128, 255, 0), 12px -12px 0 rgba(152, 128, 255, 0), 17px 0 0 #9880ff, 12px 12px 0 #9880ff, 0 17px 0 #9880ff, -12px 12px 0 rgba(152, 128, 255, 0), -17px 0 0 rgba(152, 128, 255, 0), -12px -12px 0 rgba(152, 128, 255, 0);
+    box-shadow: 0 -18px 0 -5px rgba(152, 128, 255, 0), 12.72984px -12.72984px 0 -5px rgba(152, 128, 255, 0), 18px 0 0 0 #9880ff, 12.72984px 12.72984px 0 0 #9880ff, 0 18px 0 0 #9880ff, -12.72984px 12.72984px 0 -5px rgba(152, 128, 255, 0), -18px 0 0 -5px rgba(152, 128, 255, 0), -12.72984px -12.72984px 0 -5px rgba(152, 128, 255, 0);
   }
   37.5% {
-    box-shadow: 0 -17px 0 rgba(152, 128, 255, 0), 12px -12px 0 rgba(152, 128, 255, 0), 17px 0 0 rgba(152, 128, 255, 0), 12px 12px 0 #9880ff, 0 17px 0 #9880ff, -12px 12px 0 #9880ff, -17px 0 0 rgba(152, 128, 255, 0), -12px -12px 0 rgba(152, 128, 255, 0);
+    box-shadow: 0 -18px 0 -5px rgba(152, 128, 255, 0), 12.72984px -12.72984px 0 -5px rgba(152, 128, 255, 0), 18px 0 0 -5px rgba(152, 128, 255, 0), 12.72984px 12.72984px 0 0 #9880ff, 0 18px 0 0 #9880ff, -12.72984px 12.72984px 0 0 #9880ff, -18px 0 0 -5px rgba(152, 128, 255, 0), -12.72984px -12.72984px 0 -5px rgba(152, 128, 255, 0);
   }
   50% {
-    box-shadow: 0 -17px 0 rgba(152, 128, 255, 0), 12px -12px 0 rgba(152, 128, 255, 0), 17px 0 0 rgba(152, 128, 255, 0), 12px 12px 0 rgba(152, 128, 255, 0), 0 17px 0 #9880ff, -12px 12px 0 #9880ff, -17px 0 0 #9880ff, -12px -12px 0 rgba(152, 128, 255, 0);
+    box-shadow: 0 -18px 0 -5px rgba(152, 128, 255, 0), 12.72984px -12.72984px 0 -5px rgba(152, 128, 255, 0), 18px 0 0 -5px rgba(152, 128, 255, 0), 12.72984px 12.72984px 0 -5px rgba(152, 128, 255, 0), 0 18px 0 0 #9880ff, -12.72984px 12.72984px 0 0 #9880ff, -18px 0 0 0 #9880ff, -12.72984px -12.72984px 0 -5px rgba(152, 128, 255, 0);
   }
   62.5% {
-    box-shadow: 0 -17px 0 rgba(152, 128, 255, 0), 12px -12px 0 rgba(152, 128, 255, 0), 17px 0 0 rgba(152, 128, 255, 0), 12px 12px 0 rgba(152, 128, 255, 0), 0 17px 0 rgba(152, 128, 255, 0), -12px 12px 0 #9880ff, -17px 0 0 #9880ff, -12px -12px 0 #9880ff;
+    box-shadow: 0 -18px 0 -5px rgba(152, 128, 255, 0), 12.72984px -12.72984px 0 -5px rgba(152, 128, 255, 0), 18px 0 0 -5px rgba(152, 128, 255, 0), 12.72984px 12.72984px 0 -5px rgba(152, 128, 255, 0), 0 18px 0 -5px rgba(152, 128, 255, 0), -12.72984px 12.72984px 0 0 #9880ff, -18px 0 0 0 #9880ff, -12.72984px -12.72984px 0 0 #9880ff;
   }
   75% {
-    box-shadow: 0 -17px 0 #9880ff, 12px -12px 0 rgba(152, 128, 255, 0), 17px 0 0 rgba(152, 128, 255, 0), 12px 12px 0 rgba(152, 128, 255, 0), 0 17px 0 rgba(152, 128, 255, 0), -12px 12px 0 rgba(152, 128, 255, 0), -17px 0 0 #9880ff, -12px -12px 0 #9880ff;
+    box-shadow: 0 -18px 0 0 #9880ff, 12.72984px -12.72984px 0 -5px rgba(152, 128, 255, 0), 18px 0 0 -5px rgba(152, 128, 255, 0), 12.72984px 12.72984px 0 -5px rgba(152, 128, 255, 0), 0 18px 0 -5px rgba(152, 128, 255, 0), -12.72984px 12.72984px 0 -5px rgba(152, 128, 255, 0), -18px 0 0 0 #9880ff, -12.72984px -12.72984px 0 0 #9880ff;
   }
   87.5% {
-    box-shadow: 0 -17px 0 #9880ff, 12px -12px 0 #9880ff, 17px 0 0 rgba(152, 128, 255, 0), 12px 12px 0 rgba(152, 128, 255, 0), 0 17px 0 rgba(152, 128, 255, 0), -12px 12px 0 rgba(152, 128, 255, 0), -17px 0 0 rgba(152, 128, 255, 0), -12px -12px 0 #9880ff;
+    box-shadow: 0 -18px 0 0 #9880ff, 12.72984px -12.72984px 0 0 #9880ff, 18px 0 0 -5px rgba(152, 128, 255, 0), 12.72984px 12.72984px 0 -5px rgba(152, 128, 255, 0), 0 18px 0 -5px rgba(152, 128, 255, 0), -12.72984px 12.72984px 0 -5px rgba(152, 128, 255, 0), -18px 0 0 -5px rgba(152, 128, 255, 0), -12.72984px -12.72984px 0 0 #9880ff;
   }
 }
 
@@ -663,9 +693,10 @@
   height: 10px;
   border-radius: 5px;
   background-color: #9880ff;
+  color: #9880ff;
   box-shadow: 9999px 0 0 0 #9880ff;
   animation: dotFalling 1s infinite linear;
-  animation-delay: .2s;
+  animation-delay: .1s;
 }
 
 .dot-falling::before, .dot-falling::after {
@@ -677,23 +708,26 @@
   height: 10px;
   border-radius: 5px;
   background-color: #9880ff;
+  color: #9880ff;
 }
 
-.dot-falling:before {
+.dot-falling::before {
   animation: dotFallingBefore 1s infinite linear;
   animation-delay: 0s;
 }
 
-.dot-falling:after {
+.dot-falling::after {
   animation: dotFallingAfter 1s infinite linear;
-  animation-delay: .4s;
+  animation-delay: .2s;
 }
 
 @keyframes dotFalling {
   0% {
     box-shadow: 9999px -15px 0 0 rgba(152, 128, 255, 0);
   }
-  50% {
+  25%,
+  50%,
+  75% {
     box-shadow: 9999px 0 0 0 #9880ff;
   }
   100% {
@@ -705,7 +739,9 @@
   0% {
     box-shadow: 9984px -15px 0 0 rgba(152, 128, 255, 0);
   }
-  50% {
+  25%,
+  50%,
+  75% {
     box-shadow: 9984px 0 0 0 #9880ff;
   }
   100% {
@@ -717,7 +753,9 @@
   0% {
     box-shadow: 10014px -15px 0 0 rgba(152, 128, 255, 0);
   }
-  50% {
+  25%,
+  50%,
+  75% {
     box-shadow: 10014px 0 0 0 #9880ff;
   }
   100% {
@@ -736,7 +774,9 @@
   height: 10px;
   border-radius: 5px;
   background-color: #9880ff;
+  color: #9880ff;
   animation: dotStretching 2s infinite ease-in;
+  transform: scale(1.25, 1.25);
 }
 
 .dot-stretching::before, .dot-stretching::after {
@@ -748,6 +788,7 @@
   height: 10px;
   border-radius: 5px;
   background-color: #9880ff;
+  color: #9880ff;
 }
 
 .dot-stretching::before {
@@ -760,39 +801,40 @@
 
 @keyframes dotStretching {
   0% {
-    transform: scale(1, 1);
+    transform: scale(1.25, 1.25);
   }
-  50% {
+  50%,
+  60% {
     transform: scale(0.8, 0.8);
   }
   100% {
-    transform: scale(1, 1);
+    transform: scale(1.25, 1.25);
   }
 }
 
 @keyframes dotStretchingBefore {
   0% {
-    transform: translate(0) scale(1, 1);
+    transform: translate(0) scale(0.7, 0.7);
   }
-  50% {
-    transform: translate(-20px) scale(0.8, 0.8);
+  50%,
+  60% {
+    transform: translate(-20px) scale(1, 1);
   }
-  80%,
   100% {
-    transform: translate(0) scale(1, 1);
+    transform: translate(0) scale(0.7, 0.7);
   }
 }
 
 @keyframes dotStretchingAfter {
   0% {
-    transform: translate(0) scale(1, 1);
+    transform: translate(0) scale(0.7, 0.7);
   }
-  50% {
-    transform: translate(20px) scale(0.8, 0.8);
+  50%,
+  60% {
+    transform: translate(20px) scale(1, 1);
   }
-  80%,
   100% {
-    transform: translate(0) scale(1, 1);
+    transform: translate(0) scale(0.7, 0.7);
   }
 }
 
@@ -804,11 +846,13 @@
  */
 .dot-gooey {
   position: relative;
-  width: 20px;
-  height: 20px;
-  border-radius: 10px;
+  width: 12px;
+  height: 12px;
+  border-radius: 6px;
   background-color: black;
-  filter: blur(3px);
+  color: transparent;
+  margin: -1px 0;
+  filter: blur(2px);
 }
 
 .dot-gooey::before, .dot-gooey::after {
@@ -816,13 +860,14 @@
   display: inline-block;
   position: absolute;
   top: 0;
-  left: -100px;
-  width: 20px;
-  height: 20px;
-  border-radius: 10px;
+  left: -50px;
+  width: 12px;
+  height: 12px;
+  border-radius: 6px;
   background-color: black;
+  color: transparent;
   opacity: 0;
-  filter: blur(3px);
+  filter: blur(2px);
   animation: dotGooey 2s infinite ease-in;
 }
 
@@ -837,11 +882,141 @@
   }
   50% {
     opacity: 1;
-    transform: translateX(100px);
+    transform: translateX(50px);
   }
   100% {
     opacity: 0;
-    transform: translateX(200px);
+    transform: translateX(100px);
+  }
+}
+
+/**
+ * ==============================================
+ * Experiment
+ * Dot Gooey2
+ * ==============================================
+ */
+.dot-gooey2 {
+  position: relative;
+  top: -15px;
+  width: 12px;
+  height: 12px;
+  border-radius: 6px;
+  background-color: black;
+  color: transparent;
+  filter: blur(2px);
+  transform-origin: 5px 20px;
+  animation: dotHourGooey2 2.4s infinite ease-in-out;
+  animation-delay: .6s;
+}
+
+.dot-gooey2::before, .dot-gooey2::after {
+  content: '';
+  display: inline-block;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 12px;
+  height: 12px;
+  border-radius: 6px;
+  background-color: black;
+  color: transparent;
+  filter: blur(2px);
+}
+
+.dot-gooey2::before {
+  top: 30px;
+}
+
+.dot-gooey2::after {
+  animation: dotHourGooey2After 2.4s infinite cubic-bezier(0.65, 0.05, 0.36, 1);
+}
+
+@keyframes dotHourGooey2 {
+  0% {
+    transform: rotateZ(0deg);
+  }
+  25% {
+    transform: rotateZ(180deg);
+  }
+  50% {
+    transform: rotateZ(180deg);
+  }
+  75% {
+    transform: rotateZ(360deg);
+  }
+  100% {
+    transform: rotateZ(360deg);
+  }
+}
+
+@keyframes dotHourGooey2After {
+  0% {
+    transform: translateY(0);
+  }
+  25% {
+    transform: translateY(30px);
+  }
+  50% {
+    transform: translateY(30px);
+  }
+  75% {
+    transform: translateY(0);
+  }
+  100% {
+    transform: translateY(0);
+  }
+}
+
+/**
+ * ==============================================
+ * Experiment
+ * Dot Gooey3
+ * ==============================================
+ */
+.dot-gooey3 {
+  position: relative;
+  width: 12px;
+  height: 12px;
+  border-radius: 6px;
+  background-color: transparent;
+  color: black;
+  box-shadow: 0 -20px 0 0;
+  filter: blur(2px);
+  animation: dotGooey3 2s infinite cubic-bezier(0.2, 0.6, 0.8, 0.2);
+}
+
+.dot-gooey3::before, .dot-gooey3::after {
+  content: '';
+  display: inline-block;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 12px;
+  height: 12px;
+  border-radius: 6px;
+  background-color: transparent;
+  color: black;
+  box-shadow: 0 -20px 0 0;
+  filter: blur(2px);
+}
+
+.dot-gooey3::before {
+  animation: dotGooey3 2s infinite cubic-bezier(0.2, 0.6, 0.8, 0.2);
+  animation-delay: .3s;
+}
+
+.dot-gooey3::after {
+  animation: dotGooey3 1.5s infinite cubic-bezier(0.2, 0.6, 0.8, 0.2);
+  animation-delay: .6s;
+}
+
+@keyframes dotGooey3 {
+  0% {
+    transform: rotateZ(0deg);
+  }
+  100% {
+    transform: rotateZ(360deg);
   }
 }
 
@@ -853,9 +1028,11 @@
  */
 .dot-emoji {
   position: relative;
+  height: 10px;
+  font-size: 10px;
 }
 
-.dot-emoji:before {
+.dot-emoji::before {
   content: '⚽🏀🏐';
   display: inline-block;
   position: relative;

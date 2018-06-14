@@ -4,12 +4,13 @@
  * ==============================================
  */
 
-$topPos: 8px;
+$spacing: $dotWidth + 6px;
+$topPos: $spacing/2;
 $leftPos: -9999px;
 $x1: - $leftPos - $topPos;
-$x2: - $leftPos - $topPos + 16px;
+$x2: - $leftPos - $topPos + $spacing;
 $y1: 0;
-$y2: -16px;
+$y2: -$spacing;
 
 .dot-bricks {
   position: relative;

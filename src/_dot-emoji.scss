@@ -9,8 +9,10 @@ $d: 20px;
 
 .dot-emoji {
   position: relative;
+  height: $dotHeight;
+  font-size: 10px;
 
-  &:before {
+  &::before {
     content: '⚽🏀🏐';
     display: inline-block;
     position: relative;
@@ -31,7 +33,7 @@ $d: 20px;
   35% {
     top: $d;
     animation-timing-function: ease-out;
-    transform: scale(1.5, 0.5);
+    transform: scale(1.5, .5);
   }
 
   45% {
@@ -43,7 +45,6 @@ $d: 20px;
   }
 
   100% {
-
     top: - $d;
   }
 }

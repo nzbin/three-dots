@@ -9,7 +9,7 @@
 
   @include dot;
 
-  animation: dotFlashing 1s infinite alternate;
+  animation: dotFlashing 1s infinite linear alternate;
   animation-delay: .5s;
 
   &::before,
@@ -23,13 +23,13 @@
   }
 
   &::before {
-    left: -15px;
+    left: - $dotSpacing;
     animation: dotFlashing 1s infinite alternate;
     animation-delay: 0s;
   }
 
   &::after {
-    left: 15px;
+    left: $dotSpacing;
     animation: dotFlashing 1s infinite alternate;
     animation-delay: 1s;
   }
