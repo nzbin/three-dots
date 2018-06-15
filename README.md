@@ -17,7 +17,7 @@ dot-typing
 dot-windmill
 dot-bricks
 dot-floating
-dot-hourglass
+dot-fire
 dot-spin
 dot-falling
 dot-stretching
