@@ -286,7 +286,7 @@
   left: 0;
   top: -15px;
   transform-origin: 5px 20px;
-  animation: dotRevolution 1.5s linear infinite;
+  animation: dotRevolution 1.4s linear infinite;
 }
 
 .dot-revolution::after {
@@ -564,28 +564,26 @@
 
 /**
  * ==============================================
- * Dot Hourglass
+ * Dot Fire
  * ==============================================
  */
-.dot-hourglass {
+.dot-fire {
   position: relative;
-  top: -15px;
+  left: -9999px;
   width: 10px;
   height: 10px;
   border-radius: 5px;
   background-color: #9880ff;
   color: #9880ff;
-  transform-origin: 5px 20px;
-  animation: dotHourglass 2.4s infinite ease-in-out;
-  animation-delay: .6s;
+  box-shadow: 9999px -15px 0 0;
+  animation: dotFire 1s infinite linear;
 }
 
-.dot-hourglass::before, .dot-hourglass::after {
+.dot-fire::before, .dot-fire::after {
   content: '';
   display: inline-block;
   position: absolute;
   top: 0;
-  left: 0;
   width: 10px;
   height: 10px;
   border-radius: 5px;
@@ -593,47 +591,52 @@
   color: #9880ff;
 }
 
-.dot-hourglass::before {
-  top: 30px;
+.dot-fire::before {
+  box-shadow: 9999px -5px 0 0;
+  animation: dotFireBefore 1s infinite linear;
 }
 
-.dot-hourglass::after {
-  animation: dotHourglassAfter 2.4s infinite cubic-bezier(0.65, 0.05, 0.36, 1);
+.dot-fire::after {
+  box-shadow: 9999px 15px 0 0;
+  animation: dotFireAfter 1s infinite linear;
 }
 
-@keyframes dotHourglass {
+@keyframes dotFire {
   0% {
-    transform: rotateZ(0deg);
+    box-shadow: 9999px -15px 0 -3px;
   }
-  25% {
-    transform: rotateZ(180deg);
-  }
+  1%,
   50% {
-    transform: rotateZ(180deg);
-  }
-  75% {
-    transform: rotateZ(360deg);
+    box-shadow: 9999px 15px 0 -5px;
   }
   100% {
-    transform: rotateZ(360deg);
+    box-shadow: 9999px -5px 0 2px;
   }
 }
 
-@keyframes dotHourglassAfter {
+@keyframes dotFireBefore {
   0% {
-    transform: translateY(0);
-  }
-  25% {
-    transform: translateY(30px);
+    box-shadow: 9999px -5px 0 2px;
   }
   50% {
-    transform: translateY(30px);
+    box-shadow: 9999px -15px 0 -3px;
   }
-  75% {
-    transform: translateY(0);
-  }
+  51%,
   100% {
-    transform: translateY(0);
+    box-shadow: 9999px 15px 0 -5px;
+  }
+}
+
+@keyframes dotFireAfter {
+  1% {
+    box-shadow: 9999px 15px 0 -5px;
+  }
+  50% {
+    box-shadow: 9999px -5px 0 2px;
+  }
+  100%,
+  0% {
+    box-shadow: 9999px -15px 0 -3px;
   }
 }
 
@@ -840,11 +843,11 @@
 
 /**
  * ==============================================
- * Experiment
- * Dot Gooey
+ * Experiment-Gooey Effect
+ * Dot Shuttle
  * ==============================================
  */
-.dot-gooey {
+.dot-shuttle {
   position: relative;
   width: 12px;
   height: 12px;
@@ -855,7 +858,7 @@
   filter: blur(2px);
 }
 
-.dot-gooey::before, .dot-gooey::after {
+.dot-shuttle::before, .dot-shuttle::after {
   content: '';
   display: inline-block;
   position: absolute;
@@ -868,14 +871,14 @@
   color: transparent;
   opacity: 0;
   filter: blur(2px);
-  animation: dotGooey 2s infinite ease-in;
+  animation: dotShuttle 2s infinite ease-in;
 }
 
-.dot-gooey::after {
+.dot-shuttle::after {
   animation-delay: 1s;
 }
 
-@keyframes dotGooey {
+@keyframes dotShuttle {
   0% {
     opacity: 0;
     transform: translateX(0);
@@ -892,11 +895,11 @@
 
 /**
  * ==============================================
- * Experiment
- * Dot Gooey2
+ * Experiment-Gooey Effect
+ * Dot Hourglass
  * ==============================================
  */
-.dot-gooey2 {
+.dot-hourglass {
   position: relative;
   top: -15px;
   width: 12px;
@@ -904,13 +907,14 @@
   border-radius: 6px;
   background-color: black;
   color: transparent;
+  margin: -1px 0;
   filter: blur(2px);
   transform-origin: 5px 20px;
-  animation: dotHourGooey2 2.4s infinite ease-in-out;
+  animation: dotHourglass 2.4s infinite ease-in-out;
   animation-delay: .6s;
 }
 
-.dot-gooey2::before, .dot-gooey2::after {
+.dot-hourglass::before, .dot-hourglass::after {
   content: '';
   display: inline-block;
   position: absolute;
@@ -924,15 +928,15 @@
   filter: blur(2px);
 }
 
-.dot-gooey2::before {
+.dot-hourglass::before {
   top: 30px;
 }
 
-.dot-gooey2::after {
-  animation: dotHourGooey2After 2.4s infinite cubic-bezier(0.65, 0.05, 0.36, 1);
+.dot-hourglass::after {
+  animation: dotHourglassAfter 2.4s infinite cubic-bezier(0.65, 0.05, 0.36, 1);
 }
 
-@keyframes dotHourGooey2 {
+@keyframes dotHourglass {
   0% {
     transform: rotateZ(0deg);
   }
@@ -950,7 +954,7 @@
   }
 }
 
-@keyframes dotHourGooey2After {
+@keyframes dotHourglassAfter {
   0% {
     transform: translateY(0);
   }
@@ -970,23 +974,24 @@
 
 /**
  * ==============================================
- * Experiment
- * Dot Gooey3
+ * Experiment-Gooey Effect
+ * Dot Overtaking
  * ==============================================
  */
-.dot-gooey3 {
+.dot-overtaking {
   position: relative;
   width: 12px;
   height: 12px;
   border-radius: 6px;
   background-color: transparent;
   color: black;
+  margin: -1px 0;
   box-shadow: 0 -20px 0 0;
   filter: blur(2px);
-  animation: dotGooey3 2s infinite cubic-bezier(0.2, 0.6, 0.8, 0.2);
+  animation: dotOvertaking 2s infinite cubic-bezier(0.2, 0.6, 0.8, 0.2);
 }
 
-.dot-gooey3::before, .dot-gooey3::after {
+.dot-overtaking::before, .dot-overtaking::after {
   content: '';
   display: inline-block;
   position: absolute;
@@ -1001,17 +1006,17 @@
   filter: blur(2px);
 }
 
-.dot-gooey3::before {
-  animation: dotGooey3 2s infinite cubic-bezier(0.2, 0.6, 0.8, 0.2);
+.dot-overtaking::before {
+  animation: dotOvertaking 2s infinite cubic-bezier(0.2, 0.6, 0.8, 0.2);
   animation-delay: .3s;
 }
 
-.dot-gooey3::after {
-  animation: dotGooey3 1.5s infinite cubic-bezier(0.2, 0.6, 0.8, 0.2);
+.dot-overtaking::after {
+  animation: dotOvertaking 1.5s infinite cubic-bezier(0.2, 0.6, 0.8, 0.2);
   animation-delay: .6s;
 }
 
-@keyframes dotGooey3 {
+@keyframes dotOvertaking {
   0% {
     transform: rotateZ(0deg);
   }

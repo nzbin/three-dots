@@ -23,7 +23,7 @@
     left: 0;
     top: - $dotSpacing;
     transform-origin: $dotWidth/2 ($dotSpacing + $dotWidth/2);
-    animation: dotRevolution 1.5s linear infinite;
+    animation: dotRevolution 1.4s linear infinite;
   }
 
   &::after {

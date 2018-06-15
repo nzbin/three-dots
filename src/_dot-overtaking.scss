@@ -1,20 +1,21 @@
 /**
  * ==============================================
- * Experiment
- * Dot Gooey3
+ * Experiment-Gooey Effect
+ * Dot Overtaking
  * ==============================================
  */
 
 $dotColorHSL: hsl(0, 100%, 0%);
 
-.dot-gooey3 {
+.dot-overtaking {
   position: relative;
 
   @include dot($width: 12px, $height: 12px, $radius: 6px, $bgColor: transparent, $color: $dotColorHSL);
 
+  margin: -1px 0;
   box-shadow: 0 -20px 0 0;
   filter: blur(2px);
-  animation: dotGooey3 2s infinite cubic-bezier(.2, .6, .8, .2);
+  animation: dotOvertaking 2s infinite cubic-bezier(.2, .6, .8, .2);
 
   &::before,
   &::after {
@@ -31,17 +32,17 @@ $dotColorHSL: hsl(0, 100%, 0%);
   }
 
   &::before {
-    animation: dotGooey3 2s infinite cubic-bezier(.2, .6, .8, .2);
+    animation: dotOvertaking 2s infinite cubic-bezier(.2, .6, .8, .2);
     animation-delay: .3s;
   }
 
   &::after {
-    animation: dotGooey3 1.5s infinite cubic-bezier(.2, .6, .8, .2);
+    animation: dotOvertaking 1.5s infinite cubic-bezier(.2, .6, .8, .2);
     animation-delay: .6s;
   }
 }
 
-@keyframes dotGooey3 {
+@keyframes dotOvertaking {
   0% {
     transform: rotateZ(0deg);
   }

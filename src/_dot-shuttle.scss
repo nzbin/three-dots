@@ -1,7 +1,7 @@
 /**
  * ==============================================
- * Experiment
- * Dot Gooey
+ * Experiment-Gooey Effect
+ * Dot Shuttle
  * ==============================================
  */
 
@@ -9,7 +9,7 @@ $dotColorHSL: hsl(0, 100%, 0%);
 
 $d: 50px;
 
-.dot-gooey {
+.dot-shuttle {
   position: relative;
 
   @include dot($width: 12px, $height: 12px, $radius: 6px, $bgColor: $dotColorHSL, $color: transparent);
@@ -29,7 +29,7 @@ $d: 50px;
 
     opacity: 0;
     filter: blur(2px);
-    animation: dotGooey 2s infinite ease-in;
+    animation: dotShuttle 2s infinite ease-in;
   }
 
   &::after {
@@ -37,7 +37,7 @@ $d: 50px;
   }
 }
 
-@keyframes dotGooey {
+@keyframes dotShuttle {
   0% {
     opacity: 0;
     transform: translateX(0);
