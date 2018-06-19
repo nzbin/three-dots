@@ -1,0 +1,50 @@
+/**
+ * ==============================================
+ * Experiment-Gooey Effect
+ * Dot Hourglass
+ * ==============================================
+ */
+
+@dotColorHSL: hsl(0, 100%, 0%);
+
+@r: @dotSpacing;
+@originX: @dotWidth/2;
+@originY: @dotHeight/2 + @r;
+
+.dot-hourglass {
+    .dot(@width: 12px, @height: 12px, @radius: 6px, @bgColor: @dotColorHSL, @color: transparent);
+    animation: dotHourglass 2.4s .6s infinite ease-in-out;
+    filter: blur(2px);
+    margin: -1px 0;
+    position: relative;
+    top: -@r;
+    transform-origin: @originX @originY;
+    &::before,
+    &::after {
+        .dot(@width: 12px, @height: 12px, @radius: 6px, @bgColor: @dotColorHSL, @color: transparent);
+        content: "";
+        filter: blur(2px);
+        //display: inline-block;
+        left: 0;
+        position: absolute;
+        top: 0;
+    }
+    &::before { top: @r + @r; }
+    &::after  { animation: dotHourglassAfter 2.4s infinite cubic-bezier(.65, .05, .36, 1); }
+}
+
+@keyframes dotHourglass {
+    0%   { transform: rotateZ(0deg); }
+    25%  { transform: rotateZ(180deg); }
+    50%  { transform: rotateZ(180deg); }
+    75%  { transform: rotateZ(360deg); }
+    100% { transform: rotateZ(360deg); }
+}
+
+@keyframes dotHourglassAfter {
+    0%   { transform: translateY(0); }
+    25%  { transform: translateY(@r*2); }
+    50%  { transform: translateY(@r*2); }
+    75%  { transform: translateY(0); }
+    100% { transform: translateY(0); }
+}

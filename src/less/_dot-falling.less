@@ -1,0 +1,54 @@
+/**
+ * ==============================================
+ * Dot Falling
+ * ==============================================
+ */
+
+@leftPos: -9999px;
+@x1: -@leftPos - @dotSpacing;
+@x2: -@leftPos;
+@x3: -@leftPos + @dotSpacing;
+
+@y1: -@dotSpacing;
+@y2: 0;
+@y3: @dotSpacing;
+
+@color-0: fade(@dotColor, 0%);
+@color-1: fade(@dotColor, 100%);
+
+.dot-falling {
+    position: relative;
+    .dot;
+    left: @leftPos;
+    box-shadow: @x2 0 0 0 @dotColor;
+    animation: dotFalling 1s infinite linear;
+    animation-delay: .1s;
+    &::before,
+    &::after {
+        .dot;
+        content: "";
+        //display: inline-block;
+        position: absolute;
+        top: 0;
+    }
+    &::before { animation: dotFallingBefore 1s infinite linear; }
+    &::after  { animation: dotFallingAfter 1s .2s infinite linear; }
+}
+
+@keyframes dotFalling {
+    0%            { box-shadow: @x2 @y1 0 0 @color-0; }
+    25%, 50%, 75% { box-shadow: @x2 @y2 0 0 @color-1; }
+    100%          { box-shadow: @x2 @y3 0 0 @color-0; }
+}
+
+@keyframes dotFallingBefore {
+    0%            { box-shadow: @x1 @y1 0 0 @color-0; }
+    25%, 50%, 75% { box-shadow: @x1 @y2 0 0 @color-1; }
+    100%          { box-shadow: @x1 @y3 0 0 @color-0; }
+}
+
+@keyframes dotFallingAfter {
+    0%            { box-shadow: @x3 @y1 0 0 @color-0; }
+    25%, 50%, 75% { box-shadow: @x3 @y2 0 0 @color-1; }
+    100%          { box-shadow: @x3 @y3 0 0 @color-0; }
+}

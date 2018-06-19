@@ -1,0 +1,36 @@
+/**
+ * ==============================================
+ * Dot Collision
+ * ==============================================
+ */
+
+.dot-collision {
+    .dot;
+    position: relative;
+    &::before,
+    &::after {
+        .dot;
+        content: "";
+        //display: inline-block;
+        position: absolute;
+        top: 0;
+    }
+    &::before {
+        animation: dotCollisionBefore 2s infinite ease-in;
+        left: - @dotWidth;
+    }
+    &::after {
+        animation: dotCollisionAfter 2s 1s infinite ease-in;
+        left: @dotWidth;
+    }
+}
+
+@keyframes dotCollisionBefore {
+    0%, 50%, 75%, 100% { transform: translateX(0); }
+    25%                { transform: translateX(-@dotSpacing); }
+}
+
+@keyframes dotCollisionAfter {
+    0%, 50%, 75%, 100% { transform: translateX(0); }
+    25%                { transform: translateX(@dotSpacing); }
+}

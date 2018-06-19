@@ -1,0 +1,53 @@
+/**
+ * ==============================================
+ * Dot Fire
+ * ==============================================
+ */
+
+@leftPos: -9999px;
+@x1: -@leftPos;
+@y1: -@dotSpacing;
+@y2: -@dotSpacing / 3;
+@y3: @dotSpacing;
+
+.dot-fire {
+    .dot;
+    animation: dotFire 1s infinite linear;
+    box-shadow: @x1 @y1 0 0;
+    left: @leftPos;
+    position: relative;
+    &::before,
+    &::after {
+    .dot;
+        content: "";
+        //display: inline-block;
+        position: absolute;
+        top: 0;
+    }
+    &::before {
+        animation: dotFireBefore 1s infinite linear;
+        box-shadow: @x1 @y2 0 0;
+    }
+    &::after {
+        animation: dotFireAfter 1s infinite linear;
+        box-shadow: @x1 @y3 0 0;
+    }
+}
+
+@keyframes dotFire {
+    0%      { box-shadow: @x1 @y1 0 -3px; }
+    1%, 50% { box-shadow: @x1 @y3 0 -5px; }
+    100%    { box-shadow: @x1 @y2 0 2px; }
+}
+
+@keyframes dotFireBefore {
+    0%        { box-shadow: @x1 @y2 0 2px; }
+    50%       { box-shadow: @x1 @y1 0 -3px; }
+    51%, 100% { box-shadow: @x1 @y3 0 -5px; }
+}
+
+@keyframes dotFireAfter {
+    0%, 100% { box-shadow: @x1 @y1 0 -3px; }
+    1%       { box-shadow: @x1 @y3 0 -5px; }
+    50%      { box-shadow: @x1 @y2 0 2px;}
+}

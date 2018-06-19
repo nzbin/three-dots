@@ -1,0 +1,54 @@
+/**
+ * ==============================================
+ * Dot Pulse
+ * ==============================================
+ */
+
+@leftPos: -9999px;
+@x1: -@leftPos - @dotSpacing;
+@x2: -@leftPos;
+@x3: -@leftPos + @dotSpacing;
+
+.dot-pulse {
+    .dot;
+    animation: dotPulse 1.5s infinite linear;
+    box-shadow:
+        @x1 0 0 0 @dotColor,
+        @x2 0 0 0 @dotColor,
+        @x3 0 0 0 @dotColor;
+    left: @leftPos;
+    position: relative;
+}
+
+@keyframes dotPulse {
+    0% {
+        box-shadow:
+            @x1 0 0 -5px @dotColor,
+            @x2 0 0 0 @dotColor,
+            @x3 0 0 2px @dotColor;
+    }
+    25% {
+        box-shadow:
+            @x1 0 0 0 @dotColor,
+            @x2 0 0 2px @dotColor,
+            @x3 0 0 0 @dotColor;
+    }
+    50% {
+        box-shadow:
+            @x1 0 0 2px @dotColor,
+            @x2 0 0 0 @dotColor,
+            @x3 0 0 -5px @dotColor;
+    }
+    75% {
+        box-shadow:
+            @x1 0 0 0 @dotColor,
+            @x2 0 0 -5px @dotColor,
+            @x3 0 0 0 @dotColor;
+    }
+    100% {
+        box-shadow:
+            @x1 0 0 -5px @dotColor,
+            @x2 0 0 0 @dotColor,
+            @x3 0 0 2px @dotColor;
+    }
+}
