@@ -1,0 +1,66 @@
+/**
+ * ==============================================
+ * Dot Typing
+ * ==============================================
+ */
+
+@leftPos: -9999px;
+@x1: -@leftPos - @dotSpacing;
+@x2: -@leftPos;
+@x3: -@leftPos + @dotSpacing;
+
+.dot-typing {
+    .dot;
+    animation: dotTyping 1.5s infinite linear;
+    box-shadow:
+        @x1 0 0 0 @dotColor,
+        @x2 0 0 0 @dotColor,
+        @x3 0 0 0 @dotColor;
+    left: @leftPos;
+    position: relative;
+}
+
+@keyframes dotTyping {
+    0% {
+        box-shadow:
+            @x1 0 0 0 @dotColor,
+            @x2 0 0 0 @dotColor,
+            @x3 0 0 0 @dotColor;
+    }
+    16.6667% {
+        box-shadow:
+            @x1 -10px 0 0 @dotColor,
+            @x2 0 0 0 @dotColor,
+            @x3 0 0 0 @dotColor;
+    }
+    33.3333% {
+        box-shadow:
+            @x1 0 0 0 @dotColor,
+            @x2 0 0 0 @dotColor,
+            @x3 0 0 0 @dotColor;
+    }
+    50% {
+        box-shadow:
+            @x1 0 0 0 @dotColor,
+            @x2 -10px 0 0 @dotColor,
+            @x3 0 0 0 @dotColor;
+    }
+    66.6667% {
+        box-shadow:
+            @x1 0 0 0 @dotColor,
+            @x2 0 0 0 @dotColor,
+            @x3 0 0 0 @dotColor;
+    }
+    83.3333% {
+        box-shadow:
+            @x1 0 0 0 @dotColor,
+            @x2 0 0 0 @dotColor,
+            @x3 -10px 0 0 @dotColor;
+    }
+    100% {
+        box-shadow:
+            @x1 0 0 0 @dotColor,
+            @x2 0 0 0 @dotColor,
+            @x3 0 0 0 @dotColor;
+    }
+}

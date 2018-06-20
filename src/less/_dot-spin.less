@@ -1,0 +1,124 @@
+/**
+ * ==============================================
+ * Dot Spin
+ * ==============================================
+ */
+
+@x1: @dotSpacing*1.2;
+@y1: @dotSpacing*1.2;
+@-x1: -@x1;
+@-y1: -@y1;
+
+@x2: @x1/1.414;
+@y2: @y1/1.414;
+@-x2: -@x2;
+@-y2: -@y2;
+
+@color-0: fade(@dotColor, 0%);
+@color-1: fade(@dotColor, 100%);
+
+.dot-spin {
+    .dot(@bgColor: transparent, @color: transparent);
+    animation: dotSpin 1.5s infinite linear;
+    box-shadow:
+        0 @-y1 0 0 @color-1,
+        @x2 @-y2 0 0 @color-1,
+        @x1 0 0 0 @color-1,
+        @x2 @y2 0 0 @color-0,
+        0 @y1 0 0 @color-0,
+        @-x2 @y2 0 0 @color-0,
+        @-x1 0 0 0 @color-0,
+        @-x2 @-y2 0 0 @color-0;
+    position: relative;
+}
+
+@keyframes dotSpin {
+    0%, 100% {
+        box-shadow:
+            0 @-y1 0 0 @color-1,
+            @x2 @-y2 0 0 @color-1,
+            @x1 0 0 0 @color-1,
+            @x2 @y2 0 -5px @color-0,
+            0 @y1 0 -5px @color-0,
+            @-x2 @y2 0 -5px @color-0,
+            @-x1 0 0 -5px @color-0,
+            @-x2 @-y2 0 -5px @color-0;
+    }
+    12.5% {
+        box-shadow:
+            0 @-y1 0 -5px @color-0,
+            @x2 @-y2 0 0 @color-1,
+            @x1 0 0 0 @color-1,
+            @x2 @y2 0 0 @color-1,
+            0 @y1 0 -5px @color-0,
+            @-x2 @y2 0 -5px @color-0,
+            @-x1 0 0 -5px @color-0,
+            @-x2 @-y2 0 -5px @color-0;
+    }
+    25% {
+        box-shadow:
+            0 @-y1 0 -5px @color-0,
+            @x2 @-y2 0 -5px @color-0,
+            @x1 0 0 0 @color-1,
+            @x2 @y2 0 0 @color-1,
+            0 @y1 0 0 @color-1,
+            @-x2 @y2 0 -5px @color-0,
+            @-x1 0 0 -5px @color-0,
+            @-x2 @-y2 0 -5px @color-0;
+    }
+    37.5% {
+        box-shadow:
+            0 @-y1 0 -5px @color-0,
+            @x2 @-y2 0 -5px @color-0,
+            @x1 0 0 -5px @color-0,
+            @x2 @y2 0 0 @color-1,
+            0 @y1 0 0 @color-1,
+            @-x2 @y2 0 0 @color-1,
+            @-x1 0 0 -5px @color-0,
+            @-x2 @-y2 0 -5px @color-0;
+    }
+    50% {
+        box-shadow:
+            0 @-y1 0 -5px @color-0,
+            @x2 @-y2 0 -5px @color-0,
+            @x1 0 0 -5px @color-0,
+            @x2 @y2 0 -5px @color-0,
+            0 @y1 0 0 @color-1,
+            @-x2 @y2 0 0 @color-1,
+            @-x1 0 0 0 @color-1,
+            @-x2 @-y2 0 -5px @color-0;
+    }
+    62.5% {
+        box-shadow:
+            0 @-y1 0 -5px @color-0,
+            @x2 @-y2 0 -5px @color-0,
+            @x1 0 0 -5px @color-0,
+            @x2 @y2 0 -5px @color-0,
+            0 @y1 0 -5px @color-0,
+            @-x2 @y2 0 0 @color-1,
+            @-x1 0 0 0 @color-1,
+            @-x2 @-y2 0 0 @color-1;
+    }
+    75% {
+        box-shadow:
+            0 @-y1 0 0 @color-1,
+            @x2 @-y2 0 -5px @color-0,
+            @x1 0 0 -5px @color-0,
+            @x2 @y2 0 -5px @color-0,
+            0 @y1 0 -5px @color-0,
+            @-x2 @y2 0 -5px @color-0,
+            @-x1 0 0 0 @color-1,
+            @-x2 @-y2 0 0 @color-1;
+    }
+    87.5% {
+        box-shadow:
+            0 @-y1 0 0 @color-1,
+            @x2 @-y2 0 0 @color-1,
+            @x1 0 0 -5px @color-0,
+            @x2 @y2 0 -5px @color-0,
+            0 @y1 0 -5px @color-0,
+            @-x2 @y2 0 -5px @color-0,
+            @-x1 0 0 -5px @color-0,
+            @-x2 @-y2 0 0 @color-1;
+    }
+}

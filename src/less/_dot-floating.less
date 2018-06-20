@@ -1,0 +1,47 @@
+/**
+ * ==============================================
+ * Dot Floating
+ * ==============================================
+ */
+
+.dot-floating {
+	.dot;
+	animation: dotFloating 3s infinite cubic-bezier(.15, .6, .9, .1);
+	position: relative;
+	&::before,
+	&::after {
+		.dot;
+		content: "";
+		//display: inline-block;
+		position: absolute;
+		top: 0;
+	}
+	&::before {
+		animation: dotFloatingBefore 3s infinite ease-in-out;
+		left: -@d-min;
+	}
+	&::after {
+		animation: dotFloatingAfter 3s infinite cubic-bezier(.4, 0, 1, 1);
+		left: -@d-min*2;
+	}
+}
+
+@keyframes dotFloating {
+	0%   { left: ~"calc(-50% - @{dotWidth}/2)"; }
+	75%  { left: ~"calc(50% + @{d-max}*2 + @{dotWidth}/2)"; }
+	100% { left: ~"calc(50% + @{d-max}*2 + @{dotWidth}/2})"; }
+}
+
+@keyframes dotFloatingBefore {
+	0%   { left: -@d-max; }
+	50%  { left: -@d-min; }
+	75%  { left: -@d-max; }
+	100% { left: -@d-max; }
+}
+
+@keyframes dotFloatingAfter {
+	0%   { left: -@d-max*2; }
+	50%  { left: -@d-min*2; }
+	75%  { left: -@d-max*2; }
+	100% { left: -@d-max*2; }
+}

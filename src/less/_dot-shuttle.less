@@ -1,0 +1,45 @@
+/**
+ * ==============================================
+ * Experiment-Gooey Effect
+ * Dot Shuttle
+ * ==============================================
+ */
+
+@dotColorHSL: hsl(0, 100%, 0%);
+
+@d: 50px;
+
+.dot-shuttle {
+    .dot(@width: 12px, @height: 12px, @radius: 6px, @bgColor: @dotColorHSL, @color: transparent);
+    filter: blur(2px);
+    margin: -1px 0;
+    position: relative;
+    &::before,
+    &::after {
+        .dot(@width: 12px, @height: 12px, @radius: 6px, @bgColor: @dotColorHSL, @color: transparent);
+        animation: dotShuttle 2s infinite ease-in;
+        content: "";
+        //display: inline-block;
+        filter: blur(2px);
+        left: -@d;
+        opacity: 0;
+        position: absolute;
+        top: 0;
+    }
+    &::after { animation-delay: 1s; }
+}
+
+@keyframes dotShuttle {
+    0% {
+        opacity: 0;
+        transform: translateX(0);
+    }
+    50% {
+        opacity: 1;
+        transform: translateX(@d);
+    }
+    100% {
+        opacity: 0;
+        transform: translateX(@d*2);
+    }
+}

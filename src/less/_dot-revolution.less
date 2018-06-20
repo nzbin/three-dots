@@ -1,0 +1,35 @@
+/**
+ * ==============================================
+ * Dot Revolution
+ * ==============================================
+ */
+
+.dot-revolution {
+    .dot;
+    position: relative;
+    &::before,
+    &::after {
+        .dot;
+        content: "";
+        //display: inline-block;
+        position: absolute;
+        top: 0;
+    }
+    &::before {
+        animation: dotRevolution 1.4s linear infinite;
+        left: 0;
+        top: -@dotSpacing;
+        transform-origin: @dotWidth/2 (@dotSpacing + @dotWidth/2);
+    }
+    &::after {
+        animation: dotRevolution 1s linear infinite;
+        left: 0;
+        top: -@dotSpacing*2;
+        transform-origin: @dotWidth/2 (@dotSpacing*2 + @dotWidth/2);
+    }
+}
+
+@keyframes dotRevolution {
+    0%   { transform: rotateZ(0deg) translate3d(0, 0, 0); }
+    100% { transform: rotateZ(360deg) translate3d(0, 0, 0); }
+}

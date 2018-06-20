@@ -1,0 +1,51 @@
+/**
+ * ==============================================
+ * Dot Elastic
+ * ==============================================
+ */
+
+.dot-elastic {
+    .dot;
+    animation: dotElastic 1s infinite linear;
+    position: relative;
+    &::before,
+    &::after {
+        .dot;
+        content: "";
+        //display: inline-block;
+        position: absolute;
+        top: 0;
+    }
+    &::before {
+        animation: dotElasticBefore 1s infinite linear;
+        left: -@dotSpacing;
+    }
+    &::after {
+        animation: dotElasticAfter 1s infinite linear;
+        left: @dotSpacing;
+    }
+}
+
+@keyframes dotElasticBefore {
+    0%   { transform: scale(1, 1); }
+    25%  { transform: scale(1, 1.5); }
+    50%  { transform: scale(1, .67); }
+    75%  { transform: scale(1, 1); }
+    100% { transform: scale(1, 1); }
+}
+
+@keyframes dotElastic {
+    0%   { transform: scale(1, 1); }
+    25%  { transform: scale(1, 1); }
+    50%  { transform: scale(1, 1.5); }
+    75%  { transform: scale(1, 1); }
+    100% { transform: scale(1, 1); }
+}
+
+@keyframes dotElasticAfter {
+    0%   { transform: scale(1, 1); }
+    25%  { transform: scale(1, 1); }
+    50%  { transform: scale(1, .67); }
+    75%  { transform: scale(1, 1.5); }
+    100% { transform: scale(1, 1); }
+}
