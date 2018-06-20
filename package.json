@@ -38,10 +38,10 @@
     "start": "run-p build watch",
     "build": "run-s clean sass autoprefixer",
     "clean": "rimraf dist",
-    "sass": "node-sass --output-style expanded src/three-dots.scss dist/three-dots.css && node-sass --output-style compressed src/three-dots.scss dist/three-dots.min.css",
+    "sass": "node-sass --output-style expanded sass/three-dots.scss dist/three-dots.css && node-sass --output-style compressed sass/three-dots.scss dist/three-dots.min.css",
     "copy": "cpy dist/*.css !dist/*.min.css docs/css",
     "autoprefixer": "postcss -u autoprefixer --no-map.inline --autoprefixer.browsers \"last 1 versions\" -r dist/*.css",
-    "watch": "onchange src -- run-s sass copy",
-    "lint": "stylelint --syntax scss \"src/**/*.scss\" --fix"
+    "watch": "onchange sass -- run-s sass copy",
+    "lint": "stylelint --syntax scss \"sass/**/*.scss\" --fix"
   }
 }
