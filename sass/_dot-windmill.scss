@@ -22,19 +22,20 @@ $originY: 5px + $r;
     content: '';
     display: inline-block;
     position: absolute;
-    top: 0;
-
-    @include dot;
   }
 
   &::before {
     left: -($r/2*1.732);
     top: $r + $r/2;
+
+    @include dot($bgColor: $dotBeforeColor);
   }
 
   &::after {
     left: $r/2*1.732;
     top: $r + $r/2;
+
+    @include dot($bgColor: $dotAfterColor);
   }
 }
 

@@ -15,16 +15,18 @@
     display: inline-block;
     position: absolute;
     top: 0;
-
-    @include dot;
   }
 
   &::before {
+    @include dot($bgColor: $dotBeforeColor);
+
     left: - $dotWidth;
     animation: dotCollisionBefore 2s infinite ease-in;
   }
 
   &::after {
+    @include dot($bgColor: $dotAfterColor);
+
     left: $dotWidth;
     animation: dotCollisionAfter 2s infinite ease-in;
     animation-delay: 1s;

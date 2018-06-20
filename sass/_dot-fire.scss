@@ -16,7 +16,7 @@ $y3: $dotSpacing;
 
   @include dot;
 
-  box-shadow: $x1 $y1 0 0;
+  box-shadow: $x1 $y1 0 0 $dotColor;
   animation: dotFire 1s infinite linear;
 
   &::before,
@@ -30,57 +30,57 @@ $y3: $dotSpacing;
   }
 
   &::before {
-    box-shadow: $x1 $y2 0 0;
+    box-shadow: $x1 $y2 0 0 $dotBeforeColor;
     animation: dotFireBefore 1s infinite linear;
   }
 
   &::after {
-    box-shadow: $x1 $y3 0 0;
+    box-shadow: $x1 $y3 0 0 $dotAfterColor;
     animation: dotFireAfter 1s infinite linear;
   }
 }
 
 @keyframes dotFire {
   0% {
-    box-shadow: $x1 $y1 0 -3px;
+    box-shadow: $x1 $y1 0 -3px $dotColor;
   }
 
   1%,
   50% {
-    box-shadow: $x1 $y3 0 -5px;
+    box-shadow: $x1 $y3 0 -5px $dotColor;
   }
 
   100% {
-    box-shadow: $x1 $y2 0 2px;
+    box-shadow: $x1 $y2 0 2px $dotColor;
   }
 }
 
 @keyframes dotFireBefore {
   0% {
-    box-shadow: $x1 $y2 0 2px;
+    box-shadow: $x1 $y2 0 2px $dotBeforeColor;
   }
 
   50% {
-    box-shadow: $x1 $y1 0 -3px;
+    box-shadow: $x1 $y1 0 -3px $dotBeforeColor;
   }
 
   51%,
   100% {
-    box-shadow: $x1 $y3 0 -5px;
+    box-shadow: $x1 $y3 0 -5px $dotBeforeColor;
   }
 }
 
 @keyframes dotFireAfter {
   1% {
-    box-shadow: $x1 $y3 0 -5px;
+    box-shadow: $x1 $y3 0 -5px $dotAfterColor;
   }
 
   50% {
-    box-shadow: $x1 $y2 0 2px;
+    box-shadow: $x1 $y2 0 2px $dotAfterColor;
   }
 
   100%,
   0% {
-    box-shadow: $x1 $y1 0 -3px;
+    box-shadow: $x1 $y1 0 -3px $dotAfterColor;
   }
 }

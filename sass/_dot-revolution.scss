@@ -14,12 +14,11 @@
     content: '';
     display: inline-block;
     position: absolute;
-    top: 0;
-
-    @include dot;
   }
 
   &::before {
+    @include dot($bgColor: $dotBeforeColor);
+
     left: 0;
     top: - $dotSpacing;
     transform-origin: $dotWidth/2 ($dotSpacing + $dotWidth/2);
@@ -27,6 +26,8 @@
   }
 
   &::after {
+    @include dot($bgColor: $dotAfterColor);
+
     left: 0;
     top: - $dotSpacing*2;
     transform-origin: $dotWidth/2 ($dotSpacing*2 + $dotWidth/2);

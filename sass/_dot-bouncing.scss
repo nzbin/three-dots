@@ -1,13 +1,13 @@
 /**
  * ==============================================
- * Experiment
- * Dot Emoji ⚽ 🏀 🏐
+ * Experiment-Emoji
+ * Dot Bouncing ⚽ 🏀 🏐
  * ==============================================
  */
 
 $d: 20px;
 
-.dot-emoji {
+.dot-bouncing {
   position: relative;
   height: $dotHeight;
   font-size: 10px;
@@ -16,11 +16,11 @@ $d: 20px;
     content: '⚽🏀🏐';
     display: inline-block;
     position: relative;
-    animation: dotEmoji 1s infinite;
+    animation: dotBouncing 1s infinite;
   }
 }
 
-@keyframes dotEmoji {
+@keyframes dotBouncing {
   0% {
     top: - $d;
     animation-timing-function: ease-in;

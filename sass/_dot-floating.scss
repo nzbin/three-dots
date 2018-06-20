@@ -20,16 +20,18 @@ $d-min: 12px;
     display: inline-block;
     position: absolute;
     top: 0;
-
-    @include dot;
   }
 
   &::before {
+    @include dot($bgColor: $dotBeforeColor);
+
     left: - $d-min;
     animation: dotFloatingBefore 3s infinite ease-in-out;
   }
 
   &::after {
+    @include dot($bgColor: $dotAfterColor);
+
     left: - $d-min*2;
     animation: dotFloatingAfter 3s infinite cubic-bezier(.4, 0, 1, 1);
   }

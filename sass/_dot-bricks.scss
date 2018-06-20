@@ -20,101 +20,101 @@ $y2: -$spacing;
   @include dot;
 
   box-shadow:
-    $x1 $y2 0 0 $dotColor,
+    $x1 $y2 0 0 $dotBeforeColor,
     $x1 $y1 0 0 $dotColor,
-    $x2 $y1 0 0 $dotColor;
+    $x2 $y1 0 0 $dotAfterColor;
   animation: dotBricks 2s infinite ease;
 }
 
 @keyframes dotBricks {
   0% {
     box-shadow:
-      $x1 $y2 0 0 $dotColor,
+      $x1 $y2 0 0 $dotBeforeColor,
       $x1 $y1 0 0 $dotColor,
-      $x2 $y1 0 0 $dotColor;
+      $x2 $y1 0 0 $dotAfterColor;
   }
 
   8.333% {
     box-shadow:
-      $x2 $y2 0 0 $dotColor,
+      $x2 $y2 0 0 $dotBeforeColor,
       $x1 $y1 0 0 $dotColor,
-      $x2 $y1 0 0 $dotColor;
+      $x2 $y1 0 0 $dotAfterColor;
   }
 
   16.667% {
     box-shadow:
-      $x2 $y2 0 0 $dotColor,
+      $x2 $y2 0 0 $dotBeforeColor,
       $x1 $y2 0 0 $dotColor,
-      $x2 $y1 0 0 $dotColor;
+      $x2 $y1 0 0 $dotAfterColor;
   }
 
   25% {
     box-shadow:
-      $x2 $y2 0 0 $dotColor,
+      $x2 $y2 0 0 $dotBeforeColor,
       $x1 $y2 0 0 $dotColor,
-      $x1 $y1 0 0 $dotColor;
+      $x1 $y1 0 0 $dotAfterColor;
   }
 
   33.333% {
     box-shadow:
-      $x2 $y1 0 0 $dotColor,
+      $x2 $y1 0 0 $dotBeforeColor,
       $x1 $y2 0 0 $dotColor,
-      $x1 $y1 0 0 $dotColor;
+      $x1 $y1 0 0 $dotAfterColor;
   }
 
   41.667% {
     box-shadow:
-      $x2 $y1 0 0 $dotColor,
+      $x2 $y1 0 0 $dotBeforeColor,
       $x2 $y2 0 0 $dotColor,
-      $x1 $y1 0 0 $dotColor;
+      $x1 $y1 0 0 $dotAfterColor;
   }
 
   50% {
     box-shadow:
-      $x2 $y1 0 0 $dotColor,
+      $x2 $y1 0 0 $dotBeforeColor,
       $x2 $y2 0 0 $dotColor,
-      $x1 $y2 0 0 $dotColor;
+      $x1 $y2 0 0 $dotAfterColor;
   }
 
   58.333% {
     box-shadow:
-      $x1 $y1 0 0 $dotColor,
+      $x1 $y1 0 0 $dotBeforeColor,
       $x2 $y2 0 0 $dotColor,
-      $x1 $y2 0 0 $dotColor;
+      $x1 $y2 0 0 $dotAfterColor;
   }
 
   66.666% {
     box-shadow:
-      $x1 $y1 0 0 $dotColor,
+      $x1 $y1 0 0 $dotBeforeColor,
       $x2 $y1 0 0 $dotColor,
-      $x1 $y2 0 0 $dotColor;
+      $x1 $y2 0 0 $dotAfterColor;
   }
 
   75% {
     box-shadow:
-      $x1 $y1 0 0 $dotColor,
+      $x1 $y1 0 0 $dotBeforeColor,
       $x2 $y1 0 0 $dotColor,
-      $x2 $y2 0 0 $dotColor;
+      $x2 $y2 0 0 $dotAfterColor;
   }
 
   83.333% {
     box-shadow:
-      $x1 $y2 0 0 $dotColor,
+      $x1 $y2 0 0 $dotBeforeColor,
       $x2 $y1 0 0 $dotColor,
-      $x2 $y2 0 0 $dotColor;
+      $x2 $y2 0 0 $dotAfterColor;
   }
 
   91.667% {
     box-shadow:
-      $x1 $y2 0 0 $dotColor,
+      $x1 $y2 0 0 $dotBeforeColor,
       $x1 $y1 0 0 $dotColor,
-      $x2 $y2 0 0 $dotColor;
+      $x2 $y2 0 0 $dotAfterColor;
   }
 
   100% {
     box-shadow:
-      $x1 $y2 0 0 $dotColor,
+      $x1 $y2 0 0 $dotBeforeColor,
       $x1 $y1 0 0 $dotColor,
-      $x2 $y1 0 0 $dotColor;
+      $x2 $y1 0 0 $dotAfterColor;
   }
 }

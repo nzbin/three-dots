@@ -18,17 +18,19 @@
     display: inline-block;
     position: absolute;
     top: 0;
-
-    @include dot;
   }
 
   &::before {
+    @include dot($bgColor: $dotBeforeColor);
+
     left: - $dotSpacing;
     animation: dotFlashing 1s infinite alternate;
     animation-delay: 0s;
   }
 
   &::after {
+    @include dot($bgColor: $dotAfterColor);
+
     left: $dotSpacing;
     animation: dotFlashing 1s infinite alternate;
     animation-delay: 1s;

@@ -16,31 +16,31 @@ $x3: - $leftPos + $dotSpacing;
   @include dot;
 
   box-shadow:
-    $x1 0 0 0 $dotColor,
+    $x1 0 0 0 $dotBeforeColor,
     $x2 0 0 0 $dotColor,
-    $x3 0 0 0 $dotColor;
+    $x3 0 0 0 $dotAfterColor;
   animation: dotCarousel 1.5s infinite linear;
 }
 
 @keyframes dotCarousel {
   0% {
     box-shadow:
-      $x1 0 0 -1px $dotColor,
+      $x1 0 0 -1px $dotBeforeColor,
       $x2 0 0 1px $dotColor,
-      $x3 0 0 -1px $dotColor;
+      $x3 0 0 -1px $dotAfterColor;
   }
 
   50% {
     box-shadow:
-      $x3 0 0 -1px $dotColor,
+      $x3 0 0 -1px $dotBeforeColor,
       $x1 0 0 -1px $dotColor,
-      $x2 0 0 1px $dotColor;
+      $x2 0 0 1px $dotAfterColor;
   }
 
   100% {
     box-shadow:
-      $x2 0 0 1px $dotColor,
+      $x2 0 0 1px $dotBeforeColor,
       $x3 0 0 -1px $dotColor,
-      $x1 0 0 -1px $dotColor;
+      $x1 0 0 -1px $dotAfterColor;
   }
 }

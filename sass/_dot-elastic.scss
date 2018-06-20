@@ -17,16 +17,18 @@
     display: inline-block;
     position: absolute;
     top: 0;
-
-    @include dot;
   }
 
   &::before {
+    @include dot($bgColor: $dotBeforeColor);
+
     left: - $dotSpacing;
     animation: dotElasticBefore 1s infinite linear;
   }
 
   &::after {
+    @include dot($bgColor: $dotAfterColor);
+
     left: $dotSpacing;
     animation: dotElasticAfter 1s infinite linear;
   }

@@ -12,8 +12,8 @@ $ratio2: .7;
 
   @include dot;
 
-  animation: dotStretching 2s infinite ease-in;
   transform: scale(1.25, 1.25);
+  animation: dotStretching 2s infinite ease-in;
 
   &::before,
   &::after {
@@ -21,15 +21,17 @@ $ratio2: .7;
     display: inline-block;
     position: absolute;
     top: 0;
-
-    @include dot;
   }
 
   &::before {
+    @include dot($bgColor: $dotBeforeColor);
+
     animation: dotStretchingBefore 2s infinite ease-in;
   }
 
   &::after {
+    @include dot($bgColor: $dotAfterColor);
+
     animation: dotStretchingAfter 2s infinite ease-in;
   }
 }
