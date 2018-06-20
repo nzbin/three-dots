@@ -1,0 +1,32 @@
+/**
+* ==============================================
+* Dot Flashing
+* ==============================================
+*/
+
+.dot-flashing {
+    .dot;
+    animation: dotFlashing 1s .5s infinite linear alternate;
+    position: relative;
+    &::before,
+    &::after {
+        .dot;
+        content: "";
+        display: inline-block;
+        position: absolute;
+        top: 0;
+    }
+    &::before {
+        animation: dotFlashing 1s infinite alternate;
+        left: -@dotSpacing;
+    }
+    &::after {
+        animation: dotFlashing 1s 1s infinite alternate;
+        left: @dotSpacing;
+    }
+}
+
+@keyframes dotFlashing {
+    0%   { background-color: @dotColor; }
+    100% { background-color: lighten(@dotColor, 20%); }
+}

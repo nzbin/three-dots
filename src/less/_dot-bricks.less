@@ -1,0 +1,103 @@
+/**
+ * ==============================================
+ * Dot Bricks
+ * ==============================================
+ */
+
+@spacing: @dotWidth + 6px;
+@topPos: @spacing / 2;
+@leftPos: -9999px;
+@x1: -@leftPos - @topPos;
+@x2: -@leftPos - @topPos + @spacing;
+@y1: 0;
+@y2: -@spacing;
+
+.dot-bricks {
+    .dot;
+    animation: dotBricks 2s infinite ease;
+    box-shadow: @x1 @y2 0 0 @dotColor, @x1 @y1 0 0 @dotColor, @x2 @y1 0 0 @dotColor;
+    left: @leftPos;
+    position: relative;
+    top: @topPos;
+}
+
+@keyframes dotBricks {
+    0% {
+        box-shadow:
+            @x1 @y2 0 0 @dotColor,
+            @x1 @y1 0 0 @dotColor,
+            @x2 @y1 0 0 @dotColor;
+    }
+    8.3333% {
+        box-shadow:
+            @x2 @y2 0 0 @dotColor,
+            @x1 @y1 0 0 @dotColor,
+            @x2 @y1 0 0 @dotColor;
+    }
+    16.6667% {
+        box-shadow:
+            @x2 @y2 0 0 @dotColor,
+            @x1 @y2 0 0 @dotColor,
+            @x2 @y1 0 0 @dotColor;
+    }
+    25% {
+        box-shadow:
+            @x2 @y2 0 0 @dotColor,
+            @x1 @y2 0 0 @dotColor,
+            @x1 @y1 0 0 @dotColor;
+    }
+    33.3333% {
+        box-shadow:
+            @x2 @y1 0 0 @dotColor,
+            @x1 @y2 0 0 @dotColor,
+            @x1 @y1 0 0 @dotColor;
+    }
+    41.6667% {
+        box-shadow:
+            @x2 @y1 0 0 @dotColor,
+            @x2 @y2 0 0 @dotColor,
+            @x1 @y1 0 0 @dotColor;
+    }
+    50% {
+        box-shadow:
+            @x2 @y1 0 0 @dotColor,
+            @x2 @y2 0 0 @dotColor,
+            @x1 @y2 0 0 @dotColor;
+    }
+    58.3333% {
+        box-shadow:
+            @x1 @y1 0 0 @dotColor,
+            @x2 @y2 0 0 @dotColor,
+            @x1 @y2 0 0 @dotColor;
+    }
+    66.6667% {
+        box-shadow:
+            @x1 @y1 0 0 @dotColor,
+            @x2 @y1 0 0 @dotColor,
+            @x1 @y2 0 0 @dotColor;
+    }
+    75% {
+        box-shadow:
+            @x1 @y1 0 0 @dotColor,
+            @x2 @y1 0 0 @dotColor,
+            @x2 @y2 0 0 @dotColor;
+    }
+    83.3333% {
+        box-shadow:
+            @x1 @y2 0 0 @dotColor,
+            @x2 @y1 0 0 @dotColor,
+            @x2 @y2 0 0 @dotColor;
+    }
+    91.6667% {
+        box-shadow:
+            @x1 @y2 0 0 @dotColor,
+            @x1 @y1 0 0 @dotColor,
+            @x2 @y2 0 0 @dotColor;
+    }
+    100% {
+        box-shadow:
+            @x1 @y2 0 0 @dotColor,
+            @x1 @y1 0 0 @dotColor,
+            @x2 @y1 0 0 @dotColor;
+    }
+}
