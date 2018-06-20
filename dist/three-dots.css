@@ -1056,7 +1056,7 @@
 /**
  * ==============================================
  * Experiment-Emoji
- * Dot Bouncing ⚽ 🏀 🏐
+ * Dot Bouncing
  * ==============================================
  */
 .dot-bouncing {
@@ -1099,7 +1099,7 @@
 /**
  * ==============================================
  * Experiment-Emoji
- * Dot Rolling ⚽ 🏀 🏐
+ * Dot Rolling
  * ==============================================
  */
 .dot-rolling {
@@ -1154,3 +1154,5 @@
     transform: translateX(-25px) rotateZ(0deg);
   }
 }
+
+/*# sourceMappingURL=three-dots.css.map */
