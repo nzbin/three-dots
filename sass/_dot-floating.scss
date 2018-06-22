@@ -23,16 +23,18 @@ $d-min: 12px;
   }
 
   &::before {
+    left: - $d-min;
+
     @include dot($bgColor: $dotBeforeColor);
 
-    left: - $d-min;
     animation: dotFloatingBefore 3s infinite ease-in-out;
   }
 
   &::after {
+    left: - $d-min*2;
+
     @include dot($bgColor: $dotAfterColor);
 
-    left: - $d-min*2;
     animation: dotFloatingAfter 3s infinite cubic-bezier(.4, 0, 1, 1);
   }
 }

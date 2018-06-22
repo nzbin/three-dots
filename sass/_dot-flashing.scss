@@ -21,17 +21,19 @@
   }
 
   &::before {
+    left: - $dotSpacing;
+
     @include dot($bgColor: $dotBeforeColor);
 
-    left: - $dotSpacing;
     animation: dotFlashing 1s infinite alternate;
     animation-delay: 0s;
   }
 
   &::after {
+    left: $dotSpacing;
+
     @include dot($bgColor: $dotAfterColor);
 
-    left: $dotSpacing;
     animation: dotFlashing 1s infinite alternate;
     animation-delay: 1s;
   }

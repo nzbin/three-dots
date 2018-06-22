@@ -33,22 +33,22 @@
 }
 
 .dot-elastic::before {
+  left: -15px;
   width: 10px;
   height: 10px;
   border-radius: 5px;
   background-color: #9880ff;
   color: #9880ff;
-  left: -15px;
   animation: dotElasticBefore 1s infinite linear;
 }
 
 .dot-elastic::after {
+  left: 15px;
   width: 10px;
   height: 10px;
   border-radius: 5px;
   background-color: #9880ff;
   color: #9880ff;
-  left: 15px;
   animation: dotElasticAfter 1s infinite linear;
 }
 
@@ -165,23 +165,23 @@
 }
 
 .dot-flashing::before {
+  left: -15px;
   width: 10px;
   height: 10px;
   border-radius: 5px;
   background-color: #9880ff;
   color: #9880ff;
-  left: -15px;
   animation: dotFlashing 1s infinite alternate;
   animation-delay: 0s;
 }
 
 .dot-flashing::after {
+  left: 15px;
   width: 10px;
   height: 10px;
   border-radius: 5px;
   background-color: #9880ff;
   color: #9880ff;
-  left: 15px;
   animation: dotFlashing 1s infinite alternate;
   animation-delay: 1s;
 }
@@ -217,22 +217,22 @@
 }
 
 .dot-collision::before {
+  left: -10px;
   width: 10px;
   height: 10px;
   border-radius: 5px;
   background-color: #9880ff;
   color: #9880ff;
-  left: -10px;
   animation: dotCollisionBefore 2s infinite ease-in;
 }
 
 .dot-collision::after {
+  left: 10px;
   width: 10px;
   height: 10px;
   border-radius: 5px;
   background-color: #9880ff;
   color: #9880ff;
-  left: 10px;
   animation: dotCollisionAfter 2s infinite ease-in;
   animation-delay: 1s;
 }
@@ -282,25 +282,25 @@
 }
 
 .dot-revolution::before {
+  left: 0;
+  top: -15px;
   width: 10px;
   height: 10px;
   border-radius: 5px;
   background-color: #9880ff;
   color: #9880ff;
-  left: 0;
-  top: -15px;
   transform-origin: 5px 20px;
   animation: dotRevolution 1.4s linear infinite;
 }
 
 .dot-revolution::after {
+  left: 0;
+  top: -30px;
   width: 10px;
   height: 10px;
   border-radius: 5px;
   background-color: #9880ff;
   color: #9880ff;
-  left: 0;
-  top: -30px;
   transform-origin: 5px 35px;
   animation: dotRevolution 1s linear infinite;
 }
@@ -519,22 +519,22 @@
 }
 
 .dot-floating::before {
+  left: -12px;
   width: 10px;
   height: 10px;
   border-radius: 5px;
   background-color: #9880ff;
   color: #9880ff;
-  left: -12px;
   animation: dotFloatingBefore 3s infinite ease-in-out;
 }
 
 .dot-floating::after {
+  left: -24px;
   width: 10px;
   height: 10px;
   border-radius: 5px;
   background-color: #9880ff;
   color: #9880ff;
-  left: -24px;
   animation: dotFloatingAfter 3s infinite cubic-bezier(0.4, 0, 1, 1);
 }
 
@@ -593,8 +593,9 @@
   border-radius: 5px;
   background-color: #9880ff;
   color: #9880ff;
-  box-shadow: 9999px -15px 0 0 #9880ff;
-  animation: dotFire 1s infinite linear;
+  box-shadow: 9999px 22.5px 0 -5px #9880ff;
+  animation: dotFire 1.5s infinite linear;
+  animation-delay: -.85s;
 }
 
 .dot-fire::before, .dot-fire::after {
@@ -610,51 +611,26 @@
 }
 
 .dot-fire::before {
-  box-shadow: 9999px -5px 0 0 #9880ff;
-  animation: dotFireBefore 1s infinite linear;
+  box-shadow: 9999px 22.5px 0 -5px #9880ff;
+  animation: dotFire 1.5s infinite linear;
+  animation-delay: -1.85s;
 }
 
 .dot-fire::after {
-  box-shadow: 9999px 15px 0 0 #9880ff;
-  animation: dotFireAfter 1s infinite linear;
+  box-shadow: 9999px 22.5px 0 -5px #9880ff;
+  animation: dotFire 1.5s infinite linear;
+  animation-delay: -2.85s;
 }
 
 @keyframes dotFire {
-  0% {
-    box-shadow: 9999px -15px 0 -3px #9880ff;
-  }
-  1%,
-  50% {
-    box-shadow: 9999px 15px 0 -5px #9880ff;
-  }
-  100% {
-    box-shadow: 9999px -5px 0 2px #9880ff;
-  }
-}
-
-@keyframes dotFireBefore {
-  0% {
-    box-shadow: 9999px -5px 0 2px #9880ff;
-  }
-  50% {
-    box-shadow: 9999px -15px 0 -3px #9880ff;
-  }
-  51%,
-  100% {
-    box-shadow: 9999px 15px 0 -5px #9880ff;
-  }
-}
-
-@keyframes dotFireAfter {
   1% {
-    box-shadow: 9999px 15px 0 -5px #9880ff;
+    box-shadow: 9999px 22.5px 0 -5px #9880ff;
   }
   50% {
-    box-shadow: 9999px -5px 0 2px #9880ff;
+    box-shadow: 9999px -5.625px 0 2px #9880ff;
   }
-  100%,
-  0% {
-    box-shadow: 9999px -15px 0 -3px #9880ff;
+  100% {
+    box-shadow: 9999px -22.5px 0 -5px #9880ff;
   }
 }
 
