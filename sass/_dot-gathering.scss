@@ -1,15 +1,16 @@
 /**
  * ==============================================
  * Experiment-Gooey Effect
- * Dot Shuttle
+ * Dot Gathering
  * ==============================================
  */
 
-$d: 3*$dotSpacing;
+$dotColorHSL: hsl(0, 100%, 0%);
 
-.dot-shuttle {
+$d: 50px;
+
+.dot-gathering {
   position: relative;
-  left: - $dotSpacing;
 
   @include dot($width: 12px, $height: 12px, $radius: 6px, $bgColor: $dotColorHSL, $color: transparent);
 
@@ -22,34 +23,34 @@ $d: 3*$dotSpacing;
     display: inline-block;
     position: absolute;
     top: 0;
+    left: - $d;
 
     @include dot($width: 12px, $height: 12px, $radius: 6px, $bgColor: $dotColorHSL, $color: transparent);
 
+    opacity: 0;
     filter: blur(2px);
-  }
-
-  &::before {
-    left: $dotSpacing;
-    animation: dotShuttle 2s infinite ease-out;
+    animation: dotGathering 2s infinite ease-in;
   }
 
   &::after {
-    left: 2*$dotSpacing;
+    animation-delay: .5s;
   }
 }
 
-@keyframes dotShuttle {
-  0%,
-  50%,
-  100% {
+@keyframes dotGathering {
+  0% {
+    opacity: 0;
     transform: translateX(0);
   }
 
-  25% {
-    transform: translateX(-$d);
+  35%,
+  60% {
+    opacity: 1;
+    transform: translateX($d);
   }
 
-  75% {
-    transform: translateX($d);
+  100% {
+    opacity: 0;
+    transform: translateX($d*2);
   }
 }
