@@ -2,7 +2,7 @@
 
 The project is a set of CSS loading animations created with three dots which made by just single element. I think the project can not only enhance your CSS skills but also improve your imagination.
 
-> The LESS file is contributed by other people, it's not the newest.
+> The LESS files are contributed by other people, it's not the newest.
 
 ## Usage
 
@@ -39,12 +39,18 @@ dot-stretching
 
 ## Customization
 
-You can customize the dots size ( color, spacing, etc. ) in the `_variables.scss` file.
+1. Checkout this repo and
+
+```bash
+$ npm install
+```
+
+2. Customize the dots size ( color, spacing, etc. ) in the `_variables.scss` file.
 
 ```scss
 $dotWidth: 10px;
 $dotHeight: 10px;
-$dotRadius: $dotWidth / 2;
+$dotRadius: $dotWidth/2;
 
 $dotColor: #9880ff;
 $dotBgColor: $dotColor;
@@ -53,3 +59,13 @@ $dotAfterColor: $dotColor;
 
 $dotSpacing: $dotWidth + $dotWidth/2;
 ```
+
+3. Compile Sass files
+
+```bash
+$ npm run build
+```
+
+## License
+
+MIT
