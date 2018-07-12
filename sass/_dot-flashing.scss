@@ -44,6 +44,7 @@
     background-color: $dotColor;
   }
 
+  50%,
   100% {
     background-color: lighten($dotColor, 20%);
   }

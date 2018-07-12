@@ -119,25 +119,71 @@
   border-radius: 5px;
   background-color: #9880ff;
   color: #9880ff;
-  box-shadow: 9984px 0 0 0 #9880ff, 9999px 0 0 0 #9880ff, 10014px 0 0 0 #9880ff;
+  box-shadow: 9999px 0 0 -5px #9880ff;
   animation: dotPulse 1.5s infinite linear;
+  animation-delay: .25s;
+}
+
+.dot-pulse::before, .dot-pulse::after {
+  content: '';
+  display: inline-block;
+  position: absolute;
+  top: 0;
+  width: 10px;
+  height: 10px;
+  border-radius: 5px;
+  background-color: #9880ff;
+  color: #9880ff;
+}
+
+.dot-pulse::before {
+  box-shadow: 9984px 0 0 -5px #9880ff;
+  animation: dotPulseBefore 1.5s infinite linear;
+  animation-delay: 0s;
+}
+
+.dot-pulse::after {
+  box-shadow: 10014px 0 0 -5px #9880ff;
+  animation: dotPulseAfter 1.5s infinite linear;
+  animation-delay: .5s;
+}
+
+@keyframes dotPulseBefore {
+  0% {
+    box-shadow: 9984px 0 0 -5px #9880ff;
+  }
+  30% {
+    box-shadow: 9984px 0 0 2px #9880ff;
+  }
+  60%,
+  100% {
+    box-shadow: 9984px 0 0 -5px #9880ff;
+  }
 }
 
 @keyframes dotPulse {
   0% {
-    box-shadow: 9984px 0 0 -5px #9880ff, 9999px 0 0 0 #9880ff, 10014px 0 0 2px #9880ff;
+    box-shadow: 9999px 0 0 -5px #9880ff;
   }
-  25% {
-    box-shadow: 9984px 0 0 0 #9880ff, 9999px 0 0 2px #9880ff, 10014px 0 0 0 #9880ff;
+  30% {
+    box-shadow: 9999px 0 0 2px #9880ff;
   }
-  50% {
-    box-shadow: 9984px 0 0 2px #9880ff, 9999px 0 0 0 #9880ff, 10014px 0 0 -5px #9880ff;
-  }
-  75% {
-    box-shadow: 9984px 0 0 0 #9880ff, 9999px 0 0 -5px #9880ff, 10014px 0 0 0 #9880ff;
-  }
+  60%,
   100% {
-    box-shadow: 9984px 0 0 -5px #9880ff, 9999px 0 0 0 #9880ff, 10014px 0 0 2px #9880ff;
+    box-shadow: 9999px 0 0 -5px #9880ff;
+  }
+}
+
+@keyframes dotPulseAfter {
+  0% {
+    box-shadow: 10014px 0 0 -5px #9880ff;
+  }
+  30% {
+    box-shadow: 10014px 0 0 2px #9880ff;
+  }
+  60%,
+  100% {
+    box-shadow: 10014px 0 0 -5px #9880ff;
   }
 }
 
@@ -190,6 +236,7 @@
   0% {
     background-color: #9880ff;
   }
+  50%,
   100% {
     background-color: #ebe6ff;
   }
@@ -391,13 +438,13 @@
  */
 .dot-windmill {
   position: relative;
-  top: -15px;
+  top: -10px;
   width: 10px;
   height: 10px;
   border-radius: 5px;
   background-color: #9880ff;
   color: #9880ff;
-  transform-origin: 5px 20px;
+  transform-origin: 5px 15px;
   animation: dotWindmill 2s infinite linear;
 }
 
@@ -408,8 +455,8 @@
 }
 
 .dot-windmill::before {
-  left: -12.99px;
-  top: 22.5px;
+  left: -8.66px;
+  top: 15px;
   width: 10px;
   height: 10px;
   border-radius: 5px;
@@ -418,8 +465,8 @@
 }
 
 .dot-windmill::after {
-  left: 12.99px;
-  top: 22.5px;
+  left: 8.66px;
+  top: 15px;
   width: 10px;
   height: 10px;
   border-radius: 5px;

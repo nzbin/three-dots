@@ -15,46 +15,74 @@ $x3: - $leftPos + $dotSpacing;
 
   @include dot;
 
-  box-shadow:
-    $x1 0 0 0 $dotBeforeColor,
-    $x2 0 0 0 $dotColor,
-    $x3 0 0 0 $dotAfterColor;
+  box-shadow: $x2 0 0 -5px $dotColor;
   animation: dotPulse 1.5s infinite linear;
+  animation-delay: .25s;
+
+  &::before,
+  &::after {
+    content: '';
+    display: inline-block;
+    position: absolute;
+    top: 0;
+
+    @include dot;
+  }
+
+  &::before {
+    box-shadow: $x1 0 0 -5px $dotBeforeColor;
+    animation: dotPulseBefore 1.5s infinite linear;
+    animation-delay: 0s;
+  }
+
+  &::after {
+    box-shadow: $x3 0 0 -5px $dotAfterColor;
+    animation: dotPulseAfter 1.5s infinite linear;
+    animation-delay: .5s;
+  }
+}
+
+@keyframes dotPulseBefore {
+  0% {
+    box-shadow: $x1 0 0 -5px $dotBeforeColor;
+  }
+
+  30% {
+    box-shadow: $x1 0 0 2px $dotBeforeColor;
+  }
+
+  60%,
+  100% {
+    box-shadow: $x1 0 0 -5px $dotBeforeColor;
+  }
 }
 
 @keyframes dotPulse {
   0% {
-    box-shadow:
-      $x1 0 0 -5px $dotBeforeColor,
-      $x2 0 0 0 $dotColor,
-      $x3 0 0 2px $dotAfterColor;
+    box-shadow: $x2 0 0 -5px $dotColor;
   }
 
-  25% {
-    box-shadow:
-      $x1 0 0 0 $dotBeforeColor,
-      $x2 0 0 2px $dotColor,
-      $x3 0 0 0 $dotAfterColor;
+  30% {
+    box-shadow: $x2 0 0 2px $dotColor;
   }
 
-  50% {
-    box-shadow:
-      $x1 0 0 2px $dotBeforeColor,
-      $x2 0 0 0 $dotColor,
-      $x3 0 0 -5px $dotAfterColor;
-  }
-
-  75% {
-    box-shadow:
-      $x1 0 0 0 $dotBeforeColor,
-      $x2 0 0 -5px $dotColor,
-      $x3 0 0 0 $dotAfterColor;
-  }
-
+  60%,
   100% {
-    box-shadow:
-      $x1 0 0 -5px $dotBeforeColor,
-      $x2 0 0 0 $dotColor,
-      $x3 0 0 2px $dotAfterColor;
+    box-shadow: $x2 0 0 -5px $dotColor;
+  }
+}
+
+@keyframes dotPulseAfter {
+  0% {
+    box-shadow: $x3 0 0 -5px $dotAfterColor;
+  }
+
+  30% {
+    box-shadow: $x3 0 0 2px $dotAfterColor;
+  }
+
+  60%,
+  100% {
+    box-shadow: $x3 0 0 -5px $dotAfterColor;
   }
 }
