@@ -1,7 +1,7 @@
 @charset "UTF-8";
 /**
  *
- * three-dots.css v0.1.0
+ * three-dots.css v0.1.1
  *
  * https://nzbin.github.io/three-dots/
  *
@@ -1232,3 +1232,5 @@
     transform: translateX(-25px) rotateZ(0deg);
   }
 }
+
+/*# sourceMappingURL=three-dots.css.map */
