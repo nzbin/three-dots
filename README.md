@@ -7,6 +7,12 @@ The project is a set of CSS loading animations created with three dots which mad
 
 > The LESS files are contributed by other people, it's not the newest.
 
+## Installing
+
+```sh
+$ npm install three-dots --save
+```
+
 ## Usage
 
 1. Include the CSS in your file:
