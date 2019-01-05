@@ -44,7 +44,7 @@
   },
   "scripts": {
     "start": "run-p build watch",
-    "build": "run-s clean sass sassmin postcss",
+    "build": "run-s clean sass sassmin postcss copy",
     "clean": "rimraf dist",
     "sass": "node-sass --output-style expanded sass/three-dots.scss dist/three-dots.css",
     "sassmin": "node-sass --output-style compressed sass/three-dots.scss dist/three-dots.min.css",
