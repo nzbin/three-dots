@@ -1,15 +1,13 @@
-@charset "UTF-8";
-/**
- *
- * three-dots.css v0.1.1
- *
- * https://nzbin.github.io/three-dots/
+
+/*!
+ * three-dots - v0.1.2
+ * CSS loading animation made by single element.
+ * https://github.com/nzbin/three-dots#readme
  *
  * Copyright (c) 2018 nzbin
- *
- * Released under the MIT license
- *
+ * Released under MIT License
  */
+@charset "UTF-8";
 /**
  * ==============================================
  * Dot Elastic
