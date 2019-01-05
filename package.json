@@ -50,7 +50,7 @@
     "sassmin": "node-sass --output-style compressed sass/three-dots.scss dist/three-dots.min.css",
     "copy": "cpy dist/*.css !dist/*.min.css docs/css",
     "postcss": "postcss -r dist/*.css --map",
-    "watch": "onchange sass --run-s sass copy",
+    "watch": "onchange sass -- run-s sass copy",
     "lint": "stylelint --syntax scss \"sass/**/*.scss\" --fix"
   }
 }
