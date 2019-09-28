@@ -1,7 +1,8 @@
 # Three Dots
 
-[![Financial Contributors on Open Collective](https://opencollective.com/three-dots/all/badge.svg?label=financial+contributors)](https://opencollective.com/three-dots) [![npm](https://img.shields.io/npm/v/three-dots.svg)](https://www.npmjs.com/package/three-dots)
+[![npm](https://img.shields.io/npm/v/three-dots.svg)](https://www.npmjs.com/package/three-dots)
 [![license](https://img.shields.io/github/license/mashape/apistatus.svg)](https://github.com/nzbin/three-dots)
+[![Financial Contributors on Open Collective](https://opencollective.com/three-dots/all/badge.svg?label=financial+contributors)](https://opencollective.com/three-dots) 
 
 The project is a set of CSS loading animations created with three dots which made by just single element. I think the project can not only enhance your CSS skills but also improve your imagination.
 
