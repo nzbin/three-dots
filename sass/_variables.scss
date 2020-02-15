@@ -2,13 +2,13 @@
 // Variables
 // ==============================================
 
-$dotWidth: 10px;
-$dotHeight: 10px;
-$dotRadius: $dotWidth/2;
+$dotWidth: 10px !default;
+$dotHeight: 10px !default;
+$dotRadius: $dotWidth/2 !default;
 
-$dotColor: #9880ff;
-$dotBgColor: $dotColor;
-$dotBeforeColor: $dotColor;
-$dotAfterColor: $dotColor;
+$dotColor: #9880ff !default;
+$dotBgColor: $dotColor !default;
+$dotBeforeColor: $dotColor !default;
+$dotAfterColor: $dotColor !default;
 
-$dotSpacing: $dotWidth + $dotWidth/2;
+$dotSpacing: $dotWidth + $dotWidth/2 !default;
