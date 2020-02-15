@@ -12,7 +12,13 @@ $d: 50px;
 .dot-gathering {
   position: relative;
 
-  @include dot($width: 12px, $height: 12px, $radius: 6px, $bgColor: $dotColorHSL, $color: transparent);
+  @include dot(
+    $width: 12px,
+    $height: 12px,
+    $radius: 6px,
+    $bgColor: $dotColorHSL,
+    $color: transparent
+  );
 
   margin: -1px 0;
   filter: blur(2px);
@@ -23,9 +29,15 @@ $d: 50px;
     display: inline-block;
     position: absolute;
     top: 0;
-    left: - $d;
+    left: -$d;
 
-    @include dot($width: 12px, $height: 12px, $radius: 6px, $bgColor: $dotColorHSL, $color: transparent);
+    @include dot(
+      $width: 12px,
+      $height: 12px,
+      $radius: 6px,
+      $bgColor: $dotColorHSL,
+      $color: transparent
+    );
 
     opacity: 0;
     filter: blur(2px);
@@ -51,6 +63,6 @@ $d: 50px;
 
   100% {
     opacity: 0;
-    transform: translateX($d*2);
+    transform: translateX($d * 2);
   }
 }

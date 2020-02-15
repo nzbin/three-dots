@@ -5,10 +5,10 @@
  */
 
 $leftPos: -9999px;
-$x1: - $leftPos;
-$y1: - 1.5*$dotSpacing;
-$y2: - 1.5*$dotSpacing/4;
-$y3: 1.5*$dotSpacing;
+$x1: -$leftPos;
+$y1: -1.5 * $dotSpacing;
+$y2: -1.5 * $dotSpacing/4;
+$y3: 1.5 * $dotSpacing;
 
 .dot-fire {
   position: relative;
@@ -18,7 +18,7 @@ $y3: 1.5*$dotSpacing;
 
   box-shadow: $x1 $y3 0 -5px $dotColor;
   animation: dotFire 1.5s infinite linear;
-  animation-delay: -.85s;
+  animation-delay: -0.85s;
 
   &::before,
   &::after {

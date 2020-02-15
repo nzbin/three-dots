@@ -2,7 +2,13 @@
 // Mixins
 // ==============================================
 
-@mixin dot($width: $dotWidth, $height: $dotHeight, $radius: $dotRadius,$bgColor: $dotBgColor, $color: $dotColor ) {
+@mixin dot(
+  $width: $dotWidth,
+  $height: $dotHeight,
+  $radius: $dotRadius,
+  $bgColor: $dotBgColor,
+  $color: $dotColor
+) {
   width: $width;
   height: $height;
   border-radius: $radius;

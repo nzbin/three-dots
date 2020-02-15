@@ -22,7 +22,7 @@ $d: 20px;
 
 @keyframes dotBouncing {
   0% {
-    top: - $d;
+    top: -$d;
     animation-timing-function: ease-in;
   }
 
@@ -41,10 +41,10 @@ $d: 20px;
   }
 
   90% {
-    top: - $d;
+    top: -$d;
   }
 
   100% {
-    top: - $d;
+    top: -$d;
   }
 }

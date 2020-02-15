@@ -10,7 +10,7 @@ $originY: 5px + $r;
 
 .dot-windmill {
   position: relative;
-  top: - $r;
+  top: -$r;
 
   @include dot;
 
@@ -25,14 +25,14 @@ $originY: 5px + $r;
   }
 
   &::before {
-    left: -($r/2*1.732);
+    left: -($r/2 * 1.732);
     top: $r + $r/2;
 
     @include dot($bgColor: $dotBeforeColor);
   }
 
   &::after {
-    left: $r/2*1.732;
+    left: $r/2 * 1.732;
     top: $r + $r/2;
 
     @include dot($bgColor: $dotAfterColor);

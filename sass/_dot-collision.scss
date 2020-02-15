@@ -18,7 +18,7 @@
   }
 
   &::before {
-    left: - $dotWidth;
+    left: -$dotWidth;
 
     @include dot($bgColor: $dotBeforeColor);
 

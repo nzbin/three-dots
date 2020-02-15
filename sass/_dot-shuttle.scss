@@ -5,13 +5,19 @@
  * ==============================================
  */
 
-$d: 3*$dotSpacing;
+$d: 3 * $dotSpacing;
 
 .dot-shuttle {
   position: relative;
-  left: - $dotSpacing;
+  left: -$dotSpacing;
 
-  @include dot($width: 12px, $height: 12px, $radius: 6px, $bgColor: $dotColorHSL, $color: transparent);
+  @include dot(
+    $width: 12px,
+    $height: 12px,
+    $radius: 6px,
+    $bgColor: $dotColorHSL,
+    $color: transparent
+  );
 
   margin: -1px 0;
   filter: blur(2px);
@@ -23,7 +29,13 @@ $d: 3*$dotSpacing;
     position: absolute;
     top: 0;
 
-    @include dot($width: 12px, $height: 12px, $radius: 6px, $bgColor: $dotColorHSL, $color: transparent);
+    @include dot(
+      $width: 12px,
+      $height: 12px,
+      $radius: 6px,
+      $bgColor: $dotColorHSL,
+      $color: transparent
+    );
 
     filter: blur(2px);
   }
@@ -34,7 +46,7 @@ $d: 3*$dotSpacing;
   }
 
   &::after {
-    left: 2*$dotSpacing;
+    left: 2 * $dotSpacing;
   }
 }
 

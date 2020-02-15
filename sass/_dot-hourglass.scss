@@ -13,9 +13,15 @@ $originY: $dotHeight/2 + $r;
 
 .dot-hourglass {
   position: relative;
-  top: - $r;
+  top: -$r;
 
-  @include dot($width: 12px, $height: 12px, $radius: 6px, $bgColor: $dotColorHSL, $color: transparent);
+  @include dot(
+    $width: 12px,
+    $height: 12px,
+    $radius: 6px,
+    $bgColor: $dotColorHSL,
+    $color: transparent
+  );
 
   margin: -1px 0;
   filter: blur(2px);
@@ -31,7 +37,13 @@ $originY: $dotHeight/2 + $r;
     top: 0;
     left: 0;
 
-    @include dot($width: 12px, $height: 12px, $radius: 6px, $bgColor: $dotColorHSL, $color: transparent);
+    @include dot(
+      $width: 12px,
+      $height: 12px,
+      $radius: 6px,
+      $bgColor: $dotColorHSL,
+      $color: transparent
+    );
 
     filter: blur(2px);
   }
@@ -73,11 +85,11 @@ $originY: $dotHeight/2 + $r;
   }
 
   25% {
-    transform: translateY($r*2);
+    transform: translateY($r * 2);
   }
 
   50% {
-    transform: translateY($r*2);
+    transform: translateY($r * 2);
   }
 
   75% {

@@ -23,7 +23,7 @@ $d-min: 12px;
   }
 
   &::before {
-    left: - $d-min;
+    left: -$d-min;
 
     @include dot($bgColor: $dotBeforeColor);
 
@@ -31,7 +31,7 @@ $d-min: 12px;
   }
 
   &::after {
-    left: - $d-min*2;
+    left: -$d-min * 2;
 
     @include dot($bgColor: $dotAfterColor);
 
@@ -45,46 +45,46 @@ $d-min: 12px;
   }
 
   75% {
-    left: calc(50% + #{$d-max*2 + $dotWidth/2});
+    left: calc(50% + #{$d-max * 2 + $dotWidth/2});
   }
 
   100% {
-    left: calc(50% + #{$d-max*2 + $dotWidth/2});
+    left: calc(50% + #{$d-max * 2 + $dotWidth/2});
   }
 }
 
 @keyframes dotFloatingBefore {
   0% {
-    left: - $d-max;
+    left: -$d-max;
   }
 
   50% {
-    left: - $d-min;
+    left: -$d-min;
   }
 
   75% {
-    left: - $d-max;
+    left: -$d-max;
   }
 
   100% {
-    left: - $d-max;
+    left: -$d-max;
   }
 }
 
 @keyframes dotFloatingAfter {
   0% {
-    left: - $d-max*2;
+    left: -$d-max * 2;
   }
 
   50% {
-    left: - $d-min*2;
+    left: -$d-min * 2;
   }
 
   75% {
-    left: - $d-max*2;
+    left: -$d-max * 2;
   }
 
   100% {
-    left: - $d-max*2;
+    left: -$d-max * 2;
   }
 }

@@ -10,7 +10,13 @@ $dotColorHSL: hsl(0, 100%, 0%);
 .dot-overtaking {
   position: relative;
 
-  @include dot($width: 12px, $height: 12px, $radius: 6px, $bgColor: transparent, $color: $dotColorHSL);
+  @include dot(
+    $width: 12px,
+    $height: 12px,
+    $radius: 6px,
+    $bgColor: transparent,
+    $color: $dotColorHSL
+  );
 
   margin: -1px 0;
   box-shadow: 0 -20px 0 0;
@@ -25,7 +31,13 @@ $dotColorHSL: hsl(0, 100%, 0%);
     top: 0;
     left: 0;
 
-    @include dot($width: 12px, $height: 12px, $radius: 6px, $bgColor: transparent, $color: $dotColorHSL);
+    @include dot(
+      $width: 12px,
+      $height: 12px,
+      $radius: 6px,
+      $bgColor: transparent,
+      $color: $dotColorHSL
+    );
 
     box-shadow: 0 -20px 0 0;
     filter: blur(2px);

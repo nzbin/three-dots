@@ -7,8 +7,8 @@
 $spacing: $dotWidth + 6px;
 $topPos: $spacing/2;
 $leftPos: -9999px;
-$x1: - $leftPos - $topPos;
-$x2: - $leftPos - $topPos + $spacing;
+$x1: -$leftPos - $topPos;
+$x2: -$leftPos - $topPos + $spacing;
 $y1: 0;
 $y2: -$spacing;
 

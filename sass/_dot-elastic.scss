@@ -20,7 +20,7 @@
   }
 
   &::before {
-    left: - $dotSpacing;
+    left: -$dotSpacing;
 
     @include dot($bgColor: $dotBeforeColor);
 

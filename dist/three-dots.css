@@ -2,7 +2,7 @@
 /*!
  * three-dots - v0.1.2
  * CSS loading animation made by single element.
- * https://github.com/nzbin/three-dots#readme
+ * https://nzbin.github.io/three-dots/
  *
  * Copyright (c) 2018 nzbin
  * Released under MIT License
@@ -640,7 +640,7 @@
   color: #9880ff;
   box-shadow: 9999px 22.5px 0 -5px #9880ff;
   animation: dotFire 1.5s infinite linear;
-  animation-delay: -.85s;
+  animation-delay: -0.85s;
 }
 
 .dot-fire::before, .dot-fire::after {
@@ -892,7 +892,7 @@
 
 /**
  * ==============================================
- * Experiment-Gooey Effect
+ * Experiment: Gooey Effect
  * Dot Gathering
  * ==============================================
  */
@@ -945,7 +945,7 @@
 
 /**
  * ==============================================
- * Experiment-Gooey Effect
+ * Experiment: Gooey Effect
  * Dot Hourglass
  * ==============================================
  */
@@ -1024,7 +1024,7 @@
 
 /**
  * ==============================================
- * Experiment-Gooey Effect
+ * Experiment: Gooey Effect
  * Dot Overtaking
  * ==============================================
  */
@@ -1077,7 +1077,7 @@
 
 /**
  * ==============================================
- * Experiment-Gooey Effect
+ * Experiment: Gooey Effect
  * Dot Shuttle
  * ==============================================
  */
@@ -1131,7 +1131,7 @@
 
 /**
  * ==============================================
- * Experiment-Emoji
+ * Experiment: Emoji
  * Dot Bouncing
  * ==============================================
  */
@@ -1174,7 +1174,7 @@
 
 /**
  * ==============================================
- * Experiment-Emoji
+ * Experiment: Emoji
  * Dot Rolling
  * ==============================================
  */

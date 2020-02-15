@@ -4,15 +4,15 @@
  * ==============================================
  */
 
-$x1: $dotSpacing*1.2;
-$y1: $dotSpacing*1.2;
-$-x1: - $x1;
-$-y1: - $y1;
+$x1: $dotSpacing * 1.2;
+$y1: $dotSpacing * 1.2;
+$-x1: -$x1;
+$-y1: -$y1;
 
 $x2: $x1/1.414;
 $y2: $y1/1.414;
-$-x2: - $x2;
-$-y2: - $y2;
+$-x2: -$x2;
+$-y2: -$y2;
 
 $color-0: rgba($dotColor, 0);
 $color-1: rgba($dotColor, 1);

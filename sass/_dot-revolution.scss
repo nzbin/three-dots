@@ -18,7 +18,7 @@
 
   &::before {
     left: 0;
-    top: - $dotSpacing;
+    top: -$dotSpacing;
 
     @include dot($bgColor: $dotBeforeColor);
 
@@ -28,11 +28,11 @@
 
   &::after {
     left: 0;
-    top: - $dotSpacing*2;
+    top: -$dotSpacing * 2;
 
     @include dot($bgColor: $dotAfterColor);
 
-    transform-origin: $dotWidth/2 ($dotSpacing*2 + $dotWidth/2);
+    transform-origin: $dotWidth/2 ($dotSpacing * 2 + $dotWidth/2);
     animation: dotRevolution 1s linear infinite;
   }
 }
