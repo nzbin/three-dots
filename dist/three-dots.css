@@ -640,7 +640,7 @@
   color: #9880ff;
   box-shadow: 9999px 22.5px 0 -5px #9880ff;
   animation: dot-fire 1.5s infinite linear;
-  animation-delay: -0.85s;
+  animation-delay: -.85s;
 }
 
 .dot-fire::before, .dot-fire::after {

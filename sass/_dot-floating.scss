@@ -12,7 +12,7 @@ $d-min: 12px;
 
   @include dot;
 
-  animation: dot-floating 3s infinite cubic-bezier(0.15, 0.6, 0.9, 0.1);
+  animation: dot-floating 3s infinite cubic-bezier(.15, .6, .9, .1);
 
   &::before,
   &::after {
@@ -35,7 +35,7 @@ $d-min: 12px;
 
     @include dot($bg-color: $dot-after-color);
 
-    animation: dot-floating-after 3s infinite cubic-bezier(0.4, 0, 1, 1);
+    animation: dot-floating-after 3s infinite cubic-bezier(.4, 0, 1, 1);
   }
 }
 
