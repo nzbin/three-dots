@@ -1,6 +1,6 @@
 {
   "name": "three-dots",
-  "version": "0.1.2",
+  "version": "0.2.0",
   "description": "CSS loading animation made by single element.",
   "main": "dist/three-dots.css",
   "files": [
@@ -25,6 +25,17 @@
     "sass",
     "less"
   ],
+  "scripts": {
+    "start": "run-p build watch",
+    "build": "run-s clean sass sassmin postcss copy",
+    "clean": "rimraf dist",
+    "sass": "node-sass --output-style expanded sass/three-dots.scss dist/three-dots.css",
+    "sassmin": "node-sass --output-style compressed sass/three-dots.scss dist/three-dots.min.css",
+    "copy": "cpy dist/*.css !dist/*.min.css docs/css",
+    "postcss": "postcss -r dist/*.css --map",
+    "watch": "onchange sass -- run-s sass copy",
+    "lint": "stylelint --syntax scss \"sass/**/*.scss\" --fix"
+  },
   "devDependencies": {
     "autoprefixer": "^6.7.7",
     "cpy-cli": "^1.0.1",
@@ -41,16 +52,5 @@
   },
   "engines": {
     "node": ">=4"
-  },
-  "scripts": {
-    "start": "run-p build watch",
-    "build": "run-s clean sass sassmin postcss copy",
-    "clean": "rimraf dist",
-    "sass": "node-sass --output-style expanded sass/three-dots.scss dist/three-dots.css",
-    "sassmin": "node-sass --output-style compressed sass/three-dots.scss dist/three-dots.min.css",
-    "copy": "cpy dist/*.css !dist/*.min.css docs/css",
-    "postcss": "postcss -r dist/*.css --map",
-    "watch": "onchange sass -- run-s sass copy",
-    "lint": "stylelint --syntax scss \"sass/**/*.scss\" --fix"
   }
 }
