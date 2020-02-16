@@ -12,7 +12,7 @@ $d-min: 12px;
 
   @include dot;
 
-  animation: dotFloating 3s infinite cubic-bezier(.15, .6, .9, .1);
+  animation: dot-floating 3s infinite cubic-bezier(0.15, 0.6, 0.9, 0.1);
 
   &::before,
   &::after {
@@ -25,35 +25,35 @@ $d-min: 12px;
   &::before {
     left: -$d-min;
 
-    @include dot($bgColor: $dotBeforeColor);
+    @include dot($bg-color: $dot-before-color);
 
-    animation: dotFloatingBefore 3s infinite ease-in-out;
+    animation: dot-floating-before 3s infinite ease-in-out;
   }
 
   &::after {
     left: -$d-min * 2;
 
-    @include dot($bgColor: $dotAfterColor);
+    @include dot($bg-color: $dot-after-color);
 
-    animation: dotFloatingAfter 3s infinite cubic-bezier(.4, 0, 1, 1);
+    animation: dot-floating-after 3s infinite cubic-bezier(0.4, 0, 1, 1);
   }
 }
 
-@keyframes dotFloating {
+@keyframes dot-floating {
   0% {
-    left: calc(-50% - #{$dotWidth/2});
+    left: calc(-50% - #{$dot-width/2});
   }
 
   75% {
-    left: calc(50% + #{$d-max * 2 + $dotWidth/2});
+    left: calc(50% + #{$d-max * 2 + $dot-width/2});
   }
 
   100% {
-    left: calc(50% + #{$d-max * 2 + $dotWidth/2});
+    left: calc(50% + #{$d-max * 2 + $dot-width/2});
   }
 }
 
-@keyframes dotFloatingBefore {
+@keyframes dot-floating-before {
   0% {
     left: -$d-max;
   }
@@ -71,7 +71,7 @@ $d-min: 12px;
   }
 }
 
-@keyframes dotFloatingAfter {
+@keyframes dot-floating-after {
   0% {
     left: -$d-max * 2;
   }

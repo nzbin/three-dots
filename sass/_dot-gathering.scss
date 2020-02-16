@@ -5,7 +5,7 @@
  * ==============================================
  */
 
-$dotColorHSL: hsl(0, 100%, 0%);
+$dot-color-hsl: hsl(0, 100%, 0%);
 
 $d: 50px;
 
@@ -16,7 +16,7 @@ $d: 50px;
     $width: 12px,
     $height: 12px,
     $radius: 6px,
-    $bgColor: $dotColorHSL,
+    $bg-color: $dot-color-hsl,
     $color: transparent
   );
 
@@ -35,13 +35,13 @@ $d: 50px;
       $width: 12px,
       $height: 12px,
       $radius: 6px,
-      $bgColor: $dotColorHSL,
+      $bg-color: $dot-color-hsl,
       $color: transparent
     );
 
     opacity: 0;
     filter: blur(2px);
-    animation: dotGathering 2s infinite ease-in;
+    animation: dot-gathering 2s infinite ease-in;
   }
 
   &::after {
@@ -49,7 +49,7 @@ $d: 50px;
   }
 }
 
-@keyframes dotGathering {
+@keyframes dot-gathering {
   0% {
     opacity: 0;
     transform: translateX(0);

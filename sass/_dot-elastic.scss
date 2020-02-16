@@ -9,7 +9,7 @@
 
   @include dot;
 
-  animation: dotElastic 1s infinite linear;
+  animation: dot-elastic 1s infinite linear;
 
   &::before,
   &::after {
@@ -20,23 +20,23 @@
   }
 
   &::before {
-    left: -$dotSpacing;
+    left: -$dot-spacing;
 
-    @include dot($bgColor: $dotBeforeColor);
+    @include dot($bg-color: $dot-before-color);
 
-    animation: dotElasticBefore 1s infinite linear;
+    animation: dot-elastic-before 1s infinite linear;
   }
 
   &::after {
-    left: $dotSpacing;
+    left: $dot-spacing;
 
-    @include dot($bgColor: $dotAfterColor);
+    @include dot($bg-color: $dot-after-color);
 
-    animation: dotElasticAfter 1s infinite linear;
+    animation: dot-elastic-after 1s infinite linear;
   }
 }
 
-@keyframes dotElasticBefore {
+@keyframes dot-elastic-before {
   0% {
     transform: scale(1, 1);
   }
@@ -58,7 +58,7 @@
   }
 }
 
-@keyframes dotElastic {
+@keyframes dot-elastic {
   0% {
     transform: scale(1, 1);
   }
@@ -80,7 +80,7 @@
   }
 }
 
-@keyframes dotElasticAfter {
+@keyframes dot-elastic-after {
   0% {
     transform: scale(1, 1);
   }

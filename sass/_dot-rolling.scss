@@ -9,7 +9,7 @@ $d: 20px;
 
 .dot-rolling {
   position: relative;
-  height: $dotHeight;
+  height: $dot-height;
   font-size: 10px;
 
   &::before {
@@ -17,11 +17,11 @@ $d: 20px;
     display: inline-block;
     position: relative;
     transform: translateX(-25px);
-    animation: dotRolling 3s infinite;
+    animation: dot-rolling 3s infinite;
   }
 }
 
-@keyframes dotRolling {
+@keyframes dot-rolling {
   0% {
     content: '⚽';
     transform: translateX(-25px) rotateZ(0deg);

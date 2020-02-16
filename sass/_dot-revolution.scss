@@ -18,26 +18,26 @@
 
   &::before {
     left: 0;
-    top: -$dotSpacing;
+    top: -$dot-spacing;
 
-    @include dot($bgColor: $dotBeforeColor);
+    @include dot($bg-color: $dot-before-color);
 
-    transform-origin: $dotWidth/2 ($dotSpacing + $dotWidth/2);
-    animation: dotRevolution 1.4s linear infinite;
+    transform-origin: $dot-width/2 ($dot-spacing + $dot-width/2);
+    animation: dot-revolution 1.4s linear infinite;
   }
 
   &::after {
     left: 0;
-    top: -$dotSpacing * 2;
+    top: -$dot-spacing * 2;
 
-    @include dot($bgColor: $dotAfterColor);
+    @include dot($bg-color: $dot-after-color);
 
-    transform-origin: $dotWidth/2 ($dotSpacing * 2 + $dotWidth/2);
-    animation: dotRevolution 1s linear infinite;
+    transform-origin: $dot-width/2 ($dot-spacing * 2 + $dot-width/2);
+    animation: dot-revolution 1s linear infinite;
   }
 }
 
-@keyframes dotRevolution {
+@keyframes dot-revolution {
   0% {
     transform: rotateZ(0deg) translate3d(0, 0, 0);
   }

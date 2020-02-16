@@ -9,7 +9,7 @@
 
   @include dot;
 
-  animation: dotFlashing 1s infinite linear alternate;
+  animation: dot-flashing 1s infinite linear alternate;
   animation-delay: .5s;
 
   &::before,
@@ -21,31 +21,31 @@
   }
 
   &::before {
-    left: -$dotSpacing;
+    left: -$dot-spacing;
 
-    @include dot($bgColor: $dotBeforeColor);
+    @include dot($bg-color: $dot-before-color);
 
-    animation: dotFlashing 1s infinite alternate;
+    animation: dot-flashing 1s infinite alternate;
     animation-delay: 0s;
   }
 
   &::after {
-    left: $dotSpacing;
+    left: $dot-spacing;
 
-    @include dot($bgColor: $dotAfterColor);
+    @include dot($bg-color: $dot-after-color);
 
-    animation: dotFlashing 1s infinite alternate;
+    animation: dot-flashing 1s infinite alternate;
     animation-delay: 1s;
   }
 }
 
-@keyframes dotFlashing {
+@keyframes dot-flashing {
   0% {
-    background-color: $dotColor;
+    background-color: $dot-color;
   }
 
   50%,
   100% {
-    background-color: lighten($dotColor, 20%);
+    background-color: lighten($dot-color, 20%);
   }
 }

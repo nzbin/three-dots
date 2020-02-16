@@ -9,18 +9,18 @@ $d: 20px;
 
 .dot-bouncing {
   position: relative;
-  height: $dotHeight;
+  height: $dot-height;
   font-size: 10px;
 
   &::before {
     content: '⚽🏀🏐';
     display: inline-block;
     position: relative;
-    animation: dotBouncing 1s infinite;
+    animation: dot-bouncing 1s infinite;
   }
 }
 
-@keyframes dotBouncing {
+@keyframes dot-bouncing {
   0% {
     top: -$d;
     animation-timing-function: ease-in;

@@ -58,16 +58,16 @@ $ npm install
 2. Customize the dots size ( color, spacing, etc. ) in the `_variables.scss` file.
 
 ```scss
-$dotWidth: 10px;
-$dotHeight: 10px;
-$dotRadius: $dotWidth/2;
+$dot-width: 10px;
+$dot-height: 10px;
+$dot-radius: $dot-width/2;
 
-$dotColor: #9880ff;
-$dotBgColor: $dotColor;
-$dotBeforeColor: $dotColor;
-$dotAfterColor: $dotColor;
+$dot-color: #9880ff;
+$dot-bg-color: $dot-color;
+$dot-before-color: $dot-color;
+$dot-after-color: $dot-color;
 
-$dotSpacing: $dotWidth + $dotWidth/2;
+$dot-spacing: $dot-width + $dot-width/2;
 ```
 
 3. Compile Sass files

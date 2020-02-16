@@ -20,7 +20,7 @@
   border-radius: 5px;
   background-color: #9880ff;
   color: #9880ff;
-  animation: dotElastic 1s infinite linear;
+  animation: dot-elastic 1s infinite linear;
 }
 
 .dot-elastic::before, .dot-elastic::after {
@@ -37,7 +37,7 @@
   border-radius: 5px;
   background-color: #9880ff;
   color: #9880ff;
-  animation: dotElasticBefore 1s infinite linear;
+  animation: dot-elastic-before 1s infinite linear;
 }
 
 .dot-elastic::after {
@@ -47,10 +47,10 @@
   border-radius: 5px;
   background-color: #9880ff;
   color: #9880ff;
-  animation: dotElasticAfter 1s infinite linear;
+  animation: dot-elastic-after 1s infinite linear;
 }
 
-@keyframes dotElasticBefore {
+@keyframes dot-elastic-before {
   0% {
     transform: scale(1, 1);
   }
@@ -68,7 +68,7 @@
   }
 }
 
-@keyframes dotElastic {
+@keyframes dot-elastic {
   0% {
     transform: scale(1, 1);
   }
@@ -86,7 +86,7 @@
   }
 }
 
-@keyframes dotElasticAfter {
+@keyframes dot-elastic-after {
   0% {
     transform: scale(1, 1);
   }
@@ -118,7 +118,7 @@
   background-color: #9880ff;
   color: #9880ff;
   box-shadow: 9999px 0 0 -5px #9880ff;
-  animation: dotPulse 1.5s infinite linear;
+  animation: dot-pulse 1.5s infinite linear;
   animation-delay: .25s;
 }
 
@@ -136,17 +136,17 @@
 
 .dot-pulse::before {
   box-shadow: 9984px 0 0 -5px #9880ff;
-  animation: dotPulseBefore 1.5s infinite linear;
+  animation: dot-pulse-before 1.5s infinite linear;
   animation-delay: 0s;
 }
 
 .dot-pulse::after {
   box-shadow: 10014px 0 0 -5px #9880ff;
-  animation: dotPulseAfter 1.5s infinite linear;
+  animation: dot-pulse-after 1.5s infinite linear;
   animation-delay: .5s;
 }
 
-@keyframes dotPulseBefore {
+@keyframes dot-pulse-before {
   0% {
     box-shadow: 9984px 0 0 -5px #9880ff;
   }
@@ -159,7 +159,7 @@
   }
 }
 
-@keyframes dotPulse {
+@keyframes dot-pulse {
   0% {
     box-shadow: 9999px 0 0 -5px #9880ff;
   }
@@ -172,7 +172,7 @@
   }
 }
 
-@keyframes dotPulseAfter {
+@keyframes dot-pulse-after {
   0% {
     box-shadow: 10014px 0 0 -5px #9880ff;
   }
@@ -197,7 +197,7 @@
   border-radius: 5px;
   background-color: #9880ff;
   color: #9880ff;
-  animation: dotFlashing 1s infinite linear alternate;
+  animation: dot-flashing 1s infinite linear alternate;
   animation-delay: .5s;
 }
 
@@ -215,7 +215,7 @@
   border-radius: 5px;
   background-color: #9880ff;
   color: #9880ff;
-  animation: dotFlashing 1s infinite alternate;
+  animation: dot-flashing 1s infinite alternate;
   animation-delay: 0s;
 }
 
@@ -226,11 +226,11 @@
   border-radius: 5px;
   background-color: #9880ff;
   color: #9880ff;
-  animation: dotFlashing 1s infinite alternate;
+  animation: dot-flashing 1s infinite alternate;
   animation-delay: 1s;
 }
 
-@keyframes dotFlashing {
+@keyframes dot-flashing {
   0% {
     background-color: #9880ff;
   }
@@ -268,7 +268,7 @@
   border-radius: 5px;
   background-color: #9880ff;
   color: #9880ff;
-  animation: dotCollisionBefore 2s infinite ease-in;
+  animation: dot-collision-before 2s infinite ease-in;
 }
 
 .dot-collision::after {
@@ -278,11 +278,11 @@
   border-radius: 5px;
   background-color: #9880ff;
   color: #9880ff;
-  animation: dotCollisionAfter 2s infinite ease-in;
+  animation: dot-collision-after 2s infinite ease-in;
   animation-delay: 1s;
 }
 
-@keyframes dotCollisionBefore {
+@keyframes dot-collision-before {
   0%,
   50%,
   75%,
@@ -294,7 +294,7 @@
   }
 }
 
-@keyframes dotCollisionAfter {
+@keyframes dot-collision-after {
   0%,
   50%,
   75%,
@@ -335,7 +335,7 @@
   background-color: #9880ff;
   color: #9880ff;
   transform-origin: 5px 20px;
-  animation: dotRevolution 1.4s linear infinite;
+  animation: dot-revolution 1.4s linear infinite;
 }
 
 .dot-revolution::after {
@@ -347,10 +347,10 @@
   background-color: #9880ff;
   color: #9880ff;
   transform-origin: 5px 35px;
-  animation: dotRevolution 1s linear infinite;
+  animation: dot-revolution 1s linear infinite;
 }
 
-@keyframes dotRevolution {
+@keyframes dot-revolution {
   0% {
     transform: rotateZ(0deg) translate3d(0, 0, 0);
   }
@@ -373,10 +373,10 @@
   background-color: #9880ff;
   color: #9880ff;
   box-shadow: 9984px 0 0 0 #9880ff, 9999px 0 0 0 #9880ff, 10014px 0 0 0 #9880ff;
-  animation: dotCarousel 1.5s infinite linear;
+  animation: dot-carousel 1.5s infinite linear;
 }
 
-@keyframes dotCarousel {
+@keyframes dot-carousel {
   0% {
     box-shadow: 9984px 0 0 -1px #9880ff, 9999px 0 0 1px #9880ff, 10014px 0 0 -1px #9880ff;
   }
@@ -402,10 +402,10 @@
   background-color: #9880ff;
   color: #9880ff;
   box-shadow: 9984px 0 0 0 #9880ff, 9999px 0 0 0 #9880ff, 10014px 0 0 0 #9880ff;
-  animation: dotTyping 1.5s infinite linear;
+  animation: dot-typing 1.5s infinite linear;
 }
 
-@keyframes dotTyping {
+@keyframes dot-typing {
   0% {
     box-shadow: 9984px 0 0 0 #9880ff, 9999px 0 0 0 #9880ff, 10014px 0 0 0 #9880ff;
   }
@@ -443,7 +443,7 @@
   background-color: #9880ff;
   color: #9880ff;
   transform-origin: 5px 15px;
-  animation: dotWindmill 2s infinite linear;
+  animation: dot-windmill 2s infinite linear;
 }
 
 .dot-windmill::before, .dot-windmill::after {
@@ -472,7 +472,7 @@
   color: #9880ff;
 }
 
-@keyframes dotWindmill {
+@keyframes dot-windmill {
   0% {
     transform: rotateZ(0deg) translate3d(0, 0, 0);
   }
@@ -496,10 +496,10 @@
   background-color: #9880ff;
   color: #9880ff;
   box-shadow: 9991px -16px 0 0 #9880ff, 9991px 0 0 0 #9880ff, 10007px 0 0 0 #9880ff;
-  animation: dotBricks 2s infinite ease;
+  animation: dot-bricks 2s infinite ease;
 }
 
-@keyframes dotBricks {
+@keyframes dot-bricks {
   0% {
     box-shadow: 9991px -16px 0 0 #9880ff, 9991px 0 0 0 #9880ff, 10007px 0 0 0 #9880ff;
   }
@@ -553,7 +553,7 @@
   border-radius: 5px;
   background-color: #9880ff;
   color: #9880ff;
-  animation: dotFloating 3s infinite cubic-bezier(0.15, 0.6, 0.9, 0.1);
+  animation: dot-floating 3s infinite cubic-bezier(0.15, 0.6, 0.9, 0.1);
 }
 
 .dot-floating::before, .dot-floating::after {
@@ -570,7 +570,7 @@
   border-radius: 5px;
   background-color: #9880ff;
   color: #9880ff;
-  animation: dotFloatingBefore 3s infinite ease-in-out;
+  animation: dot-floating-before 3s infinite ease-in-out;
 }
 
 .dot-floating::after {
@@ -580,10 +580,10 @@
   border-radius: 5px;
   background-color: #9880ff;
   color: #9880ff;
-  animation: dotFloatingAfter 3s infinite cubic-bezier(0.4, 0, 1, 1);
+  animation: dot-floating-after 3s infinite cubic-bezier(0.4, 0, 1, 1);
 }
 
-@keyframes dotFloating {
+@keyframes dot-floating {
   0% {
     left: calc(-50% - 5px);
   }
@@ -595,7 +595,7 @@
   }
 }
 
-@keyframes dotFloatingBefore {
+@keyframes dot-floating-before {
   0% {
     left: -50px;
   }
@@ -610,7 +610,7 @@
   }
 }
 
-@keyframes dotFloatingAfter {
+@keyframes dot-floating-after {
   0% {
     left: -100px;
   }
@@ -639,7 +639,7 @@
   background-color: #9880ff;
   color: #9880ff;
   box-shadow: 9999px 22.5px 0 -5px #9880ff;
-  animation: dotFire 1.5s infinite linear;
+  animation: dot-fire 1.5s infinite linear;
   animation-delay: -0.85s;
 }
 
@@ -657,17 +657,17 @@
 
 .dot-fire::before {
   box-shadow: 9999px 22.5px 0 -5px #9880ff;
-  animation: dotFire 1.5s infinite linear;
+  animation: dot-fire 1.5s infinite linear;
   animation-delay: -1.85s;
 }
 
 .dot-fire::after {
   box-shadow: 9999px 22.5px 0 -5px #9880ff;
-  animation: dotFire 1.5s infinite linear;
+  animation: dot-fire 1.5s infinite linear;
   animation-delay: -2.85s;
 }
 
-@keyframes dotFire {
+@keyframes dot-fire {
   1% {
     box-shadow: 9999px 22.5px 0 -5px #9880ff;
   }
@@ -692,10 +692,10 @@
   background-color: transparent;
   color: transparent;
   box-shadow: 0 -18px 0 0 #9880ff, 12.72984px -12.72984px 0 0 #9880ff, 18px 0 0 0 #9880ff, 12.72984px 12.72984px 0 0 rgba(152, 128, 255, 0), 0 18px 0 0 rgba(152, 128, 255, 0), -12.72984px 12.72984px 0 0 rgba(152, 128, 255, 0), -18px 0 0 0 rgba(152, 128, 255, 0), -12.72984px -12.72984px 0 0 rgba(152, 128, 255, 0);
-  animation: dotSpin 1.5s infinite linear;
+  animation: dot-spin 1.5s infinite linear;
 }
 
-@keyframes dotSpin {
+@keyframes dot-spin {
   0%,
   100% {
     box-shadow: 0 -18px 0 0 #9880ff, 12.72984px -12.72984px 0 0 #9880ff, 18px 0 0 0 #9880ff, 12.72984px 12.72984px 0 -5px rgba(152, 128, 255, 0), 0 18px 0 -5px rgba(152, 128, 255, 0), -12.72984px 12.72984px 0 -5px rgba(152, 128, 255, 0), -18px 0 0 -5px rgba(152, 128, 255, 0), -12.72984px -12.72984px 0 -5px rgba(152, 128, 255, 0);
@@ -737,7 +737,7 @@
   background-color: #9880ff;
   color: #9880ff;
   box-shadow: 9999px 0 0 0 #9880ff;
-  animation: dotFalling 1s infinite linear;
+  animation: dot-falling 1s infinite linear;
   animation-delay: .1s;
 }
 
@@ -754,7 +754,7 @@
   border-radius: 5px;
   background-color: #9880ff;
   color: #9880ff;
-  animation: dotFallingBefore 1s infinite linear;
+  animation: dot-falling-before 1s infinite linear;
   animation-delay: 0s;
 }
 
@@ -764,11 +764,11 @@
   border-radius: 5px;
   background-color: #9880ff;
   color: #9880ff;
-  animation: dotFallingAfter 1s infinite linear;
+  animation: dot-falling-after 1s infinite linear;
   animation-delay: .2s;
 }
 
-@keyframes dotFalling {
+@keyframes dot-falling {
   0% {
     box-shadow: 9999px -15px 0 0 rgba(152, 128, 255, 0);
   }
@@ -782,7 +782,7 @@
   }
 }
 
-@keyframes dotFallingBefore {
+@keyframes dot-falling-before {
   0% {
     box-shadow: 9984px -15px 0 0 rgba(152, 128, 255, 0);
   }
@@ -796,7 +796,7 @@
   }
 }
 
-@keyframes dotFallingAfter {
+@keyframes dot-falling-after {
   0% {
     box-shadow: 10014px -15px 0 0 rgba(152, 128, 255, 0);
   }
@@ -823,7 +823,7 @@
   background-color: #9880ff;
   color: #9880ff;
   transform: scale(1.25, 1.25);
-  animation: dotStretching 2s infinite ease-in;
+  animation: dot-stretching 2s infinite ease-in;
 }
 
 .dot-stretching::before, .dot-stretching::after {
@@ -839,7 +839,7 @@
   border-radius: 5px;
   background-color: #9880ff;
   color: #9880ff;
-  animation: dotStretchingBefore 2s infinite ease-in;
+  animation: dot-stretching-before 2s infinite ease-in;
 }
 
 .dot-stretching::after {
@@ -848,10 +848,10 @@
   border-radius: 5px;
   background-color: #9880ff;
   color: #9880ff;
-  animation: dotStretchingAfter 2s infinite ease-in;
+  animation: dot-stretching-after 2s infinite ease-in;
 }
 
-@keyframes dotStretching {
+@keyframes dot-stretching {
   0% {
     transform: scale(1.25, 1.25);
   }
@@ -864,7 +864,7 @@
   }
 }
 
-@keyframes dotStretchingBefore {
+@keyframes dot-stretching-before {
   0% {
     transform: translate(0) scale(0.7, 0.7);
   }
@@ -877,7 +877,7 @@
   }
 }
 
-@keyframes dotStretchingAfter {
+@keyframes dot-stretching-after {
   0% {
     transform: translate(0) scale(0.7, 0.7);
   }
@@ -920,14 +920,14 @@
   color: transparent;
   opacity: 0;
   filter: blur(2px);
-  animation: dotGathering 2s infinite ease-in;
+  animation: dot-gathering 2s infinite ease-in;
 }
 
 .dot-gathering::after {
   animation-delay: .5s;
 }
 
-@keyframes dotGathering {
+@keyframes dot-gathering {
   0% {
     opacity: 0;
     transform: translateX(0);
@@ -960,7 +960,7 @@
   margin: -1px 0;
   filter: blur(2px);
   transform-origin: 5px 20px;
-  animation: dotHourglass 2.4s infinite ease-in-out;
+  animation: dot-hourglass 2.4s infinite ease-in-out;
   animation-delay: .6s;
 }
 
@@ -983,10 +983,10 @@
 }
 
 .dot-hourglass::after {
-  animation: dotHourglassAfter 2.4s infinite cubic-bezier(0.65, 0.05, 0.36, 1);
+  animation: dot-hourglass-after 2.4s infinite cubic-bezier(0.65, 0.05, 0.36, 1);
 }
 
-@keyframes dotHourglass {
+@keyframes dot-hourglass {
   0% {
     transform: rotateZ(0deg);
   }
@@ -1004,7 +1004,7 @@
   }
 }
 
-@keyframes dotHourglassAfter {
+@keyframes dot-hourglass-after {
   0% {
     transform: translateY(0);
   }
@@ -1038,7 +1038,7 @@
   margin: -1px 0;
   box-shadow: 0 -20px 0 0;
   filter: blur(2px);
-  animation: dotOvertaking 2s infinite cubic-bezier(0.2, 0.6, 0.8, 0.2);
+  animation: dot-overtaking 2s infinite cubic-bezier(0.2, 0.6, 0.8, 0.2);
 }
 
 .dot-overtaking::before, .dot-overtaking::after {
@@ -1057,16 +1057,16 @@
 }
 
 .dot-overtaking::before {
-  animation: dotOvertaking 2s infinite cubic-bezier(0.2, 0.6, 0.8, 0.2);
+  animation: dot-overtaking 2s infinite cubic-bezier(0.2, 0.6, 0.8, 0.2);
   animation-delay: .3s;
 }
 
 .dot-overtaking::after {
-  animation: dotOvertaking 1.5s infinite cubic-bezier(0.2, 0.6, 0.8, 0.2);
+  animation: dot-overtaking 1.5s infinite cubic-bezier(0.2, 0.6, 0.8, 0.2);
   animation-delay: .6s;
 }
 
-@keyframes dotOvertaking {
+@keyframes dot-overtaking {
   0% {
     transform: rotateZ(0deg);
   }
@@ -1108,14 +1108,14 @@
 
 .dot-shuttle::before {
   left: 15px;
-  animation: dotShuttle 2s infinite ease-out;
+  animation: dot-shuttle 2s infinite ease-out;
 }
 
 .dot-shuttle::after {
   left: 30px;
 }
 
-@keyframes dotShuttle {
+@keyframes dot-shuttle {
   0%,
   50%,
   100% {
@@ -1145,10 +1145,10 @@
   content: '⚽🏀🏐';
   display: inline-block;
   position: relative;
-  animation: dotBouncing 1s infinite;
+  animation: dot-bouncing 1s infinite;
 }
 
-@keyframes dotBouncing {
+@keyframes dot-bouncing {
   0% {
     top: -20px;
     animation-timing-function: ease-in;
@@ -1189,10 +1189,10 @@
   display: inline-block;
   position: relative;
   transform: translateX(-25px);
-  animation: dotRolling 3s infinite;
+  animation: dot-rolling 3s infinite;
 }
 
-@keyframes dotRolling {
+@keyframes dot-rolling {
   0% {
     content: '⚽';
     transform: translateX(-25px) rotateZ(0deg);

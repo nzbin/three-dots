@@ -2,13 +2,13 @@
 // Variables
 // ==============================================
 
-$dotWidth: 10px !default;
-$dotHeight: 10px !default;
-$dotRadius: $dotWidth/2 !default;
+$dot-width: 10px !default;
+$dot-height: 10px !default;
+$dot-radius: $dot-width/2 !default;
 
-$dotColor: #9880ff !default;
-$dotBgColor: $dotColor !default;
-$dotBeforeColor: $dotColor !default;
-$dotAfterColor: $dotColor !default;
+$dot-color: #9880ff !default;
+$dot-bg-color: $dot-color !default;
+$dot-before-color: $dot-color !default;
+$dot-after-color: $dot-color !default;
 
-$dotSpacing: $dotWidth + $dotWidth/2 !default;
+$dot-spacing: $dot-width + $dot-width/2 !default;

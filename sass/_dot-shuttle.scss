@@ -5,17 +5,18 @@
  * ==============================================
  */
 
-$d: 3 * $dotSpacing;
+$d: 3 * $dot-spacing;
+$dot-color-hsl: hsl(0, 100%, 0%);
 
 .dot-shuttle {
   position: relative;
-  left: -$dotSpacing;
+  left: -$dot-spacing;
 
   @include dot(
     $width: 12px,
     $height: 12px,
     $radius: 6px,
-    $bgColor: $dotColorHSL,
+    $bg-color: $dot-color-hsl,
     $color: transparent
   );
 
@@ -33,7 +34,7 @@ $d: 3 * $dotSpacing;
       $width: 12px,
       $height: 12px,
       $radius: 6px,
-      $bgColor: $dotColorHSL,
+      $bg-color: $dot-color-hsl,
       $color: transparent
     );
 
@@ -41,16 +42,16 @@ $d: 3 * $dotSpacing;
   }
 
   &::before {
-    left: $dotSpacing;
-    animation: dotShuttle 2s infinite ease-out;
+    left: $dot-spacing;
+    animation: dot-shuttle 2s infinite ease-out;
   }
 
   &::after {
-    left: 2 * $dotSpacing;
+    left: 2 * $dot-spacing;
   }
 }
 
-@keyframes dotShuttle {
+@keyframes dot-shuttle {
   0%,
   50%,
   100% {

@@ -3,15 +3,15 @@
 // ==============================================
 
 @mixin dot(
-  $width: $dotWidth,
-  $height: $dotHeight,
-  $radius: $dotRadius,
-  $bgColor: $dotBgColor,
-  $color: $dotColor
+  $width: $dot-width,
+  $height: $dot-height,
+  $radius: $dot-radius,
+  $bg-color: $dot-bg-color,
+  $color: $dot-color
 ) {
   width: $width;
   height: $height;
   border-radius: $radius;
-  background-color: $bgColor;
+  background-color: $bg-color;
   color: $color;
 }

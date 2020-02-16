@@ -4,8 +4,8 @@
  * ==============================================
  */
 
-$ratio1: .8;
-$ratio2: .7;
+$ratio1: 0.8;
+$ratio2: 0.7;
 
 .dot-stretching {
   position: relative;
@@ -13,7 +13,7 @@ $ratio2: .7;
   @include dot;
 
   transform: scale(1.25, 1.25);
-  animation: dotStretching 2s infinite ease-in;
+  animation: dot-stretching 2s infinite ease-in;
 
   &::before,
   &::after {
@@ -24,19 +24,19 @@ $ratio2: .7;
   }
 
   &::before {
-    @include dot($bgColor: $dotBeforeColor);
+    @include dot($bg-color: $dot-before-color);
 
-    animation: dotStretchingBefore 2s infinite ease-in;
+    animation: dot-stretching-before 2s infinite ease-in;
   }
 
   &::after {
-    @include dot($bgColor: $dotAfterColor);
+    @include dot($bg-color: $dot-after-color);
 
-    animation: dotStretchingAfter 2s infinite ease-in;
+    animation: dot-stretching-after 2s infinite ease-in;
   }
 }
 
-@keyframes dotStretching {
+@keyframes dot-stretching {
   0% {
     transform: scale(1.25, 1.25);
   }
@@ -51,7 +51,7 @@ $ratio2: .7;
   }
 }
 
-@keyframes dotStretchingBefore {
+@keyframes dot-stretching-before {
   0% {
     transform: translate(0) scale($ratio2, $ratio2);
   }
@@ -66,7 +66,7 @@ $ratio2: .7;
   }
 }
 
-@keyframes dotStretchingAfter {
+@keyframes dot-stretching-after {
   0% {
     transform: translate(0) scale($ratio2, $ratio2);
   }

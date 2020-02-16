@@ -4,19 +4,19 @@
  * ==============================================
  */
 
-$leftPos: -9999px;
-$x1: -$leftPos - $dotSpacing;
-$x2: -$leftPos;
-$x3: -$leftPos + $dotSpacing;
+$left-pos: -9999px;
+$x1: -$left-pos - $dot-spacing;
+$x2: -$left-pos;
+$x3: -$left-pos + $dot-spacing;
 
 .dot-pulse {
   position: relative;
-  left: $leftPos;
+  left: $left-pos;
 
   @include dot;
 
-  box-shadow: $x2 0 0 -5px $dotColor;
-  animation: dotPulse 1.5s infinite linear;
+  box-shadow: $x2 0 0 -5px $dot-color;
+  animation: dot-pulse 1.5s infinite linear;
   animation-delay: .25s;
 
   &::before,
@@ -30,59 +30,59 @@ $x3: -$leftPos + $dotSpacing;
   }
 
   &::before {
-    box-shadow: $x1 0 0 -5px $dotBeforeColor;
-    animation: dotPulseBefore 1.5s infinite linear;
+    box-shadow: $x1 0 0 -5px $dot-before-color;
+    animation: dot-pulse-before 1.5s infinite linear;
     animation-delay: 0s;
   }
 
   &::after {
-    box-shadow: $x3 0 0 -5px $dotAfterColor;
-    animation: dotPulseAfter 1.5s infinite linear;
+    box-shadow: $x3 0 0 -5px $dot-after-color;
+    animation: dot-pulse-after 1.5s infinite linear;
     animation-delay: .5s;
   }
 }
 
-@keyframes dotPulseBefore {
+@keyframes dot-pulse-before {
   0% {
-    box-shadow: $x1 0 0 -5px $dotBeforeColor;
+    box-shadow: $x1 0 0 -5px $dot-before-color;
   }
 
   30% {
-    box-shadow: $x1 0 0 2px $dotBeforeColor;
+    box-shadow: $x1 0 0 2px $dot-before-color;
   }
 
   60%,
   100% {
-    box-shadow: $x1 0 0 -5px $dotBeforeColor;
+    box-shadow: $x1 0 0 -5px $dot-before-color;
   }
 }
 
-@keyframes dotPulse {
+@keyframes dot-pulse {
   0% {
-    box-shadow: $x2 0 0 -5px $dotColor;
+    box-shadow: $x2 0 0 -5px $dot-color;
   }
 
   30% {
-    box-shadow: $x2 0 0 2px $dotColor;
+    box-shadow: $x2 0 0 2px $dot-color;
   }
 
   60%,
   100% {
-    box-shadow: $x2 0 0 -5px $dotColor;
+    box-shadow: $x2 0 0 -5px $dot-color;
   }
 }
 
-@keyframes dotPulseAfter {
+@keyframes dot-pulse-after {
   0% {
-    box-shadow: $x3 0 0 -5px $dotAfterColor;
+    box-shadow: $x3 0 0 -5px $dot-after-color;
   }
 
   30% {
-    box-shadow: $x3 0 0 2px $dotAfterColor;
+    box-shadow: $x3 0 0 2px $dot-after-color;
   }
 
   60%,
   100% {
-    box-shadow: $x3 0 0 -5px $dotAfterColor;
+    box-shadow: $x3 0 0 -5px $dot-after-color;
   }
 }
