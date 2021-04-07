@@ -8,29 +8,31 @@
 @d: 20px;
 
 .dot-emoji {
-    font-size: 10px;
-    height: @dotHeight;
+  font-size: 10px;
+  height: @dotHeight;
+  position: relative;
+
+  &::before {
+    animation: dotEmoji 1s infinite;
+    content: "⚽🏀🏐";
+    display: inline-block;
     position: relative;
-    &::before {
-        animation: dotEmoji 1s infinite;
-        content: "⚽🏀🏐";
-        display: inline-block;
-        position: relative;
-    }
+  }
 }
 
 @keyframes dotEmoji {
-    0% {
-        animation-timing-function: ease-in;
-        top: -@d;
-    }
-    34% { transform: scale(1, 1); }
-    35% {
-        animation-timing-function: ease-out;
-        top: @d;
-        transform: scale(1.5, .5);
-    }
-    45%  { transform: scale(1, 1); }
-    90%  { top: -@d; }
-    100% { top: -@d; }
+  0% {
+    animation-timing-function: ease-in;
+    top: -@d;
+  }
+  34% { transform: scale(1, 1); }
+
+  35% {
+    animation-timing-function: ease-out;
+    top: @d;
+    transform: scale(1.5, .5);
+  }
+  45% { transform: scale(1, 1); }
+  90% { top: -@d; }
+  100% { top: -@d; }
 }
