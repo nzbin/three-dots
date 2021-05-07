@@ -1,6 +1,6 @@
 
 /*!
- * three-dots - v0.2.0
+ * three-dots - v0.2.1
  * CSS loading animation made by single element.
  * https://nzbin.github.io/three-dots/
  *
@@ -174,7 +174,7 @@
   border-radius: 5px;
   background-color: #9880ff;
   color: #9880ff;
-  box-shadow: 9999px 0 0 -5px #9880ff;
+  box-shadow: 9999px 0 0 -5px;
   -webkit-animation: dot-pulse 1.5s infinite linear;
   animation: dot-pulse 1.5s infinite linear;
   -webkit-animation-delay: .25s;
@@ -182,7 +182,7 @@
 }
 
 .dot-pulse::before, .dot-pulse::after {
-  content: '';
+  content: "";
   display: inline-block;
   position: absolute;
   top: 0;
@@ -194,7 +194,7 @@
 }
 
 .dot-pulse::before {
-  box-shadow: 9984px 0 0 -5px #9880ff;
+  box-shadow: 9984px 0 0 -5px;
   -webkit-animation: dot-pulse-before 1.5s infinite linear;
   animation: dot-pulse-before 1.5s infinite linear;
   -webkit-animation-delay: 0s;
@@ -202,7 +202,7 @@
 }
 
 .dot-pulse::after {
-  box-shadow: 10014px 0 0 -5px #9880ff;
+  box-shadow: 10014px 0 0 -5px;
   -webkit-animation: dot-pulse-after 1.5s infinite linear;
   animation: dot-pulse-after 1.5s infinite linear;
   -webkit-animation-delay: .5s;
@@ -211,79 +211,79 @@
 
 @-webkit-keyframes dot-pulse-before {
   0% {
-    box-shadow: 9984px 0 0 -5px #9880ff;
+    box-shadow: 9984px 0 0 -5px;
   }
   30% {
-    box-shadow: 9984px 0 0 2px #9880ff;
+    box-shadow: 9984px 0 0 2px;
   }
   60%,
   100% {
-    box-shadow: 9984px 0 0 -5px #9880ff;
+    box-shadow: 9984px 0 0 -5px;
   }
 }
 
 @keyframes dot-pulse-before {
   0% {
-    box-shadow: 9984px 0 0 -5px #9880ff;
+    box-shadow: 9984px 0 0 -5px;
   }
   30% {
-    box-shadow: 9984px 0 0 2px #9880ff;
+    box-shadow: 9984px 0 0 2px;
   }
   60%,
   100% {
-    box-shadow: 9984px 0 0 -5px #9880ff;
+    box-shadow: 9984px 0 0 -5px;
   }
 }
 
 @-webkit-keyframes dot-pulse {
   0% {
-    box-shadow: 9999px 0 0 -5px #9880ff;
+    box-shadow: 9999px 0 0 -5px;
   }
   30% {
-    box-shadow: 9999px 0 0 2px #9880ff;
+    box-shadow: 9999px 0 0 2px;
   }
   60%,
   100% {
-    box-shadow: 9999px 0 0 -5px #9880ff;
+    box-shadow: 9999px 0 0 -5px;
   }
 }
 
 @keyframes dot-pulse {
   0% {
-    box-shadow: 9999px 0 0 -5px #9880ff;
+    box-shadow: 9999px 0 0 -5px;
   }
   30% {
-    box-shadow: 9999px 0 0 2px #9880ff;
+    box-shadow: 9999px 0 0 2px;
   }
   60%,
   100% {
-    box-shadow: 9999px 0 0 -5px #9880ff;
+    box-shadow: 9999px 0 0 -5px;
   }
 }
 
 @-webkit-keyframes dot-pulse-after {
   0% {
-    box-shadow: 10014px 0 0 -5px #9880ff;
+    box-shadow: 10014px 0 0 -5px;
   }
   30% {
-    box-shadow: 10014px 0 0 2px #9880ff;
+    box-shadow: 10014px 0 0 2px;
   }
   60%,
   100% {
-    box-shadow: 10014px 0 0 -5px #9880ff;
+    box-shadow: 10014px 0 0 -5px;
   }
 }
 
 @keyframes dot-pulse-after {
   0% {
-    box-shadow: 10014px 0 0 -5px #9880ff;
+    box-shadow: 10014px 0 0 -5px;
   }
   30% {
-    box-shadow: 10014px 0 0 2px #9880ff;
+    box-shadow: 10014px 0 0 2px;
   }
   60%,
   100% {
-    box-shadow: 10014px 0 0 -5px #9880ff;
+    box-shadow: 10014px 0 0 -5px;
   }
 }
 
@@ -1321,7 +1321,7 @@
 
 /**
  * ==============================================
- * Experiment: Gooey Effect
+ * Experimental: Gooey Effect
  * Dot Gathering
  * ==============================================
  */
@@ -1333,7 +1333,6 @@
   background-color: black;
   color: transparent;
   margin: -1px 0;
-  -webkit-filter: blur(2px);
   filter: blur(2px);
 }
 
@@ -1349,7 +1348,6 @@
   background-color: black;
   color: transparent;
   opacity: 0;
-  -webkit-filter: blur(2px);
   filter: blur(2px);
   -webkit-animation: dot-gathering 2s infinite ease-in;
   animation: dot-gathering 2s infinite ease-in;
@@ -1394,7 +1392,7 @@
 
 /**
  * ==============================================
- * Experiment: Gooey Effect
+ * Experimental: Gooey Effect
  * Dot Hourglass
  * ==============================================
  */
@@ -1407,7 +1405,6 @@
   background-color: black;
   color: transparent;
   margin: -1px 0;
-  -webkit-filter: blur(2px);
   filter: blur(2px);
   transform-origin: 5px 20px;
   -webkit-animation: dot-hourglass 2.4s infinite ease-in-out;
@@ -1427,7 +1424,6 @@
   border-radius: 6px;
   background-color: black;
   color: transparent;
-  -webkit-filter: blur(2px);
   filter: blur(2px);
 }
 
@@ -1514,7 +1510,7 @@
 
 /**
  * ==============================================
- * Experiment: Gooey Effect
+ * Experimental: Gooey Effect
  * Dot Overtaking
  * ==============================================
  */
@@ -1527,7 +1523,6 @@
   color: black;
   margin: -1px 0;
   box-shadow: 0 -20px 0 0;
-  -webkit-filter: blur(2px);
   filter: blur(2px);
   -webkit-animation: dot-overtaking 2s infinite cubic-bezier(0.2, 0.6, 0.8, 0.2);
   animation: dot-overtaking 2s infinite cubic-bezier(0.2, 0.6, 0.8, 0.2);
@@ -1545,7 +1540,6 @@
   background-color: transparent;
   color: black;
   box-shadow: 0 -20px 0 0;
-  -webkit-filter: blur(2px);
   filter: blur(2px);
 }
 
@@ -1583,7 +1577,7 @@
 
 /**
  * ==============================================
- * Experiment: Gooey Effect
+ * Experimental: Gooey Effect
  * Dot Shuttle
  * ==============================================
  */
@@ -1596,7 +1590,6 @@
   background-color: black;
   color: transparent;
   margin: -1px 0;
-  -webkit-filter: blur(2px);
   filter: blur(2px);
 }
 
@@ -1610,7 +1603,6 @@
   border-radius: 6px;
   background-color: black;
   color: transparent;
-  -webkit-filter: blur(2px);
   filter: blur(2px);
 }
 
@@ -1654,7 +1646,7 @@
 
 /**
  * ==============================================
- * Experiment: Emoji
+ * Experimental: Emoji
  * Dot Bouncing
  * ==============================================
  */
@@ -1726,7 +1718,7 @@
 
 /**
  * ==============================================
- * Experiment: Emoji
+ * Experimental: Emoji
  * Dot Rolling
  * ==============================================
  */

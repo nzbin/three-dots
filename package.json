@@ -1,6 +1,6 @@
 {
   "name": "three-dots",
-  "version": "0.2.0",
+  "version": "0.2.1",
   "description": "CSS loading animation made by single element.",
   "main": "dist/three-dots.css",
   "files": [
@@ -34,7 +34,8 @@
     "copy": "cpy dist/*.css !dist/*.min.css docs/css",
     "postcss": "postcss -r dist/*.css --map",
     "watch": "onchange sass -- run-s sass copy",
-    "lint": "stylelint --syntax scss \"sass/**/*.scss\" --fix"
+    "lint": "stylelint --syntax scss \"sass/**/*.scss\" --fix",
+    "prepublish": "npm run build"
   },
   "devDependencies": {
     "autoprefixer": "^10.2.5",
