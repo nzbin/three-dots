@@ -14,6 +14,7 @@ $x3: -$left-pos + $dot-spacing;
   left: $left-pos;
 
   @include dot;
+
   color: $dot-color;
   box-shadow: $x2 0 0 -5px;
   animation: dot-pulse 1.5s infinite linear;
