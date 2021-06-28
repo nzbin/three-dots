@@ -32,7 +32,7 @@
       border-radius: .25rem;
     }
 
-    .examples .snippet:before {
+    .examples .snippet::before {
       display: inline-block;
       position: absolute;
       top: 0;
@@ -64,6 +64,7 @@
     .footer {
       margin: 120px 0 20px;
       text-align: center;
+      overflow: auto;
     }
   </style>
 </head>
@@ -254,9 +255,11 @@
     </div>
   </main>
 
-  <footer class="footer">
-    <p class="text-center">Designed by <a href="https://github.com/nzbin" target="_blank">nzbin</a>
-      ❤️ Made with using <a href="https://github.com/nzbin/snack" target="_blank">snack</a></p>
+  <footer class="footer text-center">
+    <p>
+      Created with ❤️ by <a href="https://github.com/nzbin" target="_blank">nzbin</a>.
+      Made with <a href="https://github.com/nzbin/snack" target="_blank">snack</a>.
+    </p>
   </footer>
 
 </body>
