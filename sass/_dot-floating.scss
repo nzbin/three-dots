@@ -41,15 +41,15 @@ $d-min: 12px;
 
 @keyframes dot-floating {
   0% {
-    left: calc(-50% - #{$dot-width/2});
+    left: calc(-50% - #{$dot-width * 0.5});
   }
 
   75% {
-    left: calc(50% + #{$d-max * 2 + $dot-width/2});
+    left: calc(50% + #{$d-max * 2 + $dot-width * 0.5});
   }
 
   100% {
-    left: calc(50% + #{$d-max * 2 + $dot-width/2});
+    left: calc(50% + #{$d-max * 2 + $dot-width * 0.5});
   }
 }
 

@@ -8,8 +8,8 @@
 $dot-color-hsl: hsl(0, 100%, 0%);
 
 $r: $dot-spacing;
-$origin-x: $dot-width/2;
-$origin-y: $dot-height/2 + $r;
+$origin-x: $dot-width * 0.5;
+$origin-y: ($dot-height * 0.5) + $r;
 
 .dot-hourglass {
   position: relative;
