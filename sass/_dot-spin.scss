@@ -4,15 +4,44 @@
  * ==============================================
  */
 
-@use "sass:math";
+// @use "sass:math";
+
+// https://css-tricks.com/snippets/sass/power-function/
+@function pow($number, $exponent) {
+  $value: 1;
+
+  @if $exponent > 0 {
+    @for $i from 1 through $exponent {
+      $value: $value * $number;
+    }
+  }
+
+  @return $value;
+}
+
+// https://www.antimath.info/css/sass-sqrt-function/
+@function sqrt($r) {
+  $x0: 1;
+  $x1: $x0;
+
+  @for $i from 1 through 10 {
+    $x1: $x0 - ($x0 * $x0 - abs($r)) / (2 * $x0);
+    $x0: $x1;
+  }
+
+  @return $x1;
+}
 
 $x1: $dot-spacing * 1.2;
 $y1: $dot-spacing * 1.2;
 $-x1: -$x1;
 $-y1: -$y1;
 
-$x2: math.sqrt(math.pow($x1, 2) * 0.5);
-$y2: math.sqrt(math.pow($y1, 2) * 0.5);
+// $x2: math.sqrt((math.pow($x1, 2) * .5));
+// $y2: math.sqrt((math.pow($y1, 2) * .5));
+$x2: sqrt((pow($x1, 2) * .5));
+$y2: sqrt((pow($y1, 2) * .5));
+
 $-x2: -$x2;
 $-y2: -$y2;
 
