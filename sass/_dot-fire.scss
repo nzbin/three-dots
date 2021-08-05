@@ -7,7 +7,7 @@
 $left-pos: -9999px;
 $x1: -$left-pos;
 $y1: -1.5 * $dot-spacing;
-$y2: -1.5 * $dot-spacing * 0.25;
+$y2: -1.5 * $dot-spacing * .25;
 $y3: 1.5 * $dot-spacing;
 
 .dot-fire {

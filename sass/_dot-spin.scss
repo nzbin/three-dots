@@ -11,8 +11,6 @@ $y1: $dot-spacing * 1.2;
 $-x1: -$x1;
 $-y1: -$y1;
 
-// $x2: math.sqrt((math.pow($x1, 2) * .5));
-// $y2: math.sqrt((math.pow($y1, 2) * .5));
 $x2: divide($x1, 1.414);
 $y2: divide($y1, 1.414);
 
