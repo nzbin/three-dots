@@ -2,4 +2,3 @@ language: node_js
 node_js:
   - 14
   - 12
-  - 10
