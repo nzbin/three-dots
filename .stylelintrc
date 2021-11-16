@@ -1,5 +1,12 @@
 {
-  "extends": ["stylelint-config-standard", "stylelint-config-recommended-scss"],
+  "ignoreFiles": [
+    "dist/**",
+    "docs/**"
+  ],
+  "extends": [
+    "stylelint-config-standard",
+    "stylelint-config-recommended-scss"
+  ],
   "rules": {
     "number-leading-zero": "never"
   }
