@@ -11,7 +11,7 @@
 .dot-windmill {
   .dot;
 
-  animation: dotWindmill 2s infinite linear;
+  animation: dot-windmill 2s infinite linear;
   position: relative;
   top: -@r;
   transform-origin: @originX @originY;
@@ -21,7 +21,7 @@
     .dot;
 
     content: "";
-    //display: inline-block;
+    display: inline-block;
     position: absolute;
     top: 0;
   }
@@ -37,7 +37,7 @@
   }
 }
 
-@keyframes dotWindmill {
+@keyframes dot-windmill {
   0% { transform: rotateZ(0deg) translate3d(0, 0, 0); }
   100% { transform: rotateZ(720deg) translate3d(0, 0, 0); }
 }

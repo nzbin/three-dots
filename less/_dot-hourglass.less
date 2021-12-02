@@ -1,42 +1,44 @@
 /**
  * ==============================================
- * Experiment-Gooey Effect
+ * Experimental: Gooey Effect
  * Dot Hourglass
  * ==============================================
  */
 
-@dotColorHSL: hsl(0, 100%, 0%);
+@dot-color-hsl: hsl(0, 100%, 0%);
 
-@r: @dotSpacing;
-@originX: @dotWidth/2;
-@originY: @dotHeight/2 + @r;
+@r: @dot-spacing;
+@originX: @dot-width/2;
+@originY: @dot-height/2 + @r;
 
 .dot-hourglass {
-  .dot(@width: 12px, @height: 12px, @radius: 6px, @bgColor: @dotColorHSL, @color: transparent);
-
-  animation: dotHourglass 2.4s .6s infinite ease-in-out;
-  filter: blur(2px);
-  margin: -1px 0;
   position: relative;
   top: -@r;
+
+  .dot(@width: 12px, @height: 12px, @radius: 6px, @bg-color: @dot-color-hsl, @color: transparent);
+
+  margin: -1px 0;
+  filter: blur(2px);
   transform-origin: @originX @originY;
+  animation: dot-hourglass 2.4s .6s infinite ease-in-out;
 
   &::before,
   &::after {
-    .dot(@width: 12px, @height: 12px, @radius: 6px, @bgColor: @dotColorHSL, @color: transparent);
+    .dot(@width: 12px, @height: 12px, @radius: 6px, @bg-color: @dot-color-hsl, @color: transparent);
 
     content: "";
     filter: blur(2px);
-    //display: inline-block;
-    left: 0;
+    display: inline-block;
     position: absolute;
+    left: 0;
     top: 0;
   }
+
   &::before { top: @r + @r; }
-  &::after { animation: dotHourglassAfter 2.4s infinite cubic-bezier(.65, .05, .36, 1); }
+  &::after { animation: dot-hourglass-after 2.4s infinite cubic-bezier(.65, .05, .36, 1); }
 }
 
-@keyframes dotHourglass {
+@keyframes dot-hourglass {
   0% { transform: rotateZ(0deg); }
   25% { transform: rotateZ(180deg); }
   50% { transform: rotateZ(180deg); }
@@ -44,7 +46,7 @@
   100% { transform: rotateZ(360deg); }
 }
 
-@keyframes dotHourglassAfter {
+@keyframes dot-hourglass-after {
   0% { transform: translateY(0); }
   25% { transform: translateY(@r*2); }
   50% { transform: translateY(@r*2); }

@@ -4,113 +4,117 @@
  * ==============================================
  */
 
-@spacing: @dotWidth + 6px;
-@topPos: @spacing / 2;
-@leftPos: -9999px;
-@x1: -@leftPos - @topPos;
-@x2: -@leftPos - @topPos + @spacing;
+@spacing: @dot-width + 6px;
+@top-pos: @spacing / 2;
+@left-pos: -9999px;
+@x1: -@left-pos - @top-pos;
+@x2: -@left-pos - @top-pos + @spacing;
 @y1: 0;
 @y2: -@spacing;
 
 .dot-bricks {
+  position: relative;
+  top: @top-pos;
+  left: @left-pos;
+
   .dot;
 
-  animation: dotBricks 2s infinite ease;
-  box-shadow: @x1 @y2 0 0 @dotColor, @x1 @y1 0 0 @dotColor, @x2 @y1 0 0 @dotColor;
-  left: @leftPos;
-  position: relative;
-  top: @topPos;
+  box-shadow:
+    @x1 @y2 0 0 @dot-color,
+    @x1 @y1 0 0 @dot-color,
+    @x2 @y1 0 0 @dot-color;
+  animation: dot-bricks 2s infinite ease;
 }
 
-@keyframes dotBricks {
+@keyframes dot-bricks {
   0% {
     box-shadow:
-      @x1 @y2 0 0 @dotColor,
-      @x1 @y1 0 0 @dotColor,
-      @x2 @y1 0 0 @dotColor;
+      @x1 @y2 0 0 @dot-color,
+      @x1 @y1 0 0 @dot-color,
+      @x2 @y1 0 0 @dot-color;
   }
 
   8.3333% {
     box-shadow:
-      @x2 @y2 0 0 @dotColor,
-      @x1 @y1 0 0 @dotColor,
-      @x2 @y1 0 0 @dotColor;
+      @x2 @y2 0 0 @dot-color,
+      @x1 @y1 0 0 @dot-color,
+      @x2 @y1 0 0 @dot-color;
   }
 
   16.6667% {
     box-shadow:
-      @x2 @y2 0 0 @dotColor,
-      @x1 @y2 0 0 @dotColor,
-      @x2 @y1 0 0 @dotColor;
+      @x2 @y2 0 0 @dot-color,
+      @x1 @y2 0 0 @dot-color,
+      @x2 @y1 0 0 @dot-color;
   }
 
   25% {
     box-shadow:
-      @x2 @y2 0 0 @dotColor,
-      @x1 @y2 0 0 @dotColor,
-      @x1 @y1 0 0 @dotColor;
+      @x2 @y2 0 0 @dot-color,
+      @x1 @y2 0 0 @dot-color,
+      @x1 @y1 0 0 @dot-color;
   }
 
   33.3333% {
     box-shadow:
-      @x2 @y1 0 0 @dotColor,
-      @x1 @y2 0 0 @dotColor,
-      @x1 @y1 0 0 @dotColor;
+      @x2 @y1 0 0 @dot-color,
+      @x1 @y2 0 0 @dot-color,
+      @x1 @y1 0 0 @dot-color;
   }
 
   41.6667% {
     box-shadow:
-      @x2 @y1 0 0 @dotColor,
-      @x2 @y2 0 0 @dotColor,
-      @x1 @y1 0 0 @dotColor;
+      @x2 @y1 0 0 @dot-color,
+      @x2 @y2 0 0 @dot-color,
+      @x1 @y1 0 0 @dot-color;
   }
 
   50% {
     box-shadow:
-      @x2 @y1 0 0 @dotColor,
-      @x2 @y2 0 0 @dotColor,
-      @x1 @y2 0 0 @dotColor;
+      @x2 @y1 0 0 @dot-color,
+      @x2 @y2 0 0 @dot-color,
+      @x1 @y2 0 0 @dot-color;
   }
 
   58.3333% {
     box-shadow:
-      @x1 @y1 0 0 @dotColor,
-      @x2 @y2 0 0 @dotColor,
-      @x1 @y2 0 0 @dotColor;
+      @x1 @y1 0 0 @dot-color,
+      @x2 @y2 0 0 @dot-color,
+      @x1 @y2 0 0 @dot-color;
   }
 
   66.6667% {
     box-shadow:
-      @x1 @y1 0 0 @dotColor,
-      @x2 @y1 0 0 @dotColor,
-      @x1 @y2 0 0 @dotColor;
+      @x1 @y1 0 0 @dot-color,
+      @x2 @y1 0 0 @dot-color,
+      @x1 @y2 0 0 @dot-color;
   }
 
   75% {
     box-shadow:
-      @x1 @y1 0 0 @dotColor,
-      @x2 @y1 0 0 @dotColor,
-      @x2 @y2 0 0 @dotColor;
+      @x1 @y1 0 0 @dot-color,
+      @x2 @y1 0 0 @dot-color,
+      @x2 @y2 0 0 @dot-color;
   }
 
   83.3333% {
     box-shadow:
-      @x1 @y2 0 0 @dotColor,
-      @x2 @y1 0 0 @dotColor,
-      @x2 @y2 0 0 @dotColor;
+      @x1 @y2 0 0 @dot-color,
+      @x2 @y1 0 0 @dot-color,
+      @x2 @y2 0 0 @dot-color;
   }
 
   91.6667% {
     box-shadow:
-      @x1 @y2 0 0 @dotColor,
-      @x1 @y1 0 0 @dotColor,
-      @x2 @y2 0 0 @dotColor;
+      @x1 @y2 0 0 @dot-color,
+      @x1 @y1 0 0 @dot-color,
+      @x2 @y2 0 0 @dot-color;
   }
 
   100% {
     box-shadow:
-      @x1 @y2 0 0 @dotColor,
-      @x1 @y1 0 0 @dotColor,
-      @x2 @y1 0 0 @dotColor;
+      @x1 @y2 0 0 @dot-color,
+      @x1 @y1 0 0 @dot-color,
+      @x2 @y1 0 0 @dot-color;
   }
 }

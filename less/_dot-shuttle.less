@@ -5,12 +5,12 @@
  * ==============================================
  */
 
-@dotColorHSL: hsl(0, 100%, 0%);
+@dot-color-hsl: hsl(0, 100%, 0%);
 
 @d: 50px;
 
 .dot-shuttle {
-  .dot(@width: 12px, @height: 12px, @radius: 6px, @bgColor: @dotColorHSL, @color: transparent);
+  .dot(@width: 12px, @height: 12px, @radius: 6px, @bg-color: @dot-color-hsl, @color: transparent);
 
   filter: blur(2px);
   margin: -1px 0;
@@ -18,11 +18,11 @@
 
   &::before,
   &::after {
-    .dot(@width: 12px, @height: 12px, @radius: 6px, @bgColor: @dotColorHSL, @color: transparent);
+    .dot(@width: 12px, @height: 12px, @radius: 6px, @bg-color: @dot-color-hsl, @color: transparent);
 
-    animation: dotShuttle 2s infinite ease-in;
+    animation: dot-shuttle 2s infinite ease-in;
     content: "";
-    //display: inline-block;
+    display: inline-block;
     filter: blur(2px);
     left: -@d;
     opacity: 0;
@@ -32,7 +32,7 @@
   &::after { animation-delay: 1s; }
 }
 
-@keyframes dotShuttle {
+@keyframes dot-shuttle {
   0% {
     opacity: 0;
     transform: translateX(0);

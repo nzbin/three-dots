@@ -4,70 +4,70 @@
  * ==============================================
  */
 
-@leftPos: -9999px;
-@x1: -@leftPos - @dotSpacing;
-@x2: -@leftPos;
-@x3: -@leftPos + @dotSpacing;
+@left-pos: -9999px;
+@x1: -@left-pos - @dot-spacing;
+@x2: -@left-pos;
+@x3: -@left-pos + @dot-spacing;
 
 .dot-typing {
   .dot;
 
-  animation: dotTyping 1.5s infinite linear;
+  animation: dot-typing 1.5s infinite linear;
   box-shadow:
-    @x1 0 0 0 @dotColor,
-    @x2 0 0 0 @dotColor,
-    @x3 0 0 0 @dotColor;
-  left: @leftPos;
+    @x1 0 0 0 @dot-color,
+    @x2 0 0 0 @dot-color,
+    @x3 0 0 0 @dot-color;
+  left: @left-pos;
   position: relative;
 }
 
-@keyframes dotTyping {
+@keyframes dot-typing {
   0% {
     box-shadow:
-      @x1 0 0 0 @dotColor,
-      @x2 0 0 0 @dotColor,
-      @x3 0 0 0 @dotColor;
+      @x1 0 0 0 @dot-color,
+      @x2 0 0 0 @dot-color,
+      @x3 0 0 0 @dot-color;
   }
 
   16.6667% {
     box-shadow:
-      @x1 -10px 0 0 @dotColor,
-      @x2 0 0 0 @dotColor,
-      @x3 0 0 0 @dotColor;
+      @x1 -10px 0 0 @dot-color,
+      @x2 0 0 0 @dot-color,
+      @x3 0 0 0 @dot-color;
   }
 
   33.3333% {
     box-shadow:
-      @x1 0 0 0 @dotColor,
-      @x2 0 0 0 @dotColor,
-      @x3 0 0 0 @dotColor;
+      @x1 0 0 0 @dot-color,
+      @x2 0 0 0 @dot-color,
+      @x3 0 0 0 @dot-color;
   }
 
   50% {
     box-shadow:
-      @x1 0 0 0 @dotColor,
-      @x2 -10px 0 0 @dotColor,
-      @x3 0 0 0 @dotColor;
+      @x1 0 0 0 @dot-color,
+      @x2 -10px 0 0 @dot-color,
+      @x3 0 0 0 @dot-color;
   }
 
   66.6667% {
     box-shadow:
-      @x1 0 0 0 @dotColor,
-      @x2 0 0 0 @dotColor,
-      @x3 0 0 0 @dotColor;
+      @x1 0 0 0 @dot-color,
+      @x2 0 0 0 @dot-color,
+      @x3 0 0 0 @dot-color;
   }
 
   83.3333% {
     box-shadow:
-      @x1 0 0 0 @dotColor,
-      @x2 0 0 0 @dotColor,
-      @x3 -10px 0 0 @dotColor;
+      @x1 0 0 0 @dot-color,
+      @x2 0 0 0 @dot-color,
+      @x3 -10px 0 0 @dot-color;
   }
 
   100% {
     box-shadow:
-      @x1 0 0 0 @dotColor,
-      @x2 0 0 0 @dotColor,
-      @x3 0 0 0 @dotColor;
+      @x1 0 0 0 @dot-color,
+      @x2 0 0 0 @dot-color,
+      @x3 0 0 0 @dot-color;
   }
 }

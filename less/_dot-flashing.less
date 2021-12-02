@@ -5,15 +5,14 @@
 */
 
 .dot-flashing {
+  position: relative;
+
   .dot;
 
-  animation: dotFlashing 1s .5s infinite linear alternate;
-  position: relative;
+  animation: dot-flashing 1s .5s infinite linear alternate;
 
   &::before,
   &::after {
-    .dot;
-
     content: "";
     display: inline-block;
     position: absolute;
@@ -21,17 +20,29 @@
   }
 
   &::before {
-    animation: dotFlashing 1s infinite alternate;
-    left: -@dotSpacing;
+    left: -@dot-spacing;
+
+    .dot(@bg-color: @dot-before-color);
+
+    animation: dot-flashing 1s infinite alternate;
   }
 
   &::after {
-    animation: dotFlashing 1s 1s infinite alternate;
-    left: @dotSpacing;
+    left: @dot-spacing;
+
+    .dot(@bg-color: @dot-after-color);
+
+    animation: dot-flashing 1s 1s infinite alternate;
   }
 }
 
-@keyframes dotFlashing {
-  0% { background-color: @dotColor; }
-  100% { background-color: lighten(@dotColor, 20%); }
+@keyframes dot-flashing {
+  0% {
+    background-color: @dot-color;
+  }
+
+  50%,
+  100% {
+    background-color: lighten(@dot-color, 20%);
+  }
 }

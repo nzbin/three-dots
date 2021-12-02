@@ -4,60 +4,56 @@
  * ==============================================
  */
 
-@leftPos: -9999px;
-@x1: -@leftPos;
-@y1: -@dotSpacing;
-@y2: -@dotSpacing / 3;
-@y3: @dotSpacing;
+@left-pos: -9999px;
+@x1: -@left-pos;
+@y1: -1.5 * @dot-spacing;
+@y2: -1.5 * @dot-spacing * .25;
+@y3: 1.5 * @dot-spacing;
 
 .dot-fire {
+  position: relative;
+  left: @left-pos;
+
   .dot;
 
-  animation: dotFire 1s infinite linear;
-  box-shadow: @x1 @y1 0 0;
-  left: @leftPos;
-  position: relative;
+  box-shadow: @x1 @y3 0 -5px @dot-color;
+  animation: dot-fire 1.5s infinite linear;
+  animation-delay: -.85s;
 
   &::before,
   &::after {
-    .dot;
-
     content: "";
-    //display: inline-block;
+    display: inline-block;
     position: absolute;
     top: 0;
+
+    .dot;
   }
 
   &::before {
-    animation: dotFireBefore 1s infinite linear;
-    box-shadow: @x1 @y2 0 0;
+    box-shadow: @x1 @y3 0 -5px @dot-before-color;
+    animation: dot-fire 1.5s infinite linear;
+    animation-delay: -1.85s;
   }
 
   &::after {
-    animation: dotFireAfter 1s infinite linear;
-    box-shadow: @x1 @y3 0 0;
+    box-shadow: @x1 @y3 0 -5px @dot-after-color;
+    animation: dot-fire 1.5s infinite linear;
+    animation-delay: -2.85s;
   }
 }
 
-@keyframes dotFire {
-  0% { box-shadow: @x1 @y1 0 -3px; }
+@keyframes dot-fire {
+  0% {
+    box-shadow: @x1 @y3 0 -5px @dot-after-color;
+  }
 
   1%,
-  50% { box-shadow: @x1 @y3 0 -5px; }
-  100% { box-shadow: @x1 @y2 0 2px; }
-}
+  50% {
+    box-shadow: @x1 @y2 0 2px @dot-after-color;
+  }
 
-@keyframes dotFireBefore {
-  0% { box-shadow: @x1 @y2 0 2px; }
-  50% { box-shadow: @x1 @y1 0 -3px; }
-
-  51%,
-  100% { box-shadow: @x1 @y3 0 -5px; }
-}
-
-@keyframes dotFireAfter {
-  0%,
-  100% { box-shadow: @x1 @y1 0 -3px; }
-  1% { box-shadow: @x1 @y3 0 -5px; }
-  50% { box-shadow: @x1 @y2 0 2px; }
+  100% {
+    box-shadow: @x1 @y1 0 -5px @dot-after-color;
+  }
 }

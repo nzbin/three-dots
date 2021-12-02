@@ -4,56 +4,84 @@
  * ==============================================
  */
 
-@leftPos: -9999px;
-@x1: -@leftPos - @dotSpacing;
-@x2: -@leftPos;
-@x3: -@leftPos + @dotSpacing;
+@left-pos: -9999px;
+@x1: -@left-pos - @dot-spacing;
+@x2: -@left-pos;
+@x3: -@left-pos + @dot-spacing;
 
 .dot-pulse {
+  position: relative;
+  left: @left-pos;
+
   .dot;
 
-  animation: dotPulse 1.5s infinite linear;
-  box-shadow:
-    @x1 0 0 0 @dotColor,
-    @x2 0 0 0 @dotColor,
-    @x3 0 0 0 @dotColor;
-  left: @leftPos;
-  position: relative;
+  box-shadow: @x2 0 0 -5px;
+  animation: dot-pulse 1.5s .25s infinite linear;
+
+  &::before,
+  &::after {
+    content: "";
+    display: inline-block;
+    position: absolute;
+    top: 0;
+
+    .dot;
+  }
+
+  &::before {
+    box-shadow: @x1 0 0 -5px;
+    animation: dot-pulse-before 1.5s infinite linear;
+    animation-delay: 0s;
+  }
+
+  &::after {
+    box-shadow: @x3 0 0 -5px;
+    animation: dot-pulse-after 1.5s infinite linear;
+    animation-delay: .5s;
+  }
 }
 
-@keyframes dotPulse {
+@keyframes dot-pulse-before {
   0% {
-    box-shadow:
-      @x1 0 0 -5px @dotColor,
-      @x2 0 0 0 @dotColor,
-      @x3 0 0 2px @dotColor;
+    box-shadow: @x1 0 0 -5px;
   }
 
-  25% {
-    box-shadow:
-      @x1 0 0 0 @dotColor,
-      @x2 0 0 2px @dotColor,
-      @x3 0 0 0 @dotColor;
+  30% {
+    box-shadow: @x1 0 0 2px;
   }
 
-  50% {
-    box-shadow:
-      @x1 0 0 2px @dotColor,
-      @x2 0 0 0 @dotColor,
-      @x3 0 0 -5px @dotColor;
-  }
-
-  75% {
-    box-shadow:
-      @x1 0 0 0 @dotColor,
-      @x2 0 0 -5px @dotColor,
-      @x3 0 0 0 @dotColor;
-  }
-
+  60%,
   100% {
-    box-shadow:
-      @x1 0 0 -5px @dotColor,
-      @x2 0 0 0 @dotColor,
-      @x3 0 0 2px @dotColor;
+    box-shadow: @x1 0 0 -5px;
+  }
+}
+
+@keyframes dot-pulse {
+  0% {
+    box-shadow: @x2 0 0 -5px;
+  }
+
+  30% {
+    box-shadow: @x2 0 0 2px;
+  }
+
+  60%,
+  100% {
+    box-shadow: @x2 0 0 -5px;
+  }
+}
+
+@keyframes dot-pulse-after {
+  0% {
+    box-shadow: @x3 0 0 -5px;
+  }
+
+  30% {
+    box-shadow: @x3 0 0 2px;
+  }
+
+  60%,
+  100% {
+    box-shadow: @x3 0 0 -5px;
   }
 }
