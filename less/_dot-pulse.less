@@ -10,34 +10,31 @@
 @x3: -@left-pos + @dot-spacing;
 
 .dot-pulse {
-  position: relative;
-  left: @left-pos;
-
   .dot;
 
+  position: relative;
+  left: @left-pos;
   box-shadow: @x2 0 0 -5px;
   animation: dot-pulse 1.5s .25s infinite linear;
 
   &::before,
   &::after {
+    .dot;
+
     content: "";
     display: inline-block;
     position: absolute;
     top: 0;
-
-    .dot;
   }
 
   &::before {
     box-shadow: @x1 0 0 -5px;
     animation: dot-pulse-before 1.5s infinite linear;
-    animation-delay: 0s;
   }
 
   &::after {
     box-shadow: @x3 0 0 -5px;
-    animation: dot-pulse-after 1.5s infinite linear;
-    animation-delay: .5s;
+    animation: dot-pulse-after 1.5s .5s infinite linear;
   }
 }
 

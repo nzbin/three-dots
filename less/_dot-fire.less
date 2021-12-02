@@ -11,23 +11,22 @@
 @y3: 1.5 * @dot-spacing;
 
 .dot-fire {
-  position: relative;
-  left: @left-pos;
-
   .dot;
 
+  position: relative;
+  left: @left-pos;
   box-shadow: @x1 @y3 0 -5px @dot-color;
   animation: dot-fire 1.5s infinite linear;
   animation-delay: -.85s;
 
   &::before,
   &::after {
+    .dot;
+
     content: "";
     display: inline-block;
     position: absolute;
     top: 0;
-
-    .dot;
   }
 
   &::before {

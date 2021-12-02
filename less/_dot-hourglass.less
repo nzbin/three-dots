@@ -12,11 +12,10 @@
 @originY: @dot-height/2 + @r;
 
 .dot-hourglass {
-  position: relative;
-  top: -@r;
-
   .dot(@width: 12px, @height: 12px, @radius: 6px, @bg-color: @dot-color-hsl, @color: transparent);
 
+  position: relative;
+  top: -@r;
   margin: -1px 0;
   filter: blur(2px);
   transform-origin: @originX @originY;

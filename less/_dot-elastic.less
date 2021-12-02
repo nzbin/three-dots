@@ -5,10 +5,9 @@
  */
 
 .dot-elastic {
-  position: relative;
-
   .dot;
 
+  position: relative;
   animation: dot-elastic 1s infinite linear;
 
   &::before,
@@ -20,18 +19,16 @@
   }
 
   &::before {
-    left: -@dot-spacing;
-
     .dot(@bg-color: @dot-before-color);
 
+    left: -@dot-spacing;
     animation: dot-elastic-before 1s infinite linear;
   }
 
   &::after {
-    left: @dot-spacing;
-
     .dot(@bg-color: @dot-after-color);
 
+    left: @dot-spacing;
     animation: dot-elastic-after 1s infinite linear;
   }
 }

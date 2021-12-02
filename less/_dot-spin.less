@@ -20,7 +20,7 @@
 .dot-spin {
   .dot(@bg-color: transparent, @color: transparent);
 
-  animation: dot-spin 1.5s infinite linear;
+  position: relative;
   box-shadow:
     0 @-y1 0 0 @color-1,
     @x2 @-y2 0 0 @color-1,
@@ -30,7 +30,7 @@
     @-x2 @y2 0 0 @color-0,
     @-x1 0 0 0 @color-0,
     @-x2 @-y2 0 0 @color-0;
-  position: relative;
+  animation: dot-spin 1.5s infinite linear;
 }
 
 @keyframes dot-spin {

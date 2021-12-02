@@ -5,9 +5,9 @@
  */
 
 .dot-collision {
-  position: relative;
-
   .dot;
+
+  position: relative;
 
   &::before,
   &::after {
@@ -18,18 +18,16 @@
   }
 
   &::before {
-    left: - @dot-width;
-
     .dot(@bg-color: @dot-before-color);
 
+    left: - @dot-width;
     animation: dot-collision-before 2s infinite ease-in;
   }
 
   &::after {
-    left: @dot-width;
-
     .dot(@bg-color: @dot-after-color);
 
+    left: @dot-width;
     animation: dot-collision-after 2s 1s infinite ease-in;
   }
 }

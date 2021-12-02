@@ -11,8 +11,6 @@
 
   &::before,
   &::after {
-    .dot;
-
     content: "";
     display: inline-block;
     position: absolute;
@@ -20,17 +18,21 @@
   }
 
   &::before {
-    animation: dot-revolution 1.4s linear infinite;
+    .dot(@bg-color: @dot-before-color);
+
     left: 0;
     top: -@dot-spacing;
     transform-origin: @dot-width/2 (@dot-spacing + @dot-width/2);
+    animation: dot-revolution 1.4s linear infinite;
   }
 
   &::after {
-    animation: dot-revolution 1s linear infinite;
+    .dot(@bg-color: @dot-after-color);
+
     left: 0;
     top: -@dot-spacing*2;
     transform-origin: @dot-width/2 (@dot-spacing*2 + @dot-width/2);
+    animation: dot-revolution 1s linear infinite;
   }
 }
 

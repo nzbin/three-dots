@@ -10,21 +10,29 @@
 .dot-stretching {
   .dot;
 
-  animation: dot-stretching 2s infinite ease-in;
   position: relative;
   transform: scale(1.25);
+  animation: dot-stretching 2s infinite ease-in;
 
   &::before,
   &::after {
-    .dot;
-
     content: "";
-    //display: inline-block;
+    display: inline-block;
     position: absolute;
     top: 0;
   }
-  &::before { animation: dot-stretching-before 2s infinite ease-in; }
-  &::after { animation: dot-stretching-after 2s infinite ease-in; }
+
+  &::before {
+    .dot(@bg-color: @dot-before-color);
+
+    animation: dot-stretching-before 2s infinite ease-in;
+  }
+
+  &::after {
+    .dot(@bg-color: @dot-after-color);
+
+    animation: dot-stretching-after 2s infinite ease-in;
+  }
 }
 
 @keyframes dot-stretching {

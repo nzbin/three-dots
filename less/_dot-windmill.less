@@ -5,21 +5,19 @@
  */
 
 @r: 15px;
-@originX: 5px;
-@originY: 5px + @r;
+@origin-x: 5px;
+@origin-y: 5px + @r;
 
 .dot-windmill {
   .dot;
 
-  animation: dot-windmill 2s infinite linear;
   position: relative;
   top: -@r;
-  transform-origin: @originX @originY;
+  transform-origin: @origin-x @origin-y;
+  animation: dot-windmill 2s infinite linear;
 
   &::before,
   &::after {
-    .dot;
-
     content: "";
     display: inline-block;
     position: absolute;
@@ -27,11 +25,15 @@
   }
 
   &::before {
+    .dot(@bg-color: @dot-before-color);
+
     left: -(@r/2*1.732);
     top: @r + @r/2;
   }
 
   &::after {
+    .dot(@bg-color: @dot-after-color);
+
     left: @r/2*1.732;
     top: @r + @r/2;
   }

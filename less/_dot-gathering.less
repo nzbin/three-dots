@@ -10,23 +10,21 @@
 @d: 50px;
 
 .dot-gathering {
-  position: relative;
-
   .dot(@width: 12px, @height: 12px, @radius: 6px, @bg-color: @dot-color-hsl, @color: transparent);
 
+  position: relative;
   margin: -1px 0;
   filter: blur(2px);
 
   &::before,
   &::after {
+    .dot(@width: 12px, @height: 12px, @radius: 6px, @bg-color: @dot-color-hsl, @color: transparent);
+
     content: '';
     display: inline-block;
     position: absolute;
     top: 0;
     left: -@d;
-
-    .dot(@width: 12px, @height: 12px, @radius: 6px, @bg-color: @dot-color-hsl, @color: transparent);
-
     opacity: 0;
     filter: blur(2px);
     animation: dot-gathering 2s infinite ease-in;

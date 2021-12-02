@@ -8,10 +8,9 @@
 @d-min: 12px;
 
 .dot-floating {
-  position: relative;
-
   .dot;
 
+  position: relative;
   animation: dot-floating 3s infinite cubic-bezier(.15, .6, .9, .1);
 
   &::before,
@@ -23,18 +22,16 @@
   }
 
   &::before {
-    left: -@d-min;
-
     .dot(@bg-color: @dot-before-color);
 
+    left: -@d-min;
     animation: dot-floating-before 3s infinite ease-in-out;
   }
 
   &::after {
-    left: -@d-min*2;
-
     .dot(@bg-color: @dot-after-color);
 
+    left: -@d-min*2;
     animation: dot-floating-after 3s infinite cubic-bezier(.4, 0, 1, 1);
   }
 }

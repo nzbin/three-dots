@@ -1,50 +1,54 @@
 /**
  * ==============================================
- * Experiment-Gooey Effect
+ * Experimental: Gooey Effect
  * Dot Shuttle
  * ==============================================
  */
 
+@d: 3 * @dot-spacing;
 @dot-color-hsl: hsl(0, 100%, 0%);
-
-@d: 50px;
 
 .dot-shuttle {
   .dot(@width: 12px, @height: 12px, @radius: 6px, @bg-color: @dot-color-hsl, @color: transparent);
 
-  filter: blur(2px);
-  margin: -1px 0;
   position: relative;
+  left: -@dot-spacing;
+  margin: -1px 0;
+  filter: blur(2px);
 
   &::before,
   &::after {
     .dot(@width: 12px, @height: 12px, @radius: 6px, @bg-color: @dot-color-hsl, @color: transparent);
 
-    animation: dot-shuttle 2s infinite ease-in;
-    content: "";
+    content: '';
     display: inline-block;
-    filter: blur(2px);
-    left: -@d;
-    opacity: 0;
     position: absolute;
     top: 0;
+    filter: blur(2px);
   }
-  &::after { animation-delay: 1s; }
+
+  &::before {
+    left: @dot-spacing;
+    animation: dot-shuttle 2s infinite ease-out;
+  }
+
+  &::after {
+    left: 2 * @dot-spacing;
+  }
 }
 
 @keyframes dot-shuttle {
-  0% {
-    opacity: 0;
+  0%,
+  50%,
+  100% {
     transform: translateX(0);
   }
 
-  50% {
-    opacity: 1;
-    transform: translateX(@d);
+  25% {
+    transform: translateX(-@d);
   }
 
-  100% {
-    opacity: 0;
-    transform: translateX(@d*2);
+  75% {
+    transform: translateX(@d);
   }
 }

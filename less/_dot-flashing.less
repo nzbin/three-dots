@@ -5,10 +5,9 @@
 */
 
 .dot-flashing {
-  position: relative;
-
   .dot;
 
+  position: relative;
   animation: dot-flashing 1s .5s infinite linear alternate;
 
   &::before,
@@ -20,18 +19,16 @@
   }
 
   &::before {
-    left: -@dot-spacing;
-
     .dot(@bg-color: @dot-before-color);
 
+    left: -@dot-spacing;
     animation: dot-flashing 1s infinite alternate;
   }
 
   &::after {
-    left: @dot-spacing;
-
     .dot(@bg-color: @dot-after-color);
 
+    left: @dot-spacing;
     animation: dot-flashing 1s 1s infinite alternate;
   }
 }
