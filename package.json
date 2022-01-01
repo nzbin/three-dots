@@ -38,12 +38,12 @@
     "prepublish": "npm run build"
   },
   "devDependencies": {
-    "autoprefixer": "^10.4.0",
-    "node-sass": "^6.0.1",
+    "autoprefixer": "^10.4.1",
+    "node-sass": "^7.0.1",
     "npm-run-all": "^4.1.5",
     "onchange": "^7.1.0",
-    "postcss": "^8.3.11",
-    "postcss-cli": "^9.0.2",
+    "postcss": "^8.4.5",
+    "postcss-cli": "^9.1.0",
     "postcss-header": "^3.0.1",
     "rimraf": "^3.0.2",
     "stylelint": "^13.13.1",
