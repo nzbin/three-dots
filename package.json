@@ -29,27 +29,27 @@
     "start": "run-p build watch",
     "build": "run-s clean sass sassmin postcss copy",
     "clean": "rimraf dist",
-    "sass": "node-sass --output-style expanded sass/three-dots.scss dist/three-dots.css",
-    "sassmin": "node-sass --output-style compressed sass/three-dots.scss dist/three-dots.min.css",
+    "sass": "sass --style=expanded sass/three-dots.scss dist/three-dots.css",
+    "sassmin": "sass --style=compressed sass/three-dots.scss dist/three-dots.min.css",
     "copy": "cp dist/three-dots.css docs/css",
     "postcss": "postcss -r dist/*.css --map",
     "watch": "onchange sass -- run-s sass copy",
-    "lint": "stylelint --syntax scss \"sass/**/*.scss\" --fix",
+    "lint": "stylelint scss \"sass/**/*.scss\" --fix",
     "prepublish": "npm run build"
   },
   "devDependencies": {
     "autoprefixer": "^10.4.1",
-    "node-sass": "^7.0.1",
     "npm-run-all": "^4.1.5",
     "onchange": "^7.1.0",
     "postcss": "^8.4.5",
     "postcss-cli": "^9.1.0",
     "postcss-header": "^3.0.1",
     "rimraf": "^3.0.2",
-    "stylelint": "^13.13.1",
-    "stylelint-config-recommended-scss": "^4.3.0",
-    "stylelint-config-standard": "^22.0.0",
-    "stylelint-scss": "^3.21.0"
+    "sass": "^1.45.2",
+    "stylelint": "^14.2.0",
+    "stylelint-config-recommended-scss": "^5.0.2",
+    "stylelint-config-standard": "^24.0.0",
+    "stylelint-scss": "^4.1.0"
   },
   "engines": {
     "node": ">=4"
