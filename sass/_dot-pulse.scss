@@ -21,7 +21,7 @@ $x3: -$left-pos + $dot-spacing;
 
   &::before,
   &::after {
-    content: "";
+    content: '';
     display: inline-block;
     position: absolute;
     top: 0;
