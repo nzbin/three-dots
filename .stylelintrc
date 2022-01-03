@@ -8,6 +8,9 @@
     "stylelint-config-recommended-scss"
   ],
   "rules": {
-    "number-leading-zero": "never"
+    "color-function-notation": "legacy",
+    "number-leading-zero": "never",
+    "number-max-precision": 6,
+    "string-quotes": "single"
   }
 }
