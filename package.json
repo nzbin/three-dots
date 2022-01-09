@@ -34,7 +34,7 @@
     "copy": "cp dist/three-dots.css docs/css",
     "postcss": "postcss -r dist/*.css --map",
     "watch": "onchange sass -- run-s sass copy",
-    "lint": "stylelint scss \"sass/**/*.scss\" --fix",
+    "lint": "stylelint \"sass/**/*.scss\" --fix",
     "prepublish": "npm run build"
   },
   "devDependencies": {
@@ -45,7 +45,7 @@
     "postcss-cli": "^9.1.0",
     "postcss-header": "^3.0.1",
     "rimraf": "^3.0.2",
-    "sass": "^1.45.2",
+    "sass": "^1.47.0",
     "stylelint": "^14.2.0",
     "stylelint-config-recommended-scss": "^5.0.2",
     "stylelint-config-standard": "^24.0.0",
