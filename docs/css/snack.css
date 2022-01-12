@@ -1217,5 +1217,21 @@ table {
 .text-muted {
   color: #777 !important;
 }
-
+.copy{
+  position: absolute;
+  top: 0;
+  right: 0;
+  background: rgba(0,0,0,0.8);
+  padding: 3px 10px;
+  color: #fff;
+  font-size: 12px;
+  cursor: pointer;
+  transition-duration: 0.3s;
+  border-radius: 5px;
+  z-index: 1;
+  display: none;
+}
+.copy:hover{
+  font-size: 14px;
+}
 /*# sourceMappingURL=snack.css.map */
