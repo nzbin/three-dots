@@ -38,17 +38,17 @@
     "prepublish": "npm run build"
   },
   "devDependencies": {
-    "autoprefixer": "^10.4.1",
+    "autoprefixer": "^10.4.2",
     "npm-run-all": "^4.1.5",
     "onchange": "^7.1.0",
-    "postcss": "^8.4.5",
+    "postcss": "^8.4.6",
     "postcss-cli": "^9.1.0",
     "postcss-header": "^3.0.1",
     "rimraf": "^3.0.2",
-    "sass": "^1.47.0",
-    "stylelint": "^14.2.0",
+    "sass": "^1.49.7",
+    "stylelint": "^14.5.0",
     "stylelint-config-recommended-scss": "^5.0.2",
-    "stylelint-config-standard": "^24.0.0",
+    "stylelint-config-standard": "^25.0.0",
     "stylelint-scss": "^4.1.0"
   },
   "engines": {
