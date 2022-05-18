@@ -1224,7 +1224,7 @@
   width: 12px;
   height: 12px;
   border-radius: 6px;
-  background-color: black;
+  background-color: hsl(0deg, 100%, 0%);
   color: transparent;
   margin: -1px 0;
   filter: blur(2px);
@@ -1238,7 +1238,7 @@
   width: 12px;
   height: 12px;
   border-radius: 6px;
-  background-color: black;
+  background-color: hsl(0deg, 100%, 0%);
   color: transparent;
   opacity: 0;
   filter: blur(2px);
@@ -1291,7 +1291,7 @@
   width: 12px;
   height: 12px;
   border-radius: 6px;
-  background-color: black;
+  background-color: hsl(0deg, 100%, 0%);
   color: transparent;
   margin: -1px 0;
   filter: blur(2px);
@@ -1310,7 +1310,7 @@
   width: 12px;
   height: 12px;
   border-radius: 6px;
-  background-color: black;
+  background-color: hsl(0deg, 100%, 0%);
   color: transparent;
   filter: blur(2px);
 }
@@ -1403,7 +1403,7 @@
   height: 12px;
   border-radius: 6px;
   background-color: transparent;
-  color: black;
+  color: hsl(0deg, 100%, 0%);
   margin: -1px 0;
   box-shadow: 0 -20px 0 0;
   filter: blur(2px);
@@ -1420,7 +1420,7 @@
   height: 12px;
   border-radius: 6px;
   background-color: transparent;
-  color: black;
+  color: hsl(0deg, 100%, 0%);
   box-shadow: 0 -20px 0 0;
   filter: blur(2px);
 }
@@ -1466,7 +1466,7 @@
   width: 12px;
   height: 12px;
   border-radius: 6px;
-  background-color: black;
+  background-color: hsl(0deg, 100%, 0%);
   color: transparent;
   margin: -1px 0;
   filter: blur(2px);
@@ -1479,7 +1479,7 @@
   width: 12px;
   height: 12px;
   border-radius: 6px;
-  background-color: black;
+  background-color: hsl(0deg, 100%, 0%);
   color: transparent;
   filter: blur(2px);
 }
