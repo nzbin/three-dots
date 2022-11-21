@@ -23,32 +23,42 @@
       font-size: 16px;
     }
 
+    .heading {
+      margin: 36px 0;
+      padding: 24px 32px;
+      background: rgba(255, 255, 255, 0.4);
+      border: 1px solid rgba(0, 32, 128, 0.12);
+      border-radius: 16px;
+      font-size: 18px;
+    }
+
     .snippet {
       position: relative;
       background: #fff;
-      padding: 2rem 5%;
-      margin: 1.5rem 0;
-      box-shadow: 0 4px 12px -2px rgba(0, 32, 128, .1), 0 0 0 1px #f0f2f7;
-      border-radius: .25rem;
+      padding: 32px 5%;
+      margin: 24px 0;
+      box-shadow: 0 4px 12px -2px rgba(0, 32, 128, .1), 0 0 0 1px rgba(60, 80, 120, 0.1);
+      border-radius: 16px;
     }
 
-    .examples .snippet::before {
+    .snippet::before {
       display: inline-block;
       position: absolute;
-      top: 0;
-      left: 0;
+      top: 6px;
+      left: 6px;
       padding: 0 8px;
       content: attr(data-title);
-      font-size: .75rem;
+      font-size: 12px;
       font-family: SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
       color: white;
       background-color: rgb(255, 25, 100);
-      border-radius: .25rem 0 .25rem 0;
+      border-radius: 10px;
+      line-height: 20px;
     }
 
-    .examples .snippet:hover {
+    .snippet:hover {
       cursor: pointer;
-      outline: solid rgb(255, 25, 100);
+      outline: 2px solid rgb(255, 25, 100);
     }
 
     .stage {
@@ -56,7 +66,7 @@
       justify-content: center;
       align-items: center;
       position: relative;
-      padding: 2rem 0;
+      padding: 32px 0;
       margin: 0 -5%;
       overflow: hidden;
     }
@@ -81,8 +91,8 @@
       border-radius: 4px;
       font-size: 12px;
       line-height: 1;
+      color: white;
       background-color: rgba(97, 97, 97, .9);
-      color: #fff;
       transform: translateX(-50%);
       content: attr(aria-label);
       pointer-events: none;
@@ -96,7 +106,7 @@
     <![endif]-->
   <main>
     <div class="container">
-      <div class="snippet">
+      <div class="heading">
         🔮 <a href="https://github.com/nzbin/three-dots" target="_blank" title="three-dots">
           Three Dots</a> is a set of CSS loading animations made with just single element.
         I hope this project can not only enhance your CSS skills but also inspire your imagination.
@@ -216,7 +226,7 @@
         </div>
       </div>
 
-      <div class="snippet">
+      <div class="heading">
         ⚗️ Experiment: The experimental loading animations require some special conditions.
       </div>
 
@@ -286,7 +296,7 @@
           integrity="sha512-7O5pXpc0oCRrxk8RUfDYFgn0nO1t+jLuIOQdOMRp4APB7uZ4vSjspzp5y6YDtDs4VzUSTbWzBFZ/LKJhnyFOKw=="
           crossorigin="anonymous" referrerpolicy="no-referrer"></script>
   <script>
-    const snippets = document.querySelectorAll('.examples .snippet');
+    const snippets = document.querySelectorAll('.snippet');
 
     for (let i = 0; i < snippets.length; i++) {
       snippets[i].addEventListener('mouseleave', clearTooltip);
@@ -303,10 +313,8 @@
       e.currentTarget.removeAttribute('aria-label');
     }
 
-    const clipboardSnippets = new ClipboardJS('.examples .snippet', {
-      text: trigger => {
-        return trigger.getAttribute('data-title');
-      }
+    const clipboardSnippets = new ClipboardJS('.snippet', {
+      text: trigger => trigger.getAttribute('data-title')
     });
 
     clipboardSnippets.on('success', e => {
