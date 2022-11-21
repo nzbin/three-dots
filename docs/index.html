@@ -28,7 +28,7 @@
       background: #fff;
       padding: 2rem 5%;
       margin: 1.5rem 0;
-      box-shadow: 0 .4rem .8rem -.1rem rgba(0, 32, 128, .1), 0 0 0 1px #f0f2f7;
+      box-shadow: 0 4px 12px -2px rgba(0, 32, 128, .1), 0 0 0 1px #f0f2f7;
       border-radius: .25rem;
     }
 
@@ -37,13 +37,18 @@
       position: absolute;
       top: 0;
       left: 0;
-      padding: 0 5px;
+      padding: 0 8px;
       content: attr(data-title);
       font-size: .75rem;
       font-family: SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
       color: white;
       background-color: rgb(255, 25, 100);
       border-radius: .25rem 0 .25rem 0;
+    }
+
+    .examples .snippet:hover {
+      cursor: pointer;
+      outline: solid rgb(255, 25, 100);
     }
 
     .stage {
@@ -66,6 +71,22 @@
       text-align: center;
       overflow: auto;
     }
+
+    .tooltip::after {
+      position: absolute;
+      top: 100%;
+      left: 50%;
+      margin-top: 8px;
+      padding: 6px 8px;
+      border-radius: 4px;
+      font-size: 12px;
+      line-height: 1;
+      background-color: rgba(97, 97, 97, .9);
+      color: #fff;
+      transform: translateX(-50%);
+      content: attr(aria-label);
+      pointer-events: none;
+    }
   </style>
 </head>
 
@@ -76,14 +97,14 @@
   <main>
     <div class="container">
       <div class="snippet">
-        🔮 <a href="https://github.com/nzbin/three-dots" target="_blank" title="three-dots">Three
-          Dots</a> is a set of CSS loading animations made with just single element. I think the
-        project can not only enhance your CSS skills but also improve your imagination. 🔥
+        🔮 <a href="https://github.com/nzbin/three-dots" target="_blank" title="three-dots">
+          Three Dots</a> is a set of CSS loading animations made with just single element.
+        I hope this project can not only enhance your CSS skills but also inspire your imagination.
       </div>
 
       <div class="row examples">
         <div class="col-3">
-          <div class="snippet" data-title=".dot-elastic">
+          <div class="snippet" data-title="dot-elastic">
             <div class="stage">
               <div class="dot-elastic"></div>
             </div>
@@ -91,7 +112,7 @@
         </div>
 
         <div class="col-3">
-          <div class="snippet" data-title=".dot-pulse">
+          <div class="snippet" data-title="dot-pulse">
             <div class="stage">
               <div class="dot-pulse"></div>
             </div>
@@ -99,7 +120,7 @@
         </div>
 
         <div class="col-3">
-          <div class="snippet" data-title=".dot-flashing">
+          <div class="snippet" data-title="dot-flashing">
             <div class="stage">
               <div class="dot-flashing"></div>
             </div>
@@ -107,7 +128,7 @@
         </div>
 
         <div class="col-3">
-          <div class="snippet" data-title=".dot-collision">
+          <div class="snippet" data-title="dot-collision">
             <div class="stage">
               <div class="dot-collision"></div>
             </div>
@@ -115,7 +136,7 @@
         </div>
 
         <div class="col-3">
-          <div class="snippet" data-title=".dot-revolution">
+          <div class="snippet" data-title="dot-revolution">
             <div class="stage">
               <div class="dot-revolution"></div>
             </div>
@@ -123,7 +144,7 @@
         </div>
 
         <div class="col-3">
-          <div class="snippet" data-title=".dot-carousel">
+          <div class="snippet" data-title="dot-carousel">
             <div class="stage">
               <div class="dot-carousel"></div>
             </div>
@@ -131,7 +152,7 @@
         </div>
 
         <div class="col-3">
-          <div class="snippet" data-title=".dot-typing">
+          <div class="snippet" data-title="dot-typing">
             <div class="stage">
               <div class="dot-typing"></div>
             </div>
@@ -139,7 +160,7 @@
         </div>
 
         <div class="col-3">
-          <div class="snippet" data-title=".dot-windmill">
+          <div class="snippet" data-title="dot-windmill">
             <div class="stage">
               <div class="dot-windmill"></div>
             </div>
@@ -147,7 +168,7 @@
         </div>
 
         <div class="col-3">
-          <div class="snippet" data-title=".dot-bricks">
+          <div class="snippet" data-title="dot-bricks">
             <div class="stage">
               <div class="dot-bricks"></div>
             </div>
@@ -155,7 +176,7 @@
         </div>
 
         <div class="col-3">
-          <div class="snippet" data-title=".dot-floating">
+          <div class="snippet" data-title="dot-floating">
             <div class="stage">
               <div class="dot-floating"></div>
             </div>
@@ -163,7 +184,7 @@
         </div>
 
         <div class="col-3">
-          <div class="snippet" data-title=".dot-fire">
+          <div class="snippet" data-title="dot-fire">
             <div class="stage">
               <div class="dot-fire"></div>
             </div>
@@ -171,7 +192,7 @@
         </div>
 
         <div class="col-3">
-          <div class="snippet" data-title=".dot-spin">
+          <div class="snippet" data-title="dot-spin">
             <div class="stage">
               <div class="dot-spin"></div>
             </div>
@@ -179,7 +200,7 @@
         </div>
 
         <div class="col-3">
-          <div class="snippet" data-title=".dot-falling">
+          <div class="snippet" data-title="dot-falling">
             <div class="stage">
               <div class="dot-falling"></div>
             </div>
@@ -187,7 +208,7 @@
         </div>
 
         <div class="col-3">
-          <div class="snippet" data-title=".dot-stretching">
+          <div class="snippet" data-title="dot-stretching">
             <div class="stage">
               <div class="dot-stretching"></div>
             </div>
@@ -196,13 +217,13 @@
       </div>
 
       <div class="snippet">
-        ⚗️ Experiment: The experimental loading animation needs special conditions.
+        ⚗️ Experiment: The experimental loading animations require some special conditions.
       </div>
 
       <div class="row examples">
 
         <div class="col-3">
-          <div class="snippet" data-title=".dot-gathering">
+          <div class="snippet" data-title="dot-gathering">
             <div class="stage filter-contrast">
               <div class="dot-gathering"></div>
             </div>
@@ -210,7 +231,7 @@
         </div>
 
         <div class="col-3">
-          <div class="snippet" data-title=".dot-hourglass">
+          <div class="snippet" data-title="dot-hourglass">
             <div class="stage filter-contrast">
               <div class="dot-hourglass"></div>
             </div>
@@ -218,7 +239,7 @@
         </div>
 
         <div class="col-3">
-          <div class="snippet" data-title=".dot-overtaking">
+          <div class="snippet" data-title="dot-overtaking">
             <div class="stage filter-contrast">
               <div class="dot-overtaking"></div>
             </div>
@@ -226,7 +247,7 @@
         </div>
 
         <div class="col-3">
-          <div class="snippet" data-title=".dot-shuttle">
+          <div class="snippet" data-title="dot-shuttle">
             <div class="stage filter-contrast">
               <div class="dot-shuttle"></div>
             </div>
@@ -234,7 +255,7 @@
         </div>
 
         <div class="col-3">
-          <div class="snippet" data-title=".dot-bouncing">
+          <div class="snippet" data-title="dot-bouncing">
             <div class="stage">
               <div class="dot-bouncing"></div>
             </div>
@@ -242,7 +263,7 @@
         </div>
 
         <div class="col-3">
-          <div class="snippet" data-title=".dot-rolling">
+          <div class="snippet" data-title="dot-rolling">
             <div class="stage">
               <div class="dot-rolling"></div>
             </div>
@@ -261,6 +282,42 @@
     </p>
   </footer>
 
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/clipboard.js/2.0.11/clipboard.min.js"
+          integrity="sha512-7O5pXpc0oCRrxk8RUfDYFgn0nO1t+jLuIOQdOMRp4APB7uZ4vSjspzp5y6YDtDs4VzUSTbWzBFZ/LKJhnyFOKw=="
+          crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+  <script>
+    const snippets = document.querySelectorAll('.examples .snippet');
+
+    for (let i = 0; i < snippets.length; i++) {
+      snippets[i].addEventListener('mouseleave', clearTooltip);
+      snippets[i].addEventListener('blur', clearTooltip);
+    }
+
+    function showTooltip(el, msg) {
+      el.setAttribute('class', 'snippet tooltip');
+      el.setAttribute('aria-label', msg);
+    }
+
+    function clearTooltip(e) {
+      e.currentTarget.setAttribute('class', 'snippet');
+      e.currentTarget.removeAttribute('aria-label');
+    }
+
+    const clipboardSnippets = new ClipboardJS('.examples .snippet', {
+      text: trigger => {
+        return trigger.getAttribute('data-title');
+      }
+    });
+
+    clipboardSnippets.on('success', e => {
+      e.clearSelection();
+      showTooltip(e.trigger, 'Copied!');
+    });
+
+    clipboardSnippets.on('error', e => {
+      showTooltip(e.trigger, 'Copy failed!');
+    });
+  </script>
 </body>
 
 </html>
