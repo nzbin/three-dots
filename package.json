@@ -38,20 +38,20 @@
     "prepublish": "npm run build"
   },
   "devDependencies": {
-    "autoprefixer": "^10.4.7",
+    "autoprefixer": "^10.4.13",
     "npm-run-all": "^4.1.5",
     "onchange": "^7.1.0",
-    "postcss": "^8.4.13",
-    "postcss-cli": "^9.1.0",
-    "postcss-header": "^3.0.2",
+    "postcss": "^8.4.19",
+    "postcss-cli": "^10.0.0",
+    "postcss-header": "^3.0.3",
     "rimraf": "^3.0.2",
-    "sass": "^1.51.0",
-    "stylelint": "^14.8.2",
-    "stylelint-config-recommended-scss": "^6.0.0",
-    "stylelint-config-standard": "^25.0.0",
-    "stylelint-scss": "^4.2.0"
+    "sass": "^1.56.1",
+    "stylelint": "^14.15.0",
+    "stylelint-config-recommended-scss": "^8.0.0",
+    "stylelint-config-standard": "^29.0.0",
+    "stylelint-scss": "^4.3.0"
   },
   "engines": {
-    "node": ">=4"
+    "node": ">=12"
   }
 }
