@@ -4,16 +4,19 @@
  * ==============================================
  */
 
+@use './variables';
+@use './mixins';
+
 $left-pos: -9999px;
-$x1: -$left-pos - $dot-spacing;
-$x2: -$left-pos;
-$x3: -$left-pos + $dot-spacing;
+$x1: - $left-pos - variables.$dot-spacing;
+$x2: - $left-pos;
+$x3: - $left-pos + variables.$dot-spacing;
 
 .dot-pulse {
   position: relative;
   left: $left-pos;
 
-  @include dot;
+  @include mixins.dot;
 
   box-shadow: $x2 0 0 -5px;
   animation: dot-pulse 1.5s infinite linear;
@@ -26,7 +29,7 @@ $x3: -$left-pos + $dot-spacing;
     position: absolute;
     top: 0;
 
-    @include dot;
+    @include mixins.dot;
   }
 
   &::before {

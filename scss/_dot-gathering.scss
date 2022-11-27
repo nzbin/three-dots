@@ -5,6 +5,9 @@
  * ==============================================
  */
 
+@use './variables';
+@use './mixins';
+
 $dot-color-hsl: hsl(0deg, 100%, 0%);
 
 $d: 50px;
@@ -12,7 +15,7 @@ $d: 50px;
 .dot-gathering {
   position: relative;
 
-  @include dot(
+  @include mixins.dot(
     $width: 12px,
     $height: 12px,
     $radius: 6px,
@@ -29,9 +32,9 @@ $d: 50px;
     display: inline-block;
     position: absolute;
     top: 0;
-    left: -$d;
+    left: - $d;
 
-    @include dot(
+    @include mixins.dot(
       $width: 12px,
       $height: 12px,
       $radius: 6px,

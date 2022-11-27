@@ -1,27 +1,27 @@
 // ------------------------------
 // Three-Dots
 // ------------------------------
-@import 'variables';
-@import 'mixins';
+@forward 'variables';
+@forward 'mixins';
 // Basic
-@import 'dot-elastic';
-@import 'dot-pulse';
-@import 'dot-flashing';
-@import 'dot-collision';
-@import 'dot-revolution';
-@import 'dot-carousel';
-@import 'dot-typing';
-@import 'dot-windmill';
-@import 'dot-bricks';
-@import 'dot-floating';
-@import 'dot-fire';
-@import 'dot-spin';
-@import 'dot-falling';
-@import 'dot-stretching';
+@forward 'dot-elastic' as elastic-*;
+@forward 'dot-pulse' as pulse-*;
+@forward 'dot-flashing' as flashing-*;
+@forward 'dot-collision' as collision-*;
+@forward 'dot-revolution' as revolution-*;
+@forward 'dot-carousel' as carousel-*;
+@forward 'dot-typing' as typing-*;
+@forward 'dot-windmill' as windmill-*;
+@forward 'dot-bricks' as bricks-*;
+@forward 'dot-floating' as floating-*;
+@forward 'dot-fire' as fire-*;
+@forward 'dot-spin' as spin-*;
+@forward 'dot-falling' as falling-*;
+@forward 'dot-stretching' as stretching-*;
 // Experimental
-@import 'dot-gathering';
-@import 'dot-hourglass';
-@import 'dot-overtaking';
-@import 'dot-shuttle';
-@import 'dot-bouncing';
-@import 'dot-rolling';
+@forward 'dot-gathering' as gathering-*;
+@forward 'dot-hourglass' as hourglass-*;
+@forward 'dot-overtaking' as overtaking-*;
+@forward 'dot-shuttle' as shuttle-*;
+@forward 'dot-bouncing' as bouncing-*;
+@forward 'dot-rolling' as rolling-*;

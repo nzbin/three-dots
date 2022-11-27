@@ -5,11 +5,14 @@
  * ==============================================
  */
 
+@use './variables';
+@use './mixins';
+
 $d: 20px;
 
 .dot-bouncing {
   position: relative;
-  height: $dot-height;
+  height: variables.$dot-height;
   font-size: 10px;
 
   &::before {
@@ -22,7 +25,7 @@ $d: 20px;
 
 @keyframes dot-bouncing {
   0% {
-    top: -$d;
+    top: - $d;
     animation-timing-function: ease-in;
   }
 
@@ -41,10 +44,10 @@ $d: 20px;
   }
 
   90% {
-    top: -$d;
+    top: - $d;
   }
 
   100% {
-    top: -$d;
+    top: - $d;
   }
 }

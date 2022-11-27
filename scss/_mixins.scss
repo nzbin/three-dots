@@ -2,12 +2,14 @@
 // Mixins
 // ==============================================
 
+@use './variables';
+
 @mixin dot(
-  $width: $dot-width,
-  $height: $dot-height,
-  $radius: $dot-radius,
-  $bg-color: $dot-bg-color,
-  $color: $dot-color
+  $width: variables.$dot-width,
+  $height: variables.$dot-height,
+  $radius: variables.$dot-radius,
+  $bg-color: variables.$dot-bg-color,
+  $color: variables.$dot-color
 ) {
   width: $width;
   height: $height;

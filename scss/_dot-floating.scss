@@ -4,13 +4,16 @@
  * ==============================================
  */
 
+@use './variables';
+@use './mixins';
+
 $d-max: 50px;
 $d-min: 12px;
 
 .dot-floating {
   position: relative;
 
-  @include dot;
+  @include mixins.dot;
 
   animation: dot-floating 3s infinite cubic-bezier(.15, .6, .9, .1);
 
@@ -23,17 +26,17 @@ $d-min: 12px;
   }
 
   &::before {
-    left: -$d-min;
+    left: - $d-min;
 
-    @include dot($bg-color: $dot-before-color);
+    @include mixins.dot($bg-color: variables.$dot-before-color);
 
     animation: dot-floating-before 3s infinite ease-in-out;
   }
 
   &::after {
-    left: -$d-min * 2;
+    left: - $d-min * 2;
 
-    @include dot($bg-color: $dot-after-color);
+    @include mixins.dot($bg-color: variables.$dot-after-color);
 
     animation: dot-floating-after 3s infinite cubic-bezier(.4, 0, 1, 1);
   }
@@ -41,50 +44,50 @@ $d-min: 12px;
 
 @keyframes dot-floating {
   0% {
-    left: calc(-50% - #{$dot-width * .5});
+    left: calc(-50% - #{variables.$dot-width * .5});
   }
 
   75% {
-    left: calc(50% + #{$d-max * 2 + $dot-width * .5});
+    left: calc(50% + #{$d-max * 2 + variables.$dot-width * .5});
   }
 
   100% {
-    left: calc(50% + #{$d-max * 2 + $dot-width * .5});
+    left: calc(50% + #{$d-max * 2 + variables.$dot-width * .5});
   }
 }
 
 @keyframes dot-floating-before {
   0% {
-    left: -$d-max;
+    left: - $d-max;
   }
 
   50% {
-    left: -$d-min;
+    left: - $d-min;
   }
 
   75% {
-    left: -$d-max;
+    left: - $d-max;
   }
 
   100% {
-    left: -$d-max;
+    left: - $d-max;
   }
 }
 
 @keyframes dot-floating-after {
   0% {
-    left: -$d-max * 2;
+    left: - $d-max * 2;
   }
 
   50% {
-    left: -$d-min * 2;
+    left: - $d-min * 2;
   }
 
   75% {
-    left: -$d-max * 2;
+    left: - $d-max * 2;
   }
 
   100% {
-    left: -$d-max * 2;
+    left: - $d-max * 2;
   }
 }

@@ -5,14 +5,17 @@
  * ==============================================
  */
 
-$d: 3 * $dot-spacing;
+@use './variables';
+@use './mixins';
+
+$d: 3 * variables.$dot-spacing;
 $dot-color-hsl: hsl(0deg, 100%, 0%);
 
 .dot-shuttle {
   position: relative;
-  left: -$dot-spacing;
+  left: - variables.$dot-spacing;
 
-  @include dot(
+  @include mixins.dot(
     $width: 12px,
     $height: 12px,
     $radius: 6px,
@@ -30,7 +33,7 @@ $dot-color-hsl: hsl(0deg, 100%, 0%);
     position: absolute;
     top: 0;
 
-    @include dot(
+    @include mixins.dot(
       $width: 12px,
       $height: 12px,
       $radius: 6px,
@@ -42,12 +45,12 @@ $dot-color-hsl: hsl(0deg, 100%, 0%);
   }
 
   &::before {
-    left: $dot-spacing;
+    left: variables.$dot-spacing;
     animation: dot-shuttle 2s infinite ease-out;
   }
 
   &::after {
-    left: 2 * $dot-spacing;
+    left: 2 * variables.$dot-spacing;
   }
 }
 
@@ -59,7 +62,7 @@ $dot-color-hsl: hsl(0deg, 100%, 0%);
   }
 
   25% {
-    transform: translateX(-$d);
+    transform: translateX(- $d);
   }
 
   75% {

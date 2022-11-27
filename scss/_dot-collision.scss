@@ -4,10 +4,13 @@
  * ==============================================
  */
 
+@use './variables';
+@use './mixins';
+
 .dot-collision {
   position: relative;
 
-  @include dot;
+  @include mixins.dot;
 
   &::before,
   &::after {
@@ -18,17 +21,17 @@
   }
 
   &::before {
-    left: -$dot-width;
+    left: - variables.$dot-width;
 
-    @include dot($bg-color: $dot-before-color);
+    @include mixins.dot($bg-color: variables.$dot-before-color);
 
     animation: dot-collision-before 2s infinite ease-in;
   }
 
   &::after {
-    left: $dot-width;
+    left: variables.$dot-width;
 
-    @include dot($bg-color: $dot-after-color);
+    @include mixins.dot($bg-color: variables.$dot-after-color);
 
     animation: dot-collision-after 2s infinite ease-in;
     animation-delay: 1s;
@@ -44,7 +47,7 @@
   }
 
   25% {
-    transform: translateX(-$dot-spacing);
+    transform: translateX(- variables.$dot-spacing);
   }
 }
 
@@ -57,6 +60,6 @@
   }
 
   25% {
-    transform: translateX($dot-spacing);
+    transform: translateX(variables.$dot-spacing);
   }
 }

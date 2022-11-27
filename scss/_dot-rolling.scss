@@ -5,11 +5,14 @@
  * ==============================================
  */
 
+@use './variables';
+@use './mixins';
+
 $d: 20px;
 
 .dot-rolling {
   position: relative;
-  height: $dot-height;
+  height: variables.$dot-height;
   font-size: 10px;
 
   &::before {

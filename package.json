@@ -29,12 +29,12 @@
     "start": "run-p build watch",
     "build": "run-s clean sass sassmin postcss copy",
     "clean": "rimraf dist",
-    "sass": "sass --style=expanded sass/three-dots.scss dist/three-dots.css",
-    "sassmin": "sass --style=compressed sass/three-dots.scss dist/three-dots.min.css",
+    "sass": "sass --style=expanded scss/three-dots.scss dist/three-dots.css",
+    "sassmin": "sass --style=compressed scss/three-dots.scss dist/three-dots.min.css",
     "copy": "cp dist/three-dots.css docs/css",
     "postcss": "postcss -r dist/*.css --map",
     "watch": "onchange sass -- run-s sass copy",
-    "lint": "stylelint \"sass/**/*.scss\" --fix",
+    "lint": "stylelint \"scss/**/*.scss\" --fix",
     "prepublish": "npm run build"
   },
   "devDependencies": {

@@ -4,31 +4,34 @@
  * ==============================================
  */
 
+@use './variables';
+@use './mixins';
+
 $left-pos: -9999px;
-$x1: -$left-pos - $dot-spacing;
-$x2: -$left-pos;
-$x3: -$left-pos + $dot-spacing;
+$x1: - $left-pos - variables.$dot-spacing;
+$x2: - $left-pos;
+$x3: - $left-pos + variables.$dot-spacing;
 
-$y1: -$dot-spacing;
+$y1: - variables.$dot-spacing;
 $y2: 0;
-$y3: $dot-spacing;
+$y3: variables.$dot-spacing;
 
-$color-0: rgba($dot-color, 0);
-$color-1: rgba($dot-color, 1);
+$color-0: rgba(variables.$dot-color, 0);
+$color-1: rgba(variables.$dot-color, 1);
 
-$color-before-0: rgba($dot-before-color, 0);
-$color-before-1: rgba($dot-before-color, 1);
+$color-before-0: rgba(variables.$dot-before-color, 0);
+$color-before-1: rgba(variables.$dot-before-color, 1);
 
-$color-after-0: rgba($dot-after-color, 0);
-$color-after-1: rgba($dot-after-color, 1);
+$color-after-0: rgba(variables.$dot-after-color, 0);
+$color-after-1: rgba(variables.$dot-after-color, 1);
 
 .dot-falling {
   position: relative;
   left: $left-pos;
 
-  @include dot;
+  @include mixins.dot;
 
-  box-shadow: $x2 0 0 0 $dot-color;
+  box-shadow: $x2 0 0 0 variables.$dot-color;
   animation: dot-falling 1s infinite linear;
   animation-delay: .1s;
 
@@ -41,14 +44,14 @@ $color-after-1: rgba($dot-after-color, 1);
   }
 
   &::before {
-    @include dot($bg-color: $dot-before-color);
+    @include mixins.dot($bg-color: variables.$dot-before-color);
 
     animation: dot-falling-before 1s infinite linear;
     animation-delay: 0s;
   }
 
   &::after {
-    @include dot($bg-color: $dot-after-color);
+    @include mixins.dot($bg-color: variables.$dot-after-color);
 
     animation: dot-falling-after 1s infinite linear;
     animation-delay: .2s;

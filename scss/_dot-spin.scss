@@ -4,23 +4,26 @@
  * ==============================================
  */
 
-$x1: $dot-spacing * 1.2;
-$y1: $dot-spacing * 1.2;
-$-x1: -$x1;
-$-y1: -$y1;
+@use './variables';
+@use './mixins';
+
+$x1: variables.$dot-spacing * 1.2;
+$y1: variables.$dot-spacing * 1.2;
+$-x1: - $x1;
+$-y1: - $y1;
 
 $x2: $x1 * .707107; // 1/√2
 $y2: $y1 * .707107; // 1/√2
-$-x2: -$x2;
-$-y2: -$y2;
+$-x2: - $x2;
+$-y2: - $y2;
 
-$color-0: rgba($dot-color, 0);
-$color-1: rgba($dot-color, 1);
+$color-0: rgba(variables.$dot-color, 0);
+$color-1: rgba(variables.$dot-color, 1);
 
 .dot-spin {
   position: relative;
 
-  @include dot($bg-color: transparent, $color: transparent);
+  @include mixins.dot($bg-color: transparent, $color: transparent);
 
   box-shadow:
     0 $-y1 0 0 $color-1,
