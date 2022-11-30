@@ -5,8 +5,9 @@
   "main": "dist/three-dots.css",
   "files": [
     "dist",
-    "sass",
-    "less"
+    "scss",
+    "less",
+    "_index.scss"
   ],
   "homepage": "https://nzbin.github.io/three-dots/",
   "repository": {
@@ -23,6 +24,7 @@
     "loading-animations",
     "single-element-css-spinners",
     "sass",
+    "scss",
     "less"
   ],
   "scripts": {
