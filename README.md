@@ -1,5 +1,6 @@
 # Three Dots
 
+[![Build Status](https://app.travis-ci.com/nzbin/three-dots.svg?branch=master)](https://app.travis-ci.com/nzbin/three-dots)
 [![npm](https://img.shields.io/npm/v/three-dots.svg)](https://www.npmjs.com/package/three-dots)
 [![license](https://img.shields.io/github/license/mashape/apistatus.svg)](https://github.com/nzbin/three-dots)
 [![Financial Contributors on Open Collective](https://opencollective.com/three-dots/all/badge.svg?label=financial+contributors)](https://opencollective.com/three-dots) 
@@ -14,10 +15,10 @@ $ npm install three-dots --save
 
 ## Usage
 
-1. Include the CSS in your file:
+1. Import the styles in your Sass file:
 
-```html
-<link href="/path/to/three-dots.css" rel="stylesheet">
+```scss
+@use 'three-dots';
 ```
 
 2. Add just one `div` tag:
@@ -47,13 +48,17 @@ dot-stretching
 
 ## Customization
 
-1. Checkout this repo and
+Customize the dot's size ( color, spacing, etc. ) with Dart Sass API.
 
-```bash
-$ npm install
+```scss
+@use 'three-dots' with (
+  $dot-width: 20px,
+  $dot-height: 20px,
+  ...
+);
 ```
 
-2. Customize the dots size ( color, spacing, etc. ) in the `_variables.scss` file.
+The available variables and their default values.
 
 ```scss
 $dot-width: 10px;
@@ -66,12 +71,6 @@ $dot-before-color: $dot-color;
 $dot-after-color: $dot-color;
 
 $dot-spacing: $dot-width + $dot-width/2;
-```
-
-3. Compile Sass files
-
-```bash
-$ npm run build
 ```
 
 ## Contributors

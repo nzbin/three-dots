@@ -1,6 +1,6 @@
 {
   "name": "three-dots",
-  "version": "0.2.3",
+  "version": "0.3.0",
   "description": "CSS loading animations made with single element",
   "main": "./_index.scss",
   "files": [
