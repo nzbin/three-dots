@@ -2,12 +2,11 @@
   "name": "three-dots",
   "version": "0.2.3",
   "description": "CSS loading animations made with single element",
-  "main": "dist/three-dots.css",
+  "main": "./_index.scss",
   "files": [
     "dist",
     "scss",
-    "less",
-    "_index.scss"
+    "less"
   ],
   "homepage": "https://nzbin.github.io/three-dots/",
   "repository": {
@@ -22,10 +21,7 @@
   "keywords": [
     "three-dots",
     "loading-animations",
-    "single-element-css-spinners",
-    "sass",
-    "scss",
-    "less"
+    "single-element-css-spinners"
   ],
   "scripts": {
     "start": "run-p build watch",
@@ -54,6 +50,6 @@
     "stylelint-scss": "^4.3.0"
   },
   "engines": {
-    "node": ">=12"
+    "node": ">=14"
   }
 }
