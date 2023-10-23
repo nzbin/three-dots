@@ -10,7 +10,7 @@ Three Dots is a set of CSS loading animations made with just single element. I t
 ## Installation
 
 ```sh
-$ npm install three-dots --save
+npm install three-dots --save
 ```
 
 ## Usage
